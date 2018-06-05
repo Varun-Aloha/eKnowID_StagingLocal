@@ -1,0 +1,77 @@
+﻿<div id="section-2">
+    <div class="container">
+        <div class="couponBox">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6  col-xs-12">
+                    <div class="couponCodeBox" ng-repeat="report in reportLists | limitTo:12" style="color:white;font-size:15px;">
+                        <div class="couponCodeBoxInner">
+                            <div class="link link1">{{report.Price | currency:"$"}}</div>
+                            <div style="margin-top:10px;">
+                                {{report.Name}}
+                            </div>
+                        </div>
+                        <input type="button" class="pricebox" ng-click="report.IsSelected = true;selectReport(report);" value="pick for {{report.Price | currency:'$'}}" />
+
+                        <div ng-show="report.IsSelected">
+                            <button class="close" ng-click="report.IsSelected = false;selectReport(report)"></button>
+                            <span class="lock"></span>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="order_summary">
+                                <div class="order_summary_title2">
+                                    <h4 class="pull-left"><span class="cart"></span><span>Shopping Cart</span></h4>
+                                    <div class="pull-right">
+                                        <button class="btn btn-success" ng-click="redirectToPayment();">Continue</button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="order_summary_desc">
+                                        <div class="pull-left">
+                                            <h5>{{packageItem.PlanName}} Report </h5>
+                                            <p><span class="blue_color">Edit</span></p>
+                                        </div>
+                                        <div class="pull-right">
+                                            <div class="price">
+                                                {{packageItem.PlanPrice | currency:"$"}}
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p>Includes the following</p>
+                                    </div>
+
+                                </div>
+                                <div class="summry_list">
+                                    <ul class="list_2">
+                                        <li ng-repeat="package in packageItem.PlanDetails">{{package.PlanDetails}}</li>
+                                    </ul>
+
+                                    <ul class="list_2" id="report-second">
+                                        <!--<li ng-repeat="report in listOfReports">{{report.Name}}</li>-->
+                                    </ul>
+                                </div>
+                                <div class="order_summary_tot">
+                                    <div class="col-xs-12">
+                                        <div class="pull-left">
+                                            <h5>total </h5>
+                                        </div>
+                                        <div class="pull-right">
+                                            <div class="price">{{totalPrice | currency:"$"}}</div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p>Account verifacation<span class="col_green"> &lt; < 1 day</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

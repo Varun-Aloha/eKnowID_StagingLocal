@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8c88a69f-f276-4543-a056-58bb6fed5c8b" name="Administrator@618-0152 2012-12-12 19:19:01" runUser="618-0152\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f72ca1e8-7912-40e1-8c7d-7bd7b61f348f">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_618-0152 2012-12-12 19_19_01">
+      <DeploymentItem filename="E:\POCO\EknowIDData\bin\Debug\EknowIDData.dll" />
+      <DeploymentItem filename="E:\POCO\EknowIDModel\bin\Debug\EknowIDModel.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-12-12T19:19:01.1229312+05:30" queuing="2012-12-12T19:19:01.8148944+05:30" start="2012-12-12T19:19:01.8569234+05:30" finish="2012-12-12T19:19:29.4129160+05:30" />
+  <ResultSummary outcome="Error">
+    <Counters total="4" executed="2" error="0" failed="1" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="2" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="618-0152" outcome="Error" timestamp="2012-12-12T19:19:29.4129160+05:30">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetStates" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="3891f2a6-d55a-a4ea-b69d-49bb6782b390">
+      <Execution id="4299d84c-5ead-4272-8543-64afdff3f0bd" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStates" />
+    </UnitTest>
+    <UnitTest name="GetPlans" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="d4128b70-8d2a-20d8-b8d4-d70dea5e2ffb">
+      <Execution id="d04bdc31-7771-4dc3-8bdd-0610fde9ce39" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPlans" />
+    </UnitTest>
+    <UnitTest name="GetProfessions" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="90ca8dc8-4eab-2d88-0476-e5a2646900cb">
+      <Execution id="88c96669-41b8-4f2d-bdf3-8e9001d6761b" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetProfessions" />
+    </UnitTest>
+    <UnitTest name="GetReports" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="7541b136-d005-1891-d3da-31ed10bfdab1">
+      <Execution id="26771c2f-8f41-466c-b1a4-14afa2a4d9fd" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetReports" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d4128b70-8d2a-20d8-b8d4-d70dea5e2ffb" executionId="d04bdc31-7771-4dc3-8bdd-0610fde9ce39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90ca8dc8-4eab-2d88-0476-e5a2646900cb" executionId="88c96669-41b8-4f2d-bdf3-8e9001d6761b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7541b136-d005-1891-d3da-31ed10bfdab1" executionId="26771c2f-8f41-466c-b1a4-14afa2a4d9fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3891f2a6-d55a-a4ea-b69d-49bb6782b390" executionId="4299d84c-5ead-4272-8543-64afdff3f0bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d04bdc31-7771-4dc3-8bdd-0610fde9ce39" testId="d4128b70-8d2a-20d8-b8d4-d70dea5e2ffb" testName="GetPlans" computerName="618-0152" duration="00:00:23.6145295" startTime="2012-12-12T19:19:01.8989501+05:30" endTime="2012-12-12T19:19:25.8679786+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d04bdc31-7771-4dc3-8bdd-0610fde9ce39">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method EknowIDTest.UnitTest1.Start threw exception. System.InvalidOperationException: System.InvalidOperationException: Mapping and metadata information could not be found for EntityType 'EknowIDModel.State'..</Message>
+          <StackTrace>    at System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   at System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   at EknowIDData.EknowIDContext..ctor() in E:\POCO\EknowIDData\EknowIDContext.cs:line 19
+   at EknowIDTest.UnitTest1.Start() in E:\POCO\EknowIDTest\UnitTest1.cs:line 19
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="88c96669-41b8-4f2d-bdf3-8e9001d6761b" testId="90ca8dc8-4eab-2d88-0476-e5a2646900cb" testName="GetProfessions" computerName="618-0152" duration="00:00:03.5369338" startTime="2012-12-12T19:19:25.8759822+05:30" endTime="2012-12-12T19:19:29.4129160+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88c96669-41b8-4f2d-bdf3-8e9001d6761b">
+    </UnitTestResult>
+    <UnitTestResult executionId="26771c2f-8f41-466c-b1a4-14afa2a4d9fd" testId="7541b136-d005-1891-d3da-31ed10bfdab1" testName="GetReports" computerName="618-0152" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="26771c2f-8f41-466c-b1a4-14afa2a4d9fd">
+    </UnitTestResult>
+    <UnitTestResult executionId="4299d84c-5ead-4272-8543-64afdff3f0bd" testId="3891f2a6-d55a-a4ea-b69d-49bb6782b390" testName="GetStates" computerName="618-0152" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4299d84c-5ead-4272-8543-64afdff3f0bd">
+    </UnitTestResult>
+  </Results>
+</TestRun>

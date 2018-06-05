@@ -1,0 +1,66 @@
+﻿<div id="section-2">
+    <div class="top-content">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row" style="margin-top:-40px;">
+                    <div class="col-sm-5 col-sm-offset-3">
+                        <div class="form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>Company Profile</h3>
+                                    <p>Fill in the form below create your company profile:</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form name="requesterCompanyForm" method="post" ng-submit="saveData();" novalidate>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterCompanyForm.CompanyName.$invalid && (requesterCompanyForm.CompanyName.$dirty || submitted)}">
+                                        <input type="text" name="CompanyName" placeholder="Company name..." class="form-control textbox" ng-model="CompanyName" ng-required="true">
+                                        <p ng-show="requesterCompanyForm.CompanyName.$error.required && (requesterCompanyForm.CompanyName.$dirty || submitted)" class="help-block">Company name is require.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterCompanyForm.JobTitle.$invalid && (requesterCompanyForm.JobTitle.$dirty || submitted)}">
+                                        <input type="text" name="JobTitle" placeholder="Job Title" class="form-control textbox" ng-model="JobTitle" ng-required="true">
+                                        <p ng-show="requesterCompanyForm.JobTitle.$error.required && (requesterCompanyForm.JobTitle.$dirty || submitted)" class="help-block">Job title is require.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterCompanyForm.CompanyPhone.$invalid && (requesterCompanyForm.CompanyPhone.$dirty || submitted)}">
+                                        <input type="text" name="CompanyPhone" placeholder="Company phone number" class="form-control textbox" ng-model="CompanyPhone" number-only ng-required="true" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
+                                        <p ng-show="requesterCompanyForm.CompanyPhone.$error.required && (requesterCompanyForm.CompanyPhone.$dirty || submitted)" class="help-block">Company phone number is require.</p>
+                                        <p ng-show="requesterCompanyForm.CompanyPhone.$error.pattern && (requesterCompanyForm.CompanyPhone.$dirty || submitted)" class="help-block">Enter valid phone number.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterCompanyForm.CompanyTaxId.$invalid && (requesterCompanyForm.CompanyTaxId.$dirty || submitted)}">
+                                        <input type="text" name="CompanyTaxId" placeholder="Tax ID/EIN (recommended)" maxlength="9" class="form-control textbox" ng-model="CompanyTaxId" ng-required="true">
+                                        <p ng-show="requesterCompanyForm.CompanyTaxId.$error.required && (requesterCompanyForm.CompanyTaxId.$dirty || submitted)" class="help-block">Tax ID/ENI is require.</p>
+                                        <!--<p ng-show="requesterCompanyForm.CompanyTaxId.$error.pattern && (requesterCompanyForm.CompanyTaxId.$dirty || submitted)" class="help-block">Enter valid ENI number.</p>-->
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterCompanyForm.State.$invalid  && (requesterCompanyForm.State.$dirty || submitted) }">
+                                        <select name="State" ng-model="State" class="form-control textbox" style="height:40px;" ng-required="true">
+                                            <option>India</option>
+                                            <option>US</option>
+                                            <option>USA</option>
+                                            <option>London</option>
+                                        </select>
+                                        <p ng-show="requesterCompanyForm.State.$error.required && (requesterCompanyForm.State.$dirty || submitted)" class="help-block">Please select state.</p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea name="Description" placeholder="Please describe your screening situation - hiring volumne , legal requirements,special needs,etc."
+                                                  class="form-control" ng-model="Description" style="line-height:none"></textarea>
+                                    </div>
+
+                                    <input type="submit" value="Create Company Profile!" class="signup-button" ng-disabled="requesterCompanyForm.$invalid">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

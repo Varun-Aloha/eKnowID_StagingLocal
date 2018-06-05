@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="year.ascx.cs" Inherits="eknowID.Controls.year" %>
+<asp:DropDownList ID ="ddlYear" CssClass="floatLeft"   runat="server"  Width="80%" ClientIDMode="Static"  />

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<BackgroundReports>
+  <BackgroundReportPackage>
+    <ReferenceId>some_id_value</ReferenceId>
+    <OrderId>12358</OrderId>
+    <ScreeningStatus>
+      <OrderStatus>x:pending</OrderStatus>
+    </ScreeningStatus>
+    <InstantInterfaceURL>https://192.168.0.1/...</InstantInterfaceURL>
+  </BackgroundReportPackage>
+</BackgroundReports>

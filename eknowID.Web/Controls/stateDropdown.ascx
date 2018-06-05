@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="stateDropdown.ascx.cs" Inherits="eknowID.Controls.stateDropdown" %>
+<asp:DropDownList ID ="ddlState_1" CssClass="ddlValidation floatLeft"   runat="server"  Width="80%"  />

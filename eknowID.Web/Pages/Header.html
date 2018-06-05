@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function setDate() {
+            
+            var d = new Date();
+            var mm = d.getMonth();
+            mm = mm > 10 ? mm : "0" + mm;
+            var dd = d.getDate();
+            dd = dd > 10 ? dd : "0" + dd;
+            document.getElementById("datefield").innerHTML = mm + "/" + dd + "/" + d.getFullYear();
+        }
+    </script>
+
+</head>
+<body style="margin-top: 0; padding: 0" onload="setDate()">
+
+
+<div class="floatRight">
+            Generated On:<span class="boldText" id="datefield"></span><br />
+            <span class="boldText" style="color: Maroon">KENTECH CONSULTING, INC</span><br />
+                200 S WACKER<br />
+                15 TH FLR<br />
+                Chicago, IL 60606<br />
+                Phone: 312-780-0470 / 888-749-2432<br />
+                Fax: 312-276-8989<br />
+</div>
+
+<div class="floatLeft">
+                <img src="../Images/site_logo.png" alt=""/>
+</div>
+</body>
+</html>

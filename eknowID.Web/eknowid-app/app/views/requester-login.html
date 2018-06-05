@@ -1,0 +1,36 @@
+﻿<div id="section-2">
+    <div class="container-fluid" style="height:535px;">
+        <div>
+            <form name="loginForm" method="post" class="form-2 form-group" ng-submit="authenticateUser();" novalidate>
+                <div class="row" style="margin-left:20px;">
+                    <div class="float form-group" ng-class="{ 'has-error' : loginForm.requesterEmail.$invalid  && (loginForm.requesterEmail.$dirty || submitted) }">
+                        <label for="login"><i class="glyphicon glyphicon-user"></i>Email Address</label>
+                        <input type="email" class="form-control" name="requesterEmail" placeholder="Email address" ng-model="email" ng-required="true">
+
+                        <div ng-class="{ 'has-error' : loginForm.requesterEmail.$invalid  && (loginForm.requesterEmail.$dirty || submitted) }">
+                            <p ng-show="loginForm.requesterEmail.$error.required && (loginForm.requesterEmail.$dirty || submitted)" class="help-block">Email is require.</p>
+                            <p ng-show="loginForm.requesterEmail.$error.email && (loginForm.requesterEmail.$dirty || submitted)" class="help-block">Enter a valid email address.</p>
+                        </div>
+
+                        <div class="error">
+                            {{errorMessage}}
+                        </div>
+                    </div>
+                    <div class="float" ng-class="{ 'has-error' : loginForm.password.$invalid && (loginForm.password.$dirty || submitted)}">
+                        <label for="password"><i class="glyphicon glyphicon-lock"></i>Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password" ng-model="password" ng-minlength="6" ng-required="true">
+
+                        <div ng-class="{ 'has-error' : loginForm.password.$invalid && (loginForm.password.$dirty || submitted)}">
+                            <p ng-show="loginForm.password.$error.required && (loginForm.password.$dirty || submitted)" class="help-block">Your password is required.</p>
+                            <p ng-show="loginForm.password.$error.minlength && (loginForm.password.$dirty || submitted)" class="help-block">Your is too short.</p>
+                        </div>
+
+                    </div>
+                    <div style="float:left;width:25%;margin-top:43px;margin-left:20px;">
+                        <input type="submit" name="submit" class="btn-submit" value="Log in">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

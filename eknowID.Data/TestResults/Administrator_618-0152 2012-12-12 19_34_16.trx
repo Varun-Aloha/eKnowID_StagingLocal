@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1f042f91-4258-4721-a4ca-30e76b0ba46f" name="Administrator@618-0152 2012-12-12 19:34:16" runUser="618-0152\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f72ca1e8-7912-40e1-8c7d-7bd7b61f348f">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_618-0152 2012-12-12 19_34_16">
+      <DeploymentItem filename="E:\POCO\EknowIDData\bin\Debug\EknowIDData.dll" />
+      <DeploymentItem filename="E:\POCO\EknowIDModel\bin\Debug\EknowIDModel.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-12-12T19:34:16.0413245+05:30" queuing="2012-12-12T19:34:16.6232189+05:30" start="2012-12-12T19:34:16.6652479+05:30" finish="2012-12-12T19:34:17.8076588+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetAccountRef" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="ef223821-d864-ab6a-9926-54ac297fc1cf">
+      <Execution id="09db8a1a-03cf-435d-a80b-299dae313b53" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAccountRef" />
+    </UnitTest>
+    <UnitTest name="GetStates" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="3891f2a6-d55a-a4ea-b69d-49bb6782b390">
+      <Execution id="542f00ce-345d-4396-be7a-f26121f2066a" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetStates" />
+    </UnitTest>
+    <UnitTest name="GetPlans" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="d4128b70-8d2a-20d8-b8d4-d70dea5e2ffb">
+      <Execution id="3e5df888-b01e-4b2c-9a65-eec67c463807" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPlans" />
+    </UnitTest>
+    <UnitTest name="GetProfessions" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="90ca8dc8-4eab-2d88-0476-e5a2646900cb">
+      <Execution id="8acfc77a-60b7-4ce0-800a-86881fd5c286" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetProfessions" />
+    </UnitTest>
+    <UnitTest name="GetReports" storage="e:\poco\eknowidtest\bin\debug\eknowidtest.dll" id="7541b136-d005-1891-d3da-31ed10bfdab1">
+      <Execution id="68f63cf0-188b-47b9-9522-48e62e1e6421" />
+      <TestMethod codeBase="E:/POCO/EknowIDTest/bin/Debug/EknowIDTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EknowIDTest.UnitTest1, EknowIDTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetReports" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d4128b70-8d2a-20d8-b8d4-d70dea5e2ffb" executionId="3e5df888-b01e-4b2c-9a65-eec67c463807" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90ca8dc8-4eab-2d88-0476-e5a2646900cb" executionId="8acfc77a-60b7-4ce0-800a-86881fd5c286" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7541b136-d005-1891-d3da-31ed10bfdab1" executionId="68f63cf0-188b-47b9-9522-48e62e1e6421" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3891f2a6-d55a-a4ea-b69d-49bb6782b390" executionId="542f00ce-345d-4396-be7a-f26121f2066a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef223821-d864-ab6a-9926-54ac297fc1cf" executionId="09db8a1a-03cf-435d-a80b-299dae313b53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3e5df888-b01e-4b2c-9a65-eec67c463807" testId="d4128b70-8d2a-20d8-b8d4-d70dea5e2ffb" testName="GetPlans" computerName="618-0152" duration="00:00:00.5672573" startTime="2012-12-12T19:34:16.6882628+05:30" endTime="2012-12-12T19:34:17.5819723+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e5df888-b01e-4b2c-9a65-eec67c463807">
+    </UnitTestResult>
+    <UnitTestResult executionId="8acfc77a-60b7-4ce0-800a-86881fd5c286" testId="90ca8dc8-4eab-2d88-0476-e5a2646900cb" testName="GetProfessions" computerName="618-0152" duration="00:00:00.0031432" startTime="2012-12-12T19:34:17.5859753+05:30" endTime="2012-12-12T19:34:17.5939809+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8acfc77a-60b7-4ce0-800a-86881fd5c286">
+    </UnitTestResult>
+    <UnitTestResult executionId="68f63cf0-188b-47b9-9522-48e62e1e6421" testId="7541b136-d005-1891-d3da-31ed10bfdab1" testName="GetReports" computerName="618-0152" duration="00:00:00.0024509" startTime="2012-12-12T19:34:17.5979839+05:30" endTime="2012-12-12T19:34:17.6036267+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68f63cf0-188b-47b9-9522-48e62e1e6421">
+    </UnitTestResult>
+    <UnitTestResult executionId="542f00ce-345d-4396-be7a-f26121f2066a" testId="3891f2a6-d55a-a4ea-b69d-49bb6782b390" testName="GetStates" computerName="618-0152" duration="00:00:00.0026217" startTime="2012-12-12T19:34:17.6076307+05:30" endTime="2012-12-12T19:34:17.6136354+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="542f00ce-345d-4396-be7a-f26121f2066a">
+    </UnitTestResult>
+    <UnitTestResult executionId="09db8a1a-03cf-435d-a80b-299dae313b53" testId="ef223821-d864-ab6a-9926-54ac297fc1cf" testName="GetAccountRef" computerName="618-0152" duration="00:00:00.0016090" startTime="2012-12-12T19:34:17.6166369+05:30" endTime="2012-12-12T19:34:17.6216404+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09db8a1a-03cf-435d-a80b-299dae313b53">
+    </UnitTestResult>
+  </Results>
+</TestRun>

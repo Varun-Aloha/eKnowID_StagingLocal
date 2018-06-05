@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BackgroundCheck userId="username" password="password">
+  <BackgroundSearchPackage action="submit" type="demo product">
+    <ReferenceId>some_id_value</ReferenceId>
+    <PersonalData>
+      <PersonName>
+        <GivenName>* John</GivenName>
+        <MiddleName>Q</MiddleName>
+        <FamilyName>* Test</FamilyName>
+      </PersonName>
+      <Aliases>
+        <PersonName>
+          <GivenName>Jack</GivenName>
+          <MiddleName>Quigley</MiddleName>
+          <FamilyName>Example</FamilyName>
+        </PersonName>
+      </Aliases>
+      <DemographicDetail>
+        <GovernmentId countryCode="US" issuingAuthority="SSN">* 123456789</GovernmentId>
+        <DateOfBirth>* 1973-12-25</DateOfBirth>
+      </DemographicDetail>
+      <PostalAddress>
+        <PostalCode>* 83201</PostalCode>
+        <Region>* UT</Region>
+        <Municipality>* Salt Lake City</Municipality>
+        <DeliveryAddress>
+          <AddressLine>* 1234</AddressLine>
+          <StreetName>* Main Street</StreetName>
+        </DeliveryAddress>
+      </PostalAddress>
+      <EmailAddress>john@test.com</EmailAddress>
+      <Telephone>801-789-4229</Telephone>
+    </PersonalData>
+    <Screenings>
+      <!-- ** Identity Development Searches ** -->
+      <!-- Credit -->
+      <Screening type="credit">
+        <Vendor score="yes" fraud="yes">experian</Vendor>
+      </Screening>
+      <!-- Social Security Search -->
+      <Screening type="ssn">
+        <Vendor type="idsearchplus" hawkalert="yes">transUnion</Vendor>
+      </Screening>
+      <!-- Person Search -->
+      <Screening type="personsearch">
+        <Vendor>omnidata</Vendor>
+      </Screening>
+      <!-- Repository Custom Search -->
+      <Screening type="custom" qualifier="repository" number="1">
+      </Screening>
+      <!-- ** Investigative Searches ** -->
+      <!-- State Criminal -->
+      <Screening type="criminal" qualifier="statewide">
+        <Region>PA</Region>
+      </Screening>
+      <!-- County Criminal -->
+      <Screening type="criminal" qualifier="county">
+        <Region>WA</Region>
+        <County>KING</County>
+      </Screening>
+      <!-- County Civil -->
+      <Screening type="civil" qualifier="county">
+        <Region>WA</Region>
+        <County>KING</County>
+      </Screening>
+      <!-- Federal Criminal -->
+      <Screening type="criminal" qualifier="federal">
+        <Region>PA</Region>
+        <District>Middle</District>
+      </Screening>
+      <!-- International Criminal -->
+      <Screening type="criminal" qualifier="international">
+        <Region>ALBANIA</Region>
+      </Screening>
+      <!-- InstaCriminal MultiState Search -->
+      <Screening type="criminal" qualifier="multistate">
+      </Screening>
+      <!-- InstaCriminal Single State Search -->
+      <Screening type="criminal" qualifier="singlestate">
+        <Region>NM</Region>
+      </Screening>
+      <!-- Global Homeland Security Search -->
+      <Screening type="criminal" qualifier="security">
+      </Screening>
+      <!-- Eviction Search -->
+      <Screening type="eviction" qualifier="statewide">
+        <Region>NM</Region>
+      </Screening>
+      <!-- InstaEviction Search -->
+      <Screening type="eviction" qualifier="singlestate">
+        <Region>NM</Region>
+      </Screening>
+      <!-- Investigative Custom Search -->
+      <Screening type="custom" qualifier="investigative" number="1">
+      </Screening>
+      <!-- ** Verification Searches ** -->
+      <!-- Professional Reference -->
+      <Screening type="reference" qualifier="professional">
+        <Contact>
+          <PersonName>
+            <FormattedName>* Yuan Li Xian</FormattedName>
+          </PersonName>
+          <ContactMethod>
+            <Telephone>* 801-444-5544</Telephone>
+          </ContactMethod>
+          <Relationship>Supervisor</Relationship>
+        </Contact>
+      </Screening>
+      <!-- Personal Reference -->
+      <Screening type="reference" qualifier="personal">
+        <Contact>
+          <PersonName>
+            <FormattedName>* Yolanda Ortega</FormattedName>
+          </PersonName>
+          <ContactMethod>
+            <Telephone>* 505-292-3969</Telephone>
+          </ContactMethod>
+          <Relationship>Best Friend Forever</Relationship>
+        </Contact>
+      </Screening>
+      <!-- Resident -->
+      <Screening type="resident">
+        <StartDate>2005-06-01</StartDate>
+        <ContactInfo>
+          <PersonName>
+            <FormattedName>* Ramona Propietario</FormattedName>
+          </PersonName>
+          <Telephone>* 505-299-5527</Telephone>
+          <PostalAddress>
+            <PostalCode>87111</PostalCode>
+            <Region>NM</Region>
+            <Municipality>Albuquerque</Municipality>
+            <DeliveryAddress>
+              <AddressLine>3204</AddressLine>
+              <StreetName>Lucerne NE</StreetName>
+            </DeliveryAddress>
+          </PostalAddress>
+        </ContactInfo>
+      </Screening>
+      <!-- Worker's Compensation Report -->
+      <Screening type="workcomp">
+        <Region>TX</Region>
+      </Screening>
+      <!-- Employment -->
+      <Screening type="employment">
+        <OrganizationName>* Burger Shack</OrganizationName>
+        <Title>* Fry Cook</Title>
+        <StartDate>2005-06-01</StartDate>
+        <EndDate>2006-04-15</EndDate>
+        <Compensation>$7.50/hr</Compensation>
+        <ContactInfo>
+          <PersonName>
+            <FormattedName>John Bossman</FormattedName>
+          </PersonName>
+          <Telephone>* 801-123-4567</Telephone>
+          <PostalAddress>
+            <PostalCode>84020</PostalCode>
+            <Region>UT</Region>
+            <Municipality>Draper</Municipality>
+            <DeliveryAddress>
+              <AddressLine>1192</AddressLine>
+              <StreetName>Draper Parkway #401</StreetName>
+            </DeliveryAddress>
+          </PostalAddress>
+        </ContactInfo>
+      </Screening>
+      <!-- ** Credentials Searches ** -->
+      <!-- Instant Driving Records Search -->
+      <Screening type="license" qualifier="imvPersonal">
+        <Region>CT</Region>
+        <SearchLicense>
+          <License>
+            <LicenseNumber>* S32106445</LicenseNumber>
+            <LicensingAgency>* CT</LicensingAgency>
+            <LicenseName>* mvPersonal</LicenseName>
+          </License>
+        </SearchLicense>
+      </Screening>
+      <!-- Driving Records Search -->
+      <Screening type="license" qualifier="mvPersonal">
+        <Region>CT</Region>
+        <SearchLicense>
+          <License>
+            <LicenseNumber>* S32106445</LicenseNumber>
+            <LicensingAgency>* CT</LicensingAgency>
+            <LicenseName>* mvPersonal</LicenseName>
+          </License>
+        </SearchLicense>
+      </Screening>
+      <!-- Education -->
+      <Screening type="education">
+        <Region>UT</Region>
+        <EducationHistory>
+          <SchoolOrInstitution schoolType="university">
+            <SchoolName>* UNIVERSITY OF UTAH</SchoolName>
+            <LocationSummary>
+              <Municipality>SALT LAKE CITY</Municipality>
+              <Region>UT</Region>
+            </LocationSummary>
+            <Degree degreeType="bachelors">
+              <DegreeName>* COMMUNICATIONS</DegreeName>
+            </Degree>
+            <DatesOfAttendance>
+              <StartDate>
+                <StringDate>* 2002-09 TO 2006-01</StringDate>
+              </StartDate>
+            </DatesOfAttendance>
+          </SchoolOrInstitution>
+        </EducationHistory>
+      </Screening>
+      <!-- ** Other Services Searches ** -->
+      <!-- Substance Abuse Detection -->
+      <Screening type="drug">
+        <PermissiblePurpose>Pre-Employment</PermissiblePurpose>
+        <SpecimenId>123456</SpecimenId>
+      </Screening>
+      <Screening type="scorecard">
+        <LinkedApplicants>
+          <OrderId>12360</OrderId>
+          <OrderId>12362</OrderId>
+        </LinkedApplicants>
+      </Screening>
+      <AdditionalItems type="x:interface">
+        <Text>Applicant|Instant</Text>
+      </AdditionalItems>
+      <!-- monthly rent required for scorecard screenings -->
+      <AdditionalItems type="x:monthly_rent">
+        <Text>* 750</Text>
+      </AdditionalItems>
+      <!-- monthly income required for scorecard screenings -->
+      <AdditionalItems type="x:monthly_income">
+        <Text>* 2850</Text>
+      </AdditionalItems>
+      <!-- Postback URL required for push results delivery, otherwise set to FALSE -->
+      <AdditionalItems type="x:postback_url">
+        <Text>* http://www.submittee.com/listener/</Text>
+      </AdditionalItems>
+      <AdditionalItems type="x:postback_username">
+        <Text>username</Text>
+      </AdditionalItems>
+      <AdditionalItems type="x:postback_password">
+        <Text>password</Text>
+      </AdditionalItems>
+      <!-- Returned screening URL includes embedded credentials. Default is TRUE -->
+      <AdditionalItems type="x:embed_credentials">
+        <Text>TRUE|FALSE</Text>
+      </AdditionalItems>
+      <AdditionalItems type="x:ordernotes">
+        <Text>
+          Applicant is my brother-in-law - please be extra thorough.
+        </Text>
+      </AdditionalItems>
+    </Screenings>
+  </BackgroundSearchPackage>
+</BackgroundCheck>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BackgroundCheck userId="kentech_xml" password="K3n13ch3">
+  <BackgroundSearchPackage action="submit" type="XML Interchange Testing">
+    <ReferenceId>123456789</ReferenceId>
+    <PersonalData>
+      <PersonName>
+        <GivenName>* John</GivenName>
+        <MiddleName>Q</MiddleName>
+        <FamilyName>* Test</FamilyName>
+      </PersonName>
+      <Aliases>
+        <PersonName>
+          <GivenName>Jack</GivenName>
+          <MiddleName>Quigley</MiddleName>
+          <FamilyName>Example</FamilyName>
+        </PersonName>
+      </Aliases>
+      <DemographicDetail>
+        <GovernmentId countryCode="US" issuingAuthority="SSN">* 123456789</GovernmentId>
+        <DateOfBirth>* 1973-12-25</DateOfBirth>
+      </DemographicDetail>
+      <PostalAddress>
+        <PostalCode>* 83201</PostalCode>
+        <Region>* UT</Region>
+        <Municipality>* Salt Lake City</Municipality>
+        <DeliveryAddress>
+          <AddressLine>* 1234</AddressLine>
+          <StreetName>* Main Street</StreetName>
+        </DeliveryAddress>
+      </PostalAddress>
+      <EmailAddress>john@test.com</EmailAddress>
+      <Telephone>801-789-4229</Telephone>
+    </PersonalData>
+    <Screenings>
+      <!-- ** Identity Development Searches ** -->
+      <!-- Credit -->
+      <Screening type="credit">
+        <Vendor score="yes" fraud="yes">experian</Vendor>
+      </Screening>
+    </Screenings>
+  </BackgroundSearchPackage>
+</BackgroundCheck>

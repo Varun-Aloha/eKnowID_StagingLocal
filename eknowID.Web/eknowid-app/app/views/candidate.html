@@ -1,0 +1,49 @@
+﻿<div id="section-2">
+    <div class="top-content">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row" style="margin-top:-40px;">
+                    <div class="col-sm-5 col-sm-offset-3">
+                        <div class="form-box">
+                            <div class="form-top">
+                                <div class="form-top-left" style="margin-top:10px;font-size:20px;">
+                                    <p>Fill the applicant information.</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form name="candidateForm" method="post" ng-submit="saveCandidateDetail();" novalidate>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : candidateForm.FirstName.$invalid && (candidateForm.FirstName.$dirty || submitted)}">
+                                        <input type="text" name="FirstName" placeholder="First name..." class="form-control textbox" ng-model="FirstName" ng-required="true">
+                                        <p ng-show="candidateForm.FirstName.$error.required && (candidateForm.FirstName.$dirty || submitted)" class="help-block">First Name is required.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : candidateForm.LastName.$invalid && (candidateForm.LastName.$dirty || submitted)}">
+                                        <input type="text" name="LastName" placeholder="Last name..." class="form-control textbox" ng-model="LastName" ng-required="true">
+                                        <p ng-show="candidateForm.LastName.$error.required && (candidateForm.LastName.$dirty || submitted)" class="help-block">Last Name is required.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : candidateForm.email.$invalid  && (candidateForm.email.$dirty || submitted) }">
+                                        <input type="email" name="email" placeholder="Email..." class="form-control textbox" ng-model="EmailAddress" ng-required="true" ng-blur>
+                                        <p ng-show="candidateForm.email.$error.required && (candidateForm.email.$dirty || submitted)" class="help-block">Email is required.</p>
+                                        <p ng-show="candidateForm.email.$error.email && (candidateForm.email.$dirty || submitted)" class="help-block">Enter a valid email.</p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea name="description" placeholder="Please describe your screening situation"
+                                                  class="form-control" ng-model="CandidateDescription" style="line-height:none"></textarea>
+                                    </div>
+
+                                    <input type="submit" value="Save" class="signup-button">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

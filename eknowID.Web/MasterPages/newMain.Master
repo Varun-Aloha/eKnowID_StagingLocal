@@ -1,0 +1,733 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="newMain.master.cs" Inherits="eknowID.MasterPages.newMain" ClientIDMode="Static" %>
+<%--<%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>--%>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>eKnowID</title>
+    <link rel="shortcut icon" href="../Images/favicon_icon.ico" />
+
+    <!--Meta tags -->
+    <meta name="title" content="eKnowID" />
+    <meta name="description" content="Mistakes and outdated information in your employment background can cost you a job. Take proactive measures before releasing outdated or erroneous information with the help of eKnowID. Use our sophisticated Background Check services to  proactively manage your reputation." />
+    <link rel="image_src" href="https://www.eknowid.com/Images/protect_icon.png" />
+
+    <!-- CSS files -->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Styles/main.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css' />
+
+    <!-- Bootstrap-jquery data table CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.jqueryui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" />
+
+    <!-- Juery files -->
+    <script src="../Scripts/jquery-2.2.2.min.js"></script>
+    <script src="../Scripts/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap-confirmation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+    <script src="../Scripts/creditcard.js"></script>
+
+    <!-- Bootstrap-jquery data table JS-->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.jqueryui.min.js"></script>
+
+    <!--User script -->
+    <script src="../Scripts/UserScripts/newCommon.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        var imNotARobot = function () {
+            $("#errortxtRecaptchaVerification").html("");
+        };
+        $(document).ready(function () {
+            $(".mobileMenu").click(function () {
+                $("nav ul").slideToggle('fast');
+            });
+        });
+
+        $(function () {
+            var windowHeight;
+
+            $(window).on("scroll", function () {
+
+                $('.topBar').css('min-height', windowHeight - 40);
+
+                if ($(window).scrollTop() > 30) {
+                    $(".navbar-trans").css("background-color", "#454545");
+                }
+                else {
+                    $(".navbar-trans").css("background-color", "rgba(0,0,0,0.5)");
+                }
+            });
+
+            function setHeight() {
+                windowHeight = $(window).innerHeight();
+                $('.topBar').css('min-height', windowHeight - 40);
+            };
+            setHeight();
+
+            $(window).resize(function () {
+                setHeight();
+            });
+        });
+
+        function setFbCount(count) {
+            var likeCount = addCommas(count);
+            $('#<%=lblFacebokkLike.ClientID%>').html(likeCount);
+        }
+
+        var sess_expirationMinutes = 20;
+        var sess_warningMinutes = 17;
+        var sess_expireInterval;
+        var sess_expireAlert;
+        var SessionTimeOutflag = false;
+
+        function initSession() {
+            if ($("#hdnSessionFlag").val() == "true") {
+                sess_expireInterval = window.setInterval('sessLogOut()', 1200000); //session expire in 20 minutes 1200000
+                sess_expireAlert = window.setInterval('sessInterval()', 1020000); //session expire warning in 17 minutes 1020000
+                $(document).bind('keypress.session', function (ed, e) {
+                    sessKeyPressed(ed, e);
+                });
+            }
+        }
+
+        function sessKeyPressed(ed, e) {
+            clearInterval(sess_expireInterval);
+            clearInterval(sess_expireAlert);
+            sess_expireInterval = window.setInterval('sessLogOut()', 1200000); //session expire in 20 minutes 1200000
+            sess_expireAlert = window.setInterval('sessInterval()', 1020000); //session expire warning in 17 minutes 1020000
+        }
+
+        function sessLogOut() {
+            SessionTimeOutflag = true;
+            window.location.href = "../Pages/index.aspx";
+        }
+
+        function sessInterval() {
+            var errorMsg = 'Your session will expire in ' + (sess_expirationMinutes - sess_warningMinutes) + ' minutes. <br/> Please save your data.';
+            $("#SessionContent").html(errorMsg);
+            $('#SessionModal').modal('show');
+        }
+        $(function () {
+            initSession();
+        });
+
+    </script>
+    <style type="text/css">
+        ul.list_PwdVerification {
+            list-style: none;
+            display: inline-block;
+            margin-bottom: 10px;
+            /*padding-left: 13px;
+            margin-top: 0px;*/
+        }
+
+        ul.list_PwdVerification li {
+            background: rgba(255, 255, 255, 0) url(../Images/CorssSign.png) no-repeat 10px center;
+            margin-bottom: 2px;
+            padding: 0px 0px 0px 40px;
+            /*margin: 5px auto;*/
+        }
+
+        ul.list_PwdVerification li::before {
+            content: '';
+            position: relative;
+            border: 1px solid #cddce9;
+            margin-right: 10px;
+        }
+        div.popover {
+            min-width: 420px;
+            background-color:rgba(255, 255, 255, 0.9);
+            padding:0px;
+        }
+        .popover-title{
+            background-color: rgba(128,128,128,0.9);
+            color: white;
+        }
+        .popover-content
+        {
+            padding:0px;
+            background-color:white;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="pageBody" runat="server">
+    <form id="newMstrPage" runat="server">
+        <asp:HiddenField ID="hdnSessionFlag" runat="server" />
+
+        <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="innerHeader">
+                                <div class="logo">
+                                    <a href="../Pages/Index.aspx">
+                                        <img src="../images/eknowid-logo.png" alt="eKnowID" /></a>
+                                </div>
+                                <nav>
+                                    <a class="mobileMenu">
+                                        <img src="../images/menu.png" /></a>
+                                    <ul>
+                                        <li><a href="../Pages/Aboutus.aspx">Why eKnowID</a></li>
+                                        <li><a href="../Pages/EnterpriseSolutions.aspx">Enterprise Solutions</a></li>
+                                        <li>
+                                            <a href="../Pages/HowItWork.aspx">How It Works</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="topBtn">
+                                    <asp:Panel ID="pnlLogin" runat="server" Visible="true">
+                                        <input type="button" id="btnSignup" value="Sign Up" class="btn btn-default btnSignup" onclick="openSignupModal();" />
+                                        <input type="button" id="btnLoginhead" value="Login" class="btn btn-default btnLogin" onclick="return openLoginModal();" />
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlLogout" runat="server" Visible="false">
+                                        <ul class="nav navbar-nav" style="margin-top: -9px;">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle pull-left" data-toggle="dropdown">
+                                                    <asp:Label ID="lblRequesterName" runat="server"></asp:Label>&nbsp&nbsp
+                                                    <span class="glyphicon glyphicon-user pull-right"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="../Pages/YourWallet.aspx">Your Wallet</a></li>
+                                                    <li><a href="../Pages/AdminDashboard.aspx">Manage Admin</a></li>
+                                                    <% if (userType == (int)EknowIDLib.UserTypeEnum.SUPER_ADMIN) { %>
+                                                        <li><a href="../Pages/AddOnSearches.aspx">Alacart Reports</a></li>
+                                                        <li><a href="../Pages/AccessFees.aspx">Access Fees</a></li>                                                        
+                                                    <% } %>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <asp:LinkButton ID="Logout" runat="server" OnClick="Logout_Click" CausesValidation="false">Sign Out</asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </asp:Panel>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+
+
+        <%--Get Started modal popup--%>
+
+        <div class="container">
+            <div class="row">
+                <div class="modal fade" id="mainModal" role="dialog" tabindex='-1' data-backdrop="static">
+                    <div class="modal-dialog" style="width: 557px;">
+                        <div class="modal-content text-center">
+                            <div class="modal-header modal-header-padding">
+                                <button type="button" class="close closeX" style="opacity: 1" onclick="hideModalPopupWindow('mainModal')"><img src="../Images/close_btn.png" /></button>
+                                <h4 class="modal-title font-size-30px margin-left-15px">Who do you want a report on?</h4>
+                                <p class="modal-header-title margin-left-15px"></p>
+                            </div>
+                            <div class="modal-body padding-left-74px padding-top-35px">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="row">
+                                            <a href="../Pages/ApplicantPackages.aspx">
+                                                <div class="circle">
+                                                    <div class="circle-inner">
+                                                        <img src="../images/employee.png" onmouseover="this.src='../images/employee-hover.png'"; onmouseout="this.src='../images/employee.png'" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="circle-text">
+                                                    <p style="margin-left: -28px">Candidate / Employee</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2" style="margin-left: -20px;">
+                                        <div>
+                                            <img src="../Images/Vertical-Divider.png" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="row">
+                                            <a href="../Pages/getStarted.aspx">
+                                                <div class="circle">
+                                                    <div class="circle-inner">
+                                                        <img src="../images/myself.png" onmouseover="this.src='../images/myself-hover.png'"; onmouseout="this.src='../images/myself.png'" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="circle-text">
+                                                    <p style="margin-left: -28px">Myself</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%--End get started modal popup--%>
+
+        <%--Bootstrap Session Exipre Dialog--%>
+
+        <div class="container">
+            <div class="row">
+                <div class="modal fade" id="SessionModal" role="dialog" tabindex='-1' data-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="margin-top: 150px;">
+                            <div class="modal-header modal-header-padding">
+                                <button type="button" class="close closeX" style="opacity: 1" onclick="hideModalPopupWindow('SessionModal')">
+                                    <img src="../Images/close_btn.png" /></button>
+                                <h4 class="modal-title font-size-30px margin-left-15px">Your session is about to expire!</h4>
+                                <p class="modal-header-title margin-left-15px"></p>
+                            </div>
+
+                            <div class="modal-body text-center">
+                                <div id="SessionContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%--End Bootstrap Session Expire Dialog  --%>
+
+
+        <%-- Forgott password popup menu --%>
+
+        <div class="container">
+            <div class="row">
+                <div class="modal fade" id="forgottPasswordModal" role="dialog" tabindex='-1' data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog" style="width: 457px;">
+                        <div class="modal-content margin-top-100px">
+                            <div class="modal-header modal-header-padding">
+                                <button type="button" class="close closeX" onclick="hideModalPopupWindow('forgottPasswordModal')" style="opacity: 1">
+                                    <img src="../Images/close_btn.png" /></button>
+                                <h4 class="modal-title font-size-30px margin-left-15px">Forgot Password</h4>
+                                <p class="modal-header-title margin-left-15px"></p>
+                            </div>
+
+                            <div class="modal-body text-center">
+
+                                <div class="row">
+                                    <div class="col-sm-12 text-left">
+                                        Enter your Registered Email Address and we will send a mail containing the Password Reset Link  
+                                    </div>
+                                </div>
+
+                                <div class="row margin-top-15px">
+                                    <div class="col-sm-12">
+                                        <label>Email</label>
+                                        <span>
+                                            <asp:TextBox ID="txtForgottPwd" runat="server" CssClass="form-control height-38px text-shadow" AutoPostBack="false"></asp:TextBox>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row text-left">
+                                    <div class="col-sm-12">
+                                        <span id="lblForgottPwdError" class="Error pull-left" style="margin-top: 10px;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <asp:Button ID="btnForgottPwd" UseSubmitBehavior="false" runat="server" CssClass="btn btn-default btn-signUp" Text="Submit" OnClientClick="return validateForgottPassword();" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%-- End forgott password popup menu --%>
+
+        <%-- Login popup Modal --%>
+        <div class="container">
+            <div class="row">
+                <div class="modal fade" id="divloginModal" role="dialog" tabindex='-1' data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog" style="width: 457px;">
+                        <div class="modal-content margin-top-100px">
+                            <div class="modal-header modal-header-padding">
+                                <button type="button" class="close closeX" style="opacity: 1" onclick="hideModalPopupWindow('divloginModal')">
+                                    <img src="../Images/close_btn.png" /></button>
+                                <h4 class="modal-title font-size-30px margin-left-15px">Sign In</h4>
+                                <p class="modal-header-title margin-left-15px"></p>
+                            </div>
+                            <div class="modal-body text-center">
+                                <div id="RequesterLogin">
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Email</label>
+                                            <span>
+                                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control height-38px text-shadow" AutoPostBack="false"></asp:TextBox>
+                                                <span id="errorEmail" class="Error pull-left"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Password</label>
+                                            <span>
+                                                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control height-38px text-shadow" TextMode="Password" AutoPostBack="false"></asp:TextBox>
+                                                <span id="errorPassword" class="Error pull-left"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span id="lblAuthenticationError" class="Error text-left"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin-top: -30px;">
+                                        <div class="col-sm-12">
+                                            <asp:Button ID="btnLogin" UseSubmitBehavior="false" runat="server" CssClass="btn btn-default btn-signUp" Text="Login" OnClientClick="return validateLoginModal();" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6 text-left">
+                                            <a id="linkForgotPassword" href="#" onclick="return openForgottPasswordModal();" class="nounder-line">Forgot Password?</a>
+                                        </div>
+
+                                        <div class="col-sm-6 pull-right">
+                                            <a id="linkSignUp" href="#" data-toggle="modal" onclick="openSignupModal();" class="pull-right nounder-line">Sign Up</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%--End Login modal poup --%>
+
+
+        <%--Background Overlay --%>
+        <div id="overlay">
+            <img src="../Images/loader.gif" class="loading" />
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div id="errorMessage" class="responsiveAlert errorMessage">
+                    <div class="alert alert-danger alert-dismissable alertPadding">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <div class="alertFont" id="ErrorDescription"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%--End Background Overlay --%>
+
+        <%-- Requestor SignUp Modal --%>
+
+        <div id="singupOverlay">
+            <img src="../Images/loader.gif" class="Signuploading" />
+        </div>
+
+        <div class="modal fade" id="ModalSingup" role="dialog" data-backdrop="static">
+            <div class="modal-dialog" style="width: 40%;">
+                <div class="modal-content" style="border-radius:10px;">
+                    <div id="RequesterHeader">
+                        <div class="modal-header modal-header-padding" style="border-top-left-radius:8px; border-top-right-radius:8px;">
+                            <button type="button" class="close closeX" style="opacity: 1" onclick="hideModalPopupWindow('ModalSingup')">
+                                <img src="../Images/close_btn.png" /></button>
+                            <span id="headerTitle" class="modal-title font-size-30px margin-left-15px">Create a Free Business Account</span>
+                            <%--<p id="headerDescription" class="modal-header-title margin-left-15px">Fill in the form below to get instant access.</p>--%>
+                        </div>
+                    </div>
+
+                    <div class="modal-body" style="text-align: center">
+
+                        <div id="RequesterDetail">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>First Name</label>
+                                    <span>
+                                        <asp:TextBox ID="txtRequestorFirstName" runat="server" MaxLength="30" CssClass="form-control charactersOnly height-38px text-shadow" AutoPostBack="false" autofocus="autofocus"></asp:TextBox>
+                                    </span>
+                                    <span id="errortxtRequestorFirstName" class="Error pull-left"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Last Name</label>
+                                    <span>
+                                        <asp:TextBox ID="txtRequestorLastName" runat="server" MaxLength="30" CssClass="form-control charactersOnly height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtRequestorLastName" class="Error pull-left"></span>
+                                </div>
+                            </div>
+                            <%--<div class="row">
+                                <div class="col-sm-6">
+                                    <label>Company Name</label>
+                                    <span>
+                                        <asp:TextBox ID="txtRequestorrCompanyName" runat="server" MaxLength="30" CssClass="form-control charactersOnly height-38px text-shadow" AutoPostBack="false" autofocus="autofocus"></asp:TextBox>
+                                    </span>
+                                    <span id="errortxtRequestorCompanyName" class="Error pull-left"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Phone number</label>
+                                    <span>
+                                        <asp:TextBox ID="txtRequestorPhoneNumber" runat="server" MaxLength="30" CssClass="form-control charactersOnly height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtRequestoPhoneNumber" class="Error pull-left"></span>
+                                </div>
+                            </div>--%>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Email</label>
+                                    <span>
+                                        <asp:TextBox ID="txtRequestorEmail" runat="server" MaxLength="50" CssClass="form-control height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtRequestorEmail" class="Error pull-left"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Password</label>
+                                    <span>
+                                        <asp:TextBox ID="txtRequestorPassword" runat="server" TextMode="Password" MaxLength="15" CssClass="form-control height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtRequestorPassword" class="Error pull-left text-left"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12" style="padding:10px;">
+                                   <%-- <span style="float:left;">
+                                        <input type="checkbox" id="chkTermsOfUse" />
+                                    </span>--%>
+                                    <div class="col-sm-1" style="padding:0px;">
+                                        <input style="width: 100%; height: 25px;" type="checkbox" id="chkTermsOfUse" /></div>
+                                    <div class="col-sm-11" style="padding:0px;">
+                                        <label style="font-weight:normal; text-align:left" class="confirm-check" for="eKnowID_TermsOfUseCheckBox">
+                                            I agree to the 
+                                        <a href="https://eknowid.com/Pages/TermsofUse.aspx" target="_blank">Terms of Use</a>, 
+                                        <a href="https://eknowid.com/Pages/PrivacyPolicy.aspx" target="_blank">Privacy Policy</a>
+                                            , and I certify that I will only use eKnowID for the purpose of Employment/Tenant screening.</label>
+                                    </div>
+                                    <span id="errortxtRequestorTermsOfUser" class="Error pull-left"></span>
+                                </div>
+                            </div>
+
+                            <div id="divPwdPolicies" class="floatLeft clearBoth hidden">
+                                <div style="color: red;">
+                                    <%--<span style="font-size: 12px;" id="pwdVerificationTitle">Password must meet the following minimum standards(any 4):</span>--%>
+                                    <ul class="list_PwdVerification">
+                                        <li class="PwdNonVerified" id="pwdLength">Be at least six characters in length</li>
+                                        <li class="PwdNonVerified" id="pwdLowerCaseChar">Contain at least one lowercase character</li>
+                                        <li class="PwdNonVerified" id="pwdNumberChar">Contain at least one number</li>
+                                        <li class="PwdNonVerified" id="pwdSpecialChar">Contain at least one special character</li>
+                                        <li class="PwdNonVerified" id="pwdUpperCaseChar">Contain at least one uppercase character</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="g-recaptcha" data-callback="imNotARobot" data-sitekey="6LcYayoUAAAAADmtlgfRRebed0NGF2_ZbxeTGrtO" style="transform:scale(0.9);-webkit-transform:scale(0.9);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                                    <span id="errortxtRecaptchaVerification" class="Error pull-left"></span>
+                                </div>                               
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <asp:Button ID="btnRequestorSignup" UseSubmitBehavior="false" runat="server" Text="SIGN UP" CssClass="btn btn-default btn-signUp" OnClientClick="return validateSignup();" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="Error pull-left" id="signupError"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label style="font-weight:normal; border-style:none;" class="form-control">Already have an account? <a href="#" onclick="return openLoginModal();" class="link-1">Log&nbsp;in.</a></label>
+                                    <%--<a href="#" class="signIn signButton signInDiv" title="SignIn" id="signInlink" onclick="return openLoginModal();">SignIn</a>--%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-- End  Requestor SignUp and Company Detail Modal --%>
+
+
+        <%--Compnay profile modal--%>
+
+        <div class="modal fade" id="ModalCompnayProfile" role="dialog" data-backdrop="static">
+            <div class="modal-dialog" style="width: 457px;">
+                <div class="modal-content">
+
+                    <div class="modal-header modal-header-padding">
+                        <button type="button" class="close closeX" style="opacity: 1" onclick="hideModalPopupWindow('ModalCompnayProfile')">
+                            <img src="../Images/close_btn.png" /></button>
+                        <h4 class="modal-title font-size-30px margin-left-15px">Company Profile</h4>
+                        <p class="modal-header-title margin-left-15px">Fill in the form below to create your company profile.</p>
+                    </div>
+
+                    <div class="modal-body" style="text-align: center">
+
+                        <div id="RequesterCompanyDetail">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Company Name</label>
+                                    <span>
+                                        <asp:TextBox ID="txtCompanyName" runat="server" MaxLength="50" CssClass="form-control height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtCompanyName" class="Error pull-left"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Job Title</label>
+                                    <span>
+                                        <asp:TextBox ID="txtJobTitle" runat="server" MaxLength="100" CssClass="form-control height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtJobTitle" class="Error pull-left"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Phone Number</label>
+                                    <span>
+                                        <asp:TextBox ID="txtPhoneNo" runat="server" MaxLength="10" CssClass="form-control digitsOnly height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtPhoneNo" class="Error pull-left text-left"></span>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label>Tax ID</label>
+                                    <span>
+                                        <asp:TextBox ID="txtTaxId" runat="server" MaxLength="9" CssClass="form-control digitsOnly height-38px text-shadow" AutoPostBack="false"></asp:TextBox></span>
+                                    <span id="errortxtTaxId" class="Error pull-left text-left"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Description</label>
+                                    <span>
+                                        <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Rows="2" Columns="10"
+                                            placeholder="Please describe your screening situation - hiring Volume , legal requirements, special needs, etc."
+                                            MaxLength="150"
+                                            CssClass="form-control height-38px text-shadow">
+                                        </asp:TextBox></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <asp:Button ID="btnRequestorCompany" UseSubmitBehavior="false" runat="server" Text="CREATE" CssClass="btn btn-default btn-signUp" OnClientClick="return validateCompany();" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="Error pull-left" id="compnayMsg"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%-- End compnay profile modal --%>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <div class="row" style="margin-right: 0px;">
+                <div class="col-lg-3 col-lg-offset-1 col-md-6 col-sm-12 col-xs-12" style="margin-top: 10px;">
+                    <article>
+                        <div class="twitter" id="jstweets">
+                            <a class="twitter-timeline" data-dnt="true" target="_blank" href="https://twitter.com/eKnowID" data-widget-id="345890537678708738" data-chrome="noheader nofooter noborders transparent" data-show-replies="false" data-tweet-limit="1" style="color: #ffffff; text-decoration: none; margin-left: 20px; font-weight: bold;">Tweets by @eKnowID</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-lg-offset-1 col-sm-12 col-xs-12" style="margin-top: 20px;">
+                    <article>
+                        <p>
+                            <img src="../images/facebook_f_icon.png" />
+                            <span class="facebook">Join us on Facebook</span>
+                        </p>
+                        <p class="facebook-count">
+                            <asp:Label ID="lblFacebokkLike" runat="server"></asp:Label>
+                        </p>
+                        <p class="facebook" style="margin-left: 0px; margin-top: -15px;">Fans on Facebook </p>
+                        <div>
+                            <a href="https://www.facebook.com/eknowid" target="_blank">
+                                <img src="../Images/Facebook-Icon.png" />
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-lg-offset-1 col-sm-12 col-xs-12 footer-contactus">
+                    <h4>Contact Us</h4>
+                    <article class="contact-section">
+                        We are available always to meet your needs.Please contact our corporate office via phone for further information.
+
+                    <div style="line-height: 200%; margin-top: 10px;">
+                        Phone : 1-888 -SIX CHEC (749-2432)
+                        <a style="text-decoration: none; color: #ffffff" href="mailto:support@eknowid.com ">support@eknowid.com
+                        </a>
+                    </div>
+                    </article>
+                </div>
+            </div>
+        </footer>
+        <section>
+            <div class="container" style="width: 100%; padding-left: 0px; padding-right: 0px;">
+                <div class="footerBtm">
+                    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-7" style="padding-left: 0px;">
+                            <ul class="footermenu">
+                                <li><a href="../Pages/index.aspx">Home</a></li>
+                                <li><a href="../Pages/WhyEKnowID.aspx">Why eKnowID</a></li>
+                                <li><a href="../Pages/Aboutus.aspx">About Us</a></li>
+                                <li><a href="../Pages/Feedback.aspx">Feedback</a></li>
+                                <li><a href="../Pages/PrivacyPolicy.aspx">Privacy Policy</a></li>
+                                <li><a href="../Pages/TermsofUse.aspx">Terms of Use</a> </li>
+                                <li><a href="../Pages/eKnowID_blog.aspx" target="_blank">Blog</a></li>
+                                <li><a href="../Pages/FAQ.aspx">FAQs</a></li>
+                                <li><a href="../Pages/PressLink.aspx">Press</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3  col-lg-offset-1 copy">
+                            Copyright © 2014.  eKnowID. All Rights Reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

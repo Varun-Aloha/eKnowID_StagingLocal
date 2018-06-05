@@ -1,0 +1,159 @@
+﻿<div id="section-2">
+    <div class="container">
+        <form name="paymentForm" method="post" ng-model="creditCard" ng-submit="savePaymentData();" novalidate validate-card>
+
+            <div id="overlay" ng-show="loading">
+                <img ng-src="/eknowID.Web/Images/loader.gif" class="loading" />
+            </div>
+
+            <div class="row" style="margin-left:10px;margin-right:20px;margin-bottom:130px;">
+                <div class="col-lg-6 col-sm-12 col-xs-12 payment" style="top:115px;">
+                    <div style="text-transform:capitalize;font-size:35px;">payment Information</div>
+                    <img src="Images/card.png" width="180" class="card">
+
+                    <div>
+                        <div class="form-group" ng-class="{ 'has-error' : paymentForm.number.$dirty && !creditCard.valid && paymentForm.number.length>0}">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Card Number:</label>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="number" ng-model="creditCard.number" tabindex="1" ng-required="true" format-card>
+
+                                    <div ng-class="{ 'has-error' : paymentForm.number.$dirty && !creditCard.valid && creditCard.number.length>0 }">
+                                        <p ng-show="paymentForm.number.$dirty && !creditCard.valid && creditCard.number.length>0" class="help-block">Please Enter valid Card number</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error' : paymentForm.expire.$dirty && !creditCard.expiry }">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Expire Date:</label>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <select class="form-control" ng-model="creditCard.month" name="expire" tabindex="2" ng-disabled="!creditCard.valid">
+                                        <option ng-repeat="mon in month">{{mon}}</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <select class="form-control" ng-model="creditCard.year" tabindex="3" ng-disabled="!creditCard.valid">
+                                        <option ng-repeat="y in years">{{y}}</option>
+                                    </select>
+
+                                    <div ng-class="{ 'has-error' : paymentForm.expire.number.$dirty && !creditCard.expiry }">
+                                        <p ng-show="paymentForm.expire.$dirty && !creditCard.expiry" class="help-block">Expire.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error' : paymentForm.cvv.$dirty && !creditCard.cvcValid }">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Security Code:</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="password" name="cvv" ng-model="creditCard.cvc" class="form-control" maxlength="4" size="4" ng-disabled="!creditCard.expiry" />
+
+                                    <div ng-class="{ 'has-error' : (paymentForm.cvv.$dirty && !creditCard.cvcValid) || verified() }">
+                                        <p ng-show="paymentForm.cvv.$dirty && !creditCard.cvcValid" class="help-block">Not valid CVV.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="firstChecked">I agree to the Terms of Use and Privacy Policy
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="secondChecked"> I am requesting a backgroundcheck report for the permissible purpose of employement screening.<br /> I will abide by the <span class="blue_color">Notice of Users of Consumer Reports: Obligations of Users Under the FCRA.</span><br>
+                                    I understand that obtaining information on a consumer from a consumer reporting agency under false pretenss may lead to fines and imprisonment under title 18 , United State Code.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="thirdChecked"> I have Consent or will obtain consent from the candidate to run this report.<br />
+                                    I will provide candidates with A Summary Of your Rights Under the Fair  Credit Reporting Act.
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success" value="Place Order" ng-disabled="!creditCard.cvcValid">Place Order</button>
+                    </div>
+                </div>
+                <div class="col-lg-5  col-sm-12  col-xs-12" style="top:115px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hire_box">
+                                <h4>Hire with confident</h4>
+                                <ul class="list_1">
+                                    <li><img src="Images/icon1.png"> <span>100% Money Back Guarantee</span></li>
+                                    <li><img src="Images/icon2.jpg"> <span>Data Protected By SSL Encryption</span></li>
+                                    <li><img src="Images/icon3.png"> <span>Better Business Bureau Accredited</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="order_summary">
+                                <div class="order_summary_title">
+                                    <h4 class="pull-left">order summary</h4>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-success" value="Place Order" ng-disabled="!creditCard.cvcValid">Place Order</button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="order_summary_desc">
+                                        <div class="pull-left">
+                                            <h5>Report Inclued</h5><p><span class="blue_color"><a href="#package">Edit</a></span></p>
+                                        </div>
+                                        <div class="pull-right">
+                                            <!--<div class="price">{{basicReport.PlanPrice | currency:"$"}}</div>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p>Includes the following</p>
+                                    </div>
+                                </div>
+                                <div class="summry_list">
+                                    <ul class="list_2">
+                                        <li ng-repeat="name in basicReport.PlanDetails">{{name.PlanDetails}}</li>
+                                        <li ng-repeat="report in alacartReportList">{{report.Name}}</li>
+                                    </ul>
+                                </div>
+                                <div class="order_summary_tot">
+                                    <div class="col-xs-12">
+                                        <div class="pull-left">
+                                            <h5>total </h5>
+                                        </div>
+                                        <div class="pull-right">
+                                            <div class="price">{{totalReport | currency:"$"}}</div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p>Account verifacation<span class="col_green"> < 1</span></p>
+                                        <p>Account verifacation<span class="col_green"> < 1</span></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

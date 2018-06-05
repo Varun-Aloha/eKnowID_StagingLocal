@@ -1,0 +1,2814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8ECAE83D-F671-440B-B494-EEE3B38B6869}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eknowID</RootNamespace>
+    <AssemblyName>eknowID</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <IncludeAppPool>true</IncludeAppPool>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah">
+      <HintPath>..\..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="jquery.spellchecker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\1121\Downloads\jQuery-Spell-Checker-for-ASP.NET-master\jQuery-Spell-Checker-for-ASP.NET-master\jquery.spellchecker.webform\bin\jquery.spellchecker.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\SocialAuth.NET.2.4.0.0\Lib\4.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\SocialAuth.NET.2.4.0.0\Lib\4.0\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PayPalCoreSDK, Version=1.7.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PayPalCoreSDK.1.7.1\lib\net45\PayPalCoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalMerchantSDK, Version=2.16.117.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PayPalMerchantSDK.2.16.117\lib\net20\PayPalMerchantSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalPermissionsSDK, Version=2.8.109.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PayPalPermissionsSDK.2.8.109\lib\net20\PayPalPermissionsSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="SocialAuth-net, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SocialAuth.NET.2.4.0.0\Lib\4.0\SocialAuth-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Xizmark.Webber, Version=1.1.5883.41405, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Webber.1.1.1\lib\net40\Xizmark.Webber.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-modal.css" />
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrapValidator.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\font-awesome\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\font-awesome\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\font-awesome\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Controls\ProgressBar.ascx" />
+    <Content Include="Htmls\Emails\ActivateUserAccount.html" />
+    <Content Include="Htmls\Emails\CreditReportCredentialingRequest.html" />
+    <Content Include="Htmls\Emails\ResetPassword.html" />
+    <Content Include="Htmls\OrderError.htm" />
+    <Content Include="Htmls\OrderExpired.html" />
+    <Content Include="Images\AMEX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow-new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\black-arrow_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\black-arrow_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\close_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CorssSign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Dankort.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\DINERSCLUB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\DISCOVER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\eknowid-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\email.png" />
+    <Content Include="Images\employee-hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\employee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EreNethover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Facebook-Icon.png" />
+    <Content Include="Images\Finance-Wallet-icon.png" />
+    <Content Include="Images\Forbeshover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HfGatehover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home-aboutus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home-blog_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MoneyWatchhover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\myself-hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\myself.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-AmericanExpress-Card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-DinersClub-Card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-Discover-Card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment-icon1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment-icon2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment-icon3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-JCB-Card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-Maestro-Card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-Master-Card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Payment-Visa-card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PopupCloseIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PressLink.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MoneyWatch.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Forbes.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HfGate.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\InformationWeek.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EreNet.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\InformationWeekhover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\JCB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\maestro.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MASTER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pimg1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pimg2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pimg3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pimg4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pimg5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Process-100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Process-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Process-65.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Process-70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Refund_Small.png" />
+    <Content Include="Images\removeIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\loader.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrapValidator.css" />
+    <Content Include="Controls\AdditionalSkills.ascx" />
+    <Content Include="Controls\AlaCartReport.ascx" />
+    <Content Include="Controls\AlacartReportSummary.ascx" />
+    <Content Include="Controls\completePurchase.ascx" />
+    <Content Include="Controls\ConfirmPassword.ascx" />
+    <Content Include="Controls\ContactInfo.ascx" />
+    <Content Include="Controls\Footer.ascx" />
+    <Content Include="Controls\RC_EmploymentDetails.ascx" />
+    <Content Include="Controls\RC_EducationalDetails.ascx" />
+    <Content Include="Controls\ResumeChecking_AlaCartReport.ascx" />
+    <Content Include="Controls\UpgradeAlacartReport.ascx" />
+    <Content Include="Controls\dob.ascx" />
+    <Content Include="Controls\year.ascx" />
+    <Content Include="Controls\IdentityTheftSearchByProfHeader.ascx" />
+    <Content Include="Controls\DrugsVerficationDetails.ascx" />
+    <Content Include="Controls\EducationalDetails.ascx" />
+    <Content Include="Controls\EmploymentDetails.ascx" />
+    <Content Include="Controls\ForgotPassword.ascx" />
+    <Content Include="Controls\JoinNow.ascx" />
+    <Content Include="Controls\LanguageKnown.ascx" />
+    <Content Include="Controls\OrderDetails_ContactInfo.ascx" />
+    <Content Include="Controls\purchaseError.ascx" />
+    <Content Include="Controls\RCheckerHeader.ascx" />
+    <Content Include="Controls\stateDropdown.ascx" />
+    <Content Include="Controls\ImageSlider.ascx" />
+    <Content Include="Controls\innerSignIn.ascx" />
+    <Content Include="Controls\innerSignUp.ascx" />
+    <Content Include="Controls\innerSignUpData.ascx" />
+    <Content Include="Controls\joinEknowID.ascx" />
+    <Content Include="Controls\latestNews.ascx" />
+    <Content Include="Controls\LicenseInformation.ascx" />
+    <Content Include="Controls\partner.ascx" />
+    <Content Include="Controls\PlanDisplay.ascx" />
+    <Content Include="Controls\PlanOrderSummary.ascx" />
+    <Content Include="Controls\ReferenceDetails.ascx" />
+    <Content Include="Controls\SampleReport1.ascx" />
+    <Content Include="Controls\SampleReport2.ascx" />
+    <Content Include="Controls\SampleReport3.ascx" />
+    <Content Include="Controls\SearchByProfHeader.ascx" />
+    <Content Include="Controls\signUp.ascx" />
+    <Content Include="Controls\singIn.ascx" />
+    <Content Include="Controls\UploadResume.ascx" />
+    <Content Include="default.aspx" />
+    <Content Include="dictionary\dict-large.txt" />
+    <Content Include="Images\add-manually.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\black_bk.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\check_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\error-icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\gray_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\index-logo.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\linked-in.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\loader-image.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\minus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\resume.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\right_arrow_new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\total_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Htmls\DataLoading.htm" />
+    <Content Include="Htmls\Emails\ResumeCheckerSupport.html" />
+    <Content Include="Htmls\Emails\PaymentCompleteSupport.html" />
+    <Content Include="Htmls\Emails\feedback.htm" />
+    <Content Include="Htmls\Emails\Feedback_reply.htm" />
+    <Content Include="Htmls\Emails\PaymentComplete.html" />
+    <Content Include="Htmls\Emails\StatusComplete.html" />
+    <Content Include="Htmls\Emails\DrugVerification.html" />
+    <Content Include="Htmls\Emails\ForgotPassword.html" />
+    <Content Include="Htmls\Emails\RegistrationSuccess.html" />
+    <Content Include="Htmls\OrderInProgress.htm" />
+    <Content Include="Htmls\RegistrationSuccess.html" />
+    <Content Include="Images\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\About_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\about_banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\about_us_seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\address_history_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\affordability_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\amex_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\analysis_summery_grid_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\animated_favicon1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_icon_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_img_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_right_grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arrow_top_user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\asc.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\background_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\background_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\banner_about_image.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\banner_slider_menu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Banner_Sub_About_Page.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Banner_Sub_Why_Page.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\banner_why_image.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\basic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\basic_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\benifits_img1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\benifits_img2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\benifits_img3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_check_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_contact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_content.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_menu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_menu_selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_menu_unselected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_radar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_testimonial.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg_topbar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\black_btn_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\black_btn_middle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\black_btn_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\blog_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bottom_3box_bg_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bottom_bg_body_special_offer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bottom_bg_repet_special_offer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bottom_box_vertical_line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bottom_corner_special_offer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bullet.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cal_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\captcha2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\caption.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\caption_news.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Checkmate_Circle_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\checkout_blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_package_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_border_grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_bottomNew.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_bottom_New.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_left_shadow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_left_shadow_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_right_shadow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_right_shadow_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\choose_plan_top_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\clear_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\close_20x20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Close_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\close_icon_popup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\color_hover_round.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\coming_soon_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\coming_soon_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\coming_soon_right_rotate.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\compliant_focus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\complian_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\contact_gradient.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\continue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\continue_blue_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\continue_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\continue_btn_blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\continue_btn_blue_disable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\continue_btn_sp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Create_Ac_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\desc.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\disabled_next_btn_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\discover_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\down_arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\down_arrow_grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\drug_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\eknow_glanss_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EKnow_ID_image-%28circle%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\eknow_youtube.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\enterprise_banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ereNet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\export_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\express_checkout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\facebook25x25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\facebook_f_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Facebook_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\fail_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\favicon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\favicon_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\footer_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Forbes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\forgot_password_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_analysis_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_analysis_disable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_analysis_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_check_blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_resume_check_158x34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_resume_check_green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_resume_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free_resume_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\get_green_hover_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\get_green_normal_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\get_started_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\get_started_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\get_started_now.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\gold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\gold_yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\go_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\graphic_home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\graphic_partners.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\greenTick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\green_plan_tick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\green_tick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\green_tick19x20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\green_tick_round.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HC Online.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HeaderSeprator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\headerSeprator1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header_bg_top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header_seprater.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\help.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\help.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_3tab_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_3tab_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_box_1s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_box_2s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_box_3s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_box_hover_1s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_box_hover_2s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_box_hover_3s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_start_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_statement.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_statement_seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\hori_line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\hori_line_grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\hori_line_secure.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HowItWorks_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\how_it_wk_line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\how_work_banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_affordable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_compliant_technology.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_currect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_innovative_technology.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_money_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_privacy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_quality.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_reports.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_report_included.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\identity_verification_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\image_1_testimonial.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\important.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\import_linkdin_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\import_profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\info.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\InformationWeek.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\innovation_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\innovative_technology.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\in_the_press_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\in_the_press_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Job_Seekers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\joinId_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\JoinNow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\jquery.datatable\back_disabled.png" />
+    <Content Include="Images\jquery.datatable\back_enabled.png" />
+    <Content Include="Images\jquery.datatable\back_enabled_hover.png" />
+    <Content Include="Images\jquery.datatable\details_close.png" />
+    <Content Include="Images\jquery.datatable\details_open.png" />
+    <Content Include="Images\jquery.datatable\forward_disabled.png" />
+    <Content Include="Images\jquery.datatable\forward_enabled.png" />
+    <Content Include="Images\jquery.datatable\forward_enabled_hover.png" />
+    <Content Include="Images\jquery.datatable\minus.png" />
+    <Content Include="Images\jquery.datatable\sort_asc.png" />
+    <Content Include="Images\jquery.datatable\sort_asc_disabled.png" />
+    <Content Include="Images\jquery.datatable\sort_both.png" />
+    <Content Include="Images\jquery.datatable\sort_desc.png" />
+    <Content Include="Images\jquery.datatable\sort_desc_disabled.png" />
+    <Content Include="Images\learn_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\learn_more_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\left_arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\line_caption.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\line_sign_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Line_top_corner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Line_top_corner_hori.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\line_top_link.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\linkdin25x25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Linked_In_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\link_facebook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\link_linkedin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\link_login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\link_signup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\link_twitter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Listbullet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\lock_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\login_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\login_menuSeperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\login_seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_beta_2v.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_about.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_contact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_how.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_run.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_signin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_signup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main_menu_why.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\manage_promote_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\manage_promote_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\master_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_about_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_compare_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_how_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_run_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_why_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\moneyWatch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\money_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\money_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\most_popular.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\most_popular_new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Myths.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\nannycheck_circle_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\nationwide_criminal_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\navigation_page_hori_line_center.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\news_seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\next_btn_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\nortan_security.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\orbit\bullets.jpg" />
+    <Content Include="Images\orbit\loading.gif" />
+    <Content Include="Images\orbit\mask-black.png" />
+    <Content Include="Images\orbit\pause-black.png" />
+    <Content Include="Images\orbit\rotator-black.png" />
+    <Content Include="Images\orbit\timer-black.png" />
+    <Content Include="Images\order-error-Symbol-Error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OrderSummary_repeatBg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\order_summery_bottom_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\order_summery_center_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\order_summery_center_bg_repet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\order_summery_top_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\package_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\package_left_shadow_inner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\package_right_shadow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\partner_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pass_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_checkout_basic_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_checkout_gold_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_checkout_platinum_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_checkout_rightbox_bottom_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_checkout_rightbox_bottom_bg_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\payment_summery_sep_line_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pdf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pegination_normal_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pegination_selected_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pin_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Plase wait.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\platinum.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\platinum_grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\plus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\privacy_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\proceed_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\proceed_disable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\proceed_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\process_graphic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\process_report_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_blue_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_contact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_education.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_experience.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_license.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_reference.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_skills.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_icon_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_tab_black_middle_side.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_tab_middle_side.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profile_tab_red_middle_side.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Protect_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\protect_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Protect_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Recent_Graduates.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Recent_Graduates_secure.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\recevie_report_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\red_arrow_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\red_arrow_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\red_btn1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\red_btn2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\red_btn3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\red_get_started_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\refresh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report-grid-data.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report_contents_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report_grid_bg_top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report_summery_tab_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report_top_header_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report_top_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report_user_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\resume_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\review_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\right_arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\right_side_heading_title_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\round_img1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\round_img2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\runCheck.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\run_check_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\run_check_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\run_check_now.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SearchBar_background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SearchBar_Percentage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\search_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\search_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Secure-Job_banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SecureJob_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\secure_job_brand_new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\secure_job_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\security_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\seperator_line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SFGate.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shadow_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shadow_top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SignUpFacebook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SignUpLinkedIn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SignUpSeperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\signup_background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_in_bottom_white_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_in_bottom_white_bg_new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sign_in_FB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_in_header_bg_popup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_in_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sign_in_Linkedin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_up_bottom_white_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_up_bottom_white_bg_new.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sign_up_FB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sign_up_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sign_up_Linkedin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\site_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\site_logo2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\slider\banner_1_image.jpg" />
+    <Content Include="Images\slider\banner_1_image.png" />
+    <Content Include="Images\slider\banner_2_image.jpg" />
+    <Content Include="Images\slider\banner_2_image.png" />
+    <Content Include="Images\slider\banner_3_image.jpg" />
+    <Content Include="Images\slider\banner_3_image.png" />
+    <Content Include="Images\slider\banner_4_image.jpg" />
+    <Content Include="Images\slider\banner_5_image.jpg" />
+    <Content Include="Images\SmartPhoneUsers_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Submit_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sub_page_background_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_1i_selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_2i_selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_3i_selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_bg_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_bg_repet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_bg_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_Head_bg_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_Head_bg_repet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_Head_bg_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tab_normal_round.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Tenants_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\testimonial_rebin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\title.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\top_header_bg_popup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Trends1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Trends2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Trends_img2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\twitter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\twitter25x25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Twitter_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ui-bg_glass_85_dfeffc_1x400.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ui-icons_6da8d5_256x240.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\unconver_bg_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UncoverBackground_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\upload_resume_btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\up_arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\up_arrow_grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserProfile_seperator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Vertical-Divider.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\vertical_line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\vertical_line1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\VISA.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\visa_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\wait_animation.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\wait_graphic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\white_box_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\white_box_onClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\white_box_vertical_line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WhyEknow_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WhyeKnow_banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WhyEmpRunCheck1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WhyEmpRunCheck2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\WhyEmpRunCheck3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\YoungAdults_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\youtube_eknowid_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\you_tube_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\Elmah.dll" />
+    <Content Include="lib\jquery.spellchecker.dll" />
+    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\PayPal_Core_SDK.dll" />
+    <Content Include="lib\PayPal_Merchant_SDK.dll" />
+    <Content Include="Pages\AboutUs.aspx" />
+    <Content Include="Pages\AboutWallet.aspx" />
+    <Content Include="Pages\AccessFees.aspx" />
+    <Content Include="Pages\ActivateUserAccount.aspx" />
+    <Content Include="Pages\AddOnSearches.aspx" />
+    <Content Include="Pages\AdminDashboard.aspx" />
+    <Content Include="Pages\Alacarte.aspx" />
+    <Content Include="Pages\AlacartReport.aspx" />
+    <Content Include="Pages\AnatomyOfBackgroundCheck.aspx" />
+    <Content Include="Pages\APIResponse.aspx" />
+    <Content Include="Pages\ApplicantAlacarte.aspx" />
+    <Content Include="Pages\ApplicantPackages.aspx" />
+    <Content Include="Pages\Benifits.aspx" />
+    <Content Include="Pages\Captcha.aspx" />
+    <Content Include="Pages\CMS_HomePage.aspx" />
+    <Content Include="Pages\CommonMyths.aspx" />
+    <Content Include="Pages\ConfirmPassword.aspx" />
+    <Content Include="Pages\Contactus.aspx" />
+    <Content Include="Pages\CriminalRecordSearches.aspx" />
+    <Content Include="Pages\YourWallet.aspx" />
+    <Content Include="Pages\EmailTrack.aspx" />
+    <Content Include="Pages\EnterpriseSolutions.aspx" />
+    <Content Include="Pages\HRBenifits.aspx" />
+    <Content Include="Pages\Index.aspx" />
+    <Content Include="Pages\PressLink.aspx" />
+    <Content Include="Pages\getStarted.aspx" />
+    <Content Include="Pages\PaymentSuccess.aspx" />
+    <Content Include="Pages\RC_AnalysisSummary.aspx" />
+    <Content Include="Pages\RC_DetailedAnalysis.aspx" />
+    <Content Include="Pages\RequesterCandidate.aspx" />
+    <Content Include="Pages\RequesterPayment.aspx" />
+    <Content Include="Pages\CompnayProfile.aspx" />
+    <Content Include="Pages\TermsofUse1.aspx" />
+    <Content Include="Pages\Trends.aspx" />
+    <Content Include="Pages\UpgradeReportPackage.aspx" />
+    <Content Include="Pages\FAQ.aspx" />
+    <Content Include="Pages\footer.html" />
+    <Content Include="Pages\GetStarted_ProtectID.aspx" />
+    <Content Include="Pages\GetStarted_SecureJob.aspx" />
+    <Content Include="Pages\GetStarted_UncoverBackground.aspx" />
+    <Content Include="Pages\Header.html" />
+    <Content Include="Pages\OrderDetail.aspx" />
+    <Content Include="Pages\orderHistory.aspx" />
+    <Content Include="Pages\RC_ProcessResume.aspx" />
+    <Content Include="Pages\SelectProf_PackageSelection.aspx" />
+    <Content Include="Pages\UploadResume.aspx" />
+    <Content Include="Pages\UserProfile.aspx" />
+    <Content Include="Pages\eKnowID_blog.aspx" />
+    <Content Include="Pages\WalletPayment.aspx" />
+    <Content Include="Pages\WhyEKnowID.aspx" />
+    <Content Include="Pages\CustomErrorPage.aspx" />
+    <Content Include="Pages\EntryDetails.aspx" />
+    <Content Include="Pages\Feedback.aspx" />
+    <Content Include="Pages\HowItWork.aspx" />
+    <Content Include="Pages\loginajaxcalls.aspx" />
+    <Content Include="Pages\orderHandling.aspx" />
+    <Content Include="Pages\Packages.aspx" />
+    <Content Include="Pages\PopUp.aspx" />
+    <Content Include="Pages\PrivacyPolicy.aspx" />
+    <Content Include="Pages\ProcessPopup.aspx" />
+    <Content Include="Pages\SearchByProf_ChoosePlan.aspx" />
+    <Content Include="Pages\SearchByProf_Login.aspx" />
+    <Content Include="Pages\SearchByProf_PaymentInfo.aspx" />
+    <Content Include="Pages\SearchByProf_SelectProf.aspx" />
+    <Content Include="Pages\TermsofUse.aspx" />
+    <Content Include="Pages\Test.aspx" />
+    <Content Include="Pages\UserAccount.aspx" />
+    <Content Include="Pages\UserActivity.aspx" />
+    <Content Include="Pages\UserInfoHandling.aspx" />
+    <Content Include="Pages\ViewSampleReport.aspx" />
+    <Content Include="Pages\WhyEmployeeRunKnowID.aspx" />
+    <Content Include="Pages\YouTubeVideo.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap-confirmation.js" />
+    <Content Include="Scripts\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap-modalmanager.js" />
+    <Content Include="Scripts\formValidation.js" />
+    <None Include="Properties\PublishProfiles\eknowID-Publish.pubxml" />
+    <None Include="Properties\PublishProfiles\eknowIDPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\eKnowIdStaging_Publish.pubxml" />
+    <None Include="Scripts\jquery-2.2.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.2.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.4.1.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.payment.js" />
+    <Content Include="Scripts\payment-validation.js" />
+    <Content Include="Scripts\basic.js" />
+    <Content Include="Scripts\bootstrap-filestyle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrapValidator.min.js" />
+    <Content Include="Scripts\dirPagination.js" />
+    <Content Include="Scripts\eknowId.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="MasterPages\newMain.Master" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.datatables.js" />
+    <Content Include="Scripts\jquery.dropdownPlain.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.2.2.js" />
+    <Content Include="Scripts\jquery.pwdMeter.min.js" />
+    <Content Include="Scripts\jquery.simplemodal.js" />
+    <Content Include="Scripts\jquery.spellchecker.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\pie-chart.js" />
+    <Content Include="Scripts\tooltip.js" />
+    <Content Include="Scripts\Tooltip\excanvas.js" />
+    <Content Include="Scripts\Tooltip\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\Tooltip\jquery.bt.min.js" />
+    <Content Include="Scripts\UserScripts\AddRemoveEmploymentInfo.js" />
+    <Content Include="Scripts\UserScripts\AddRemoveLanguages.js" />
+    <Content Include="Scripts\UserScripts\AddRemoveReferenceInfo.js" />
+    <Content Include="Scripts\UserScripts\AddRemoveSkills.js" />
+    <Content Include="Scripts\creditcard.js" />
+    <Content Include="Scripts\UserScripts\AlacartReport.js" />
+    <Content Include="Scripts\UserScripts\CascadingSelectList.js" />
+    <Content Include="Scripts\UserScripts\Common.js" />
+    <Content Include="Scripts\UserScripts\ContactInfo.js" />
+    <Content Include="Scripts\UserScripts\EducationDetails.js" />
+    <Content Include="Scripts\UserScripts\Index-ProgressBar.js" />
+    <Content Include="Scripts\UserScripts\JoinNow.js" />
+    <Content Include="Scripts\UserScripts\LicenseInformation.js" />
+    <Content Include="Scripts\UserScripts\LinkedInData.js" />
+    <Content Include="Scripts\UserScripts\newCommon.js" />
+    <Content Include="Scripts\UserScripts\RemoveHelper.js" />
+    <Content Include="Scripts\UserScripts\SaveOrderDetails.js" />
+    <Content Include="Scripts\UserScripts\fbLogin.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery.bpopup-0.6.0.js" />
+    <Content Include="Scripts\jquery.orbit-1.2.3.min.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\jquery.watermark.js" />
+    <Content Include="Scripts\UserScripts\openPopUp.js" />
+    <Content Include="Scripts\UserScripts\OrderDetailsTab.js" />
+    <Content Include="Scripts\UserScripts\SaveUserProfileDetails.js" />
+    <Content Include="Scripts\UserScripts\SelfOrderAlacartPackages.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="Styles\applicantStyle.css" />
+    <Content Include="Styles\errorPage.css" />
+    <Content Include="Styles\Index-ProgressBar.css" />
+    <Content Include="Styles\IpadCss.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\jquery.bt.css" />
+    <Content Include="Styles\jquery.datatable.css" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Styles\orbit-1.2.3.css" />
+    <Content Include="Scripts\bpopUp.js" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Scripts\jquery-2.2.2.min.map" />
+    <Content Include="Scripts\jquery.youtubepopup.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\BaseAbstractClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\EncryptionHelper.cs" />
+    <Compile Include="AppCode\IUserPage.cs" />
+    <Compile Include="AppCode\LinkedinData.cs" />
+    <Compile Include="AppCode\Message.cs" />
+    <Compile Include="AppCode\OrderDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\OrderDetailsHelper.cs" />
+    <Compile Include="AppCode\OrderStateHelper.cs" />
+    <Compile Include="AppCode\PageProfession.cs" />
+    <Compile Include="AppCode\PageReportData.cs" />
+    <Compile Include="AppCode\AjaxUtils.cs" />
+    <Compile Include="AppCode\PaymentDetails.cs" />
+    <Compile Include="AppCode\RequiredInformation.cs" />
+    <Compile Include="AppCode\SessionWrapper.cs" />
+    <Compile Include="AppCode\UserAuthentication.cs" />
+    <Compile Include="Controls\AdditionalSkills.ascx.cs">
+      <DependentUpon>AdditionalSkills.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdditionalSkills.ascx.designer.cs">
+      <DependentUpon>AdditionalSkills.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlaCartReport.ascx.cs">
+      <DependentUpon>AlaCartReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AlaCartReport.ascx.designer.cs">
+      <DependentUpon>AlaCartReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlacartReportSummary.ascx.cs">
+      <DependentUpon>AlacartReportSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AlacartReportSummary.ascx.designer.cs">
+      <DependentUpon>AlacartReportSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\completePurchase.ascx.cs">
+      <DependentUpon>completePurchase.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\completePurchase.ascx.designer.cs">
+      <DependentUpon>completePurchase.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConfirmPassword.ascx.cs">
+      <DependentUpon>ConfirmPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ConfirmPassword.ascx.designer.cs">
+      <DependentUpon>ConfirmPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContactInfo.ascx.cs">
+      <DependentUpon>ContactInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactInfo.ascx.designer.cs">
+      <DependentUpon>ContactInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressBar.ascx.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgressBar.ascx.designer.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RC_EmploymentDetails.ascx.cs">
+      <DependentUpon>RC_EmploymentDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RC_EmploymentDetails.ascx.designer.cs">
+      <DependentUpon>RC_EmploymentDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RC_EducationalDetails.ascx.cs">
+      <DependentUpon>RC_EducationalDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RC_EducationalDetails.ascx.designer.cs">
+      <DependentUpon>RC_EducationalDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResumeChecking_AlaCartReport.ascx.cs">
+      <DependentUpon>ResumeChecking_AlaCartReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ResumeChecking_AlaCartReport.ascx.designer.cs">
+      <DependentUpon>ResumeChecking_AlaCartReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UpgradeAlacartReport.ascx.cs">
+      <DependentUpon>UpgradeAlacartReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UpgradeAlacartReport.ascx.designer.cs">
+      <DependentUpon>UpgradeAlacartReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\dob.ascx.cs">
+      <DependentUpon>dob.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\dob.ascx.designer.cs">
+      <DependentUpon>dob.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\year.ascx.cs">
+      <DependentUpon>year.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\year.ascx.designer.cs">
+      <DependentUpon>year.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IdentityTheftSearchByProfHeader.ascx.cs">
+      <DependentUpon>IdentityTheftSearchByProfHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\IdentityTheftSearchByProfHeader.ascx.designer.cs">
+      <DependentUpon>IdentityTheftSearchByProfHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DrugsVerficationDetails.ascx.cs">
+      <DependentUpon>DrugsVerficationDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DrugsVerficationDetails.ascx.designer.cs">
+      <DependentUpon>DrugsVerficationDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EducationalDetails.ascx.cs">
+      <DependentUpon>EducationalDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EducationalDetails.ascx.designer.cs">
+      <DependentUpon>EducationalDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmploymentDetails.ascx.cs">
+      <DependentUpon>EmploymentDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EmploymentDetails.ascx.designer.cs">
+      <DependentUpon>EmploymentDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ForgotPassword.ascx.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ForgotPassword.ascx.designer.cs">
+      <DependentUpon>ForgotPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageSlider.ascx.cs">
+      <DependentUpon>ImageSlider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageSlider.ascx.designer.cs">
+      <DependentUpon>ImageSlider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\innerSignIn.ascx.cs">
+      <DependentUpon>innerSignIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\innerSignIn.ascx.designer.cs">
+      <DependentUpon>innerSignIn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\innerSignUp.ascx.cs">
+      <DependentUpon>innerSignUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\innerSignUp.ascx.designer.cs">
+      <DependentUpon>innerSignUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\innerSignUpData.ascx.cs">
+      <DependentUpon>innerSignUpData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\innerSignUpData.ascx.designer.cs">
+      <DependentUpon>innerSignUpData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\joinEknowID.ascx.cs">
+      <DependentUpon>joinEknowID.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\joinEknowID.ascx.designer.cs">
+      <DependentUpon>joinEknowID.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JoinNow.ascx.cs">
+      <DependentUpon>JoinNow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JoinNow.ascx.designer.cs">
+      <DependentUpon>JoinNow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LanguageKnown.ascx.cs">
+      <DependentUpon>LanguageKnown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LanguageKnown.ascx.designer.cs">
+      <DependentUpon>LanguageKnown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\latestNews.ascx.cs">
+      <DependentUpon>latestNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\latestNews.ascx.designer.cs">
+      <DependentUpon>latestNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LicenseInformation.ascx.cs">
+      <DependentUpon>LicenseInformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LicenseInformation.ascx.designer.cs">
+      <DependentUpon>LicenseInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderDetails_ContactInfo.ascx.cs">
+      <DependentUpon>OrderDetails_ContactInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderDetails_ContactInfo.ascx.designer.cs">
+      <DependentUpon>OrderDetails_ContactInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\partner.ascx.cs">
+      <DependentUpon>partner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\partner.ascx.designer.cs">
+      <DependentUpon>partner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlanDisplay.ascx.cs">
+      <DependentUpon>PlanDisplay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlanDisplay.ascx.designer.cs">
+      <DependentUpon>PlanDisplay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlanOrderSummary.ascx.cs">
+      <DependentUpon>PlanOrderSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlanOrderSummary.ascx.designer.cs">
+      <DependentUpon>PlanOrderSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\purchaseError.ascx.cs">
+      <DependentUpon>purchaseError.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\purchaseError.ascx.designer.cs">
+      <DependentUpon>purchaseError.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RCheckerHeader.ascx.cs">
+      <DependentUpon>RCheckerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RCheckerHeader.ascx.designer.cs">
+      <DependentUpon>RCheckerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReferenceDetails.ascx.cs">
+      <DependentUpon>ReferenceDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceDetails.ascx.designer.cs">
+      <DependentUpon>ReferenceDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SampleReport1.ascx.cs">
+      <DependentUpon>SampleReport1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SampleReport1.ascx.designer.cs">
+      <DependentUpon>SampleReport1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SampleReport2.ascx.cs">
+      <DependentUpon>SampleReport2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SampleReport2.ascx.designer.cs">
+      <DependentUpon>SampleReport2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SampleReport3.ascx.cs">
+      <DependentUpon>SampleReport3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SampleReport3.ascx.designer.cs">
+      <DependentUpon>SampleReport3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchByProfHeader.ascx.cs">
+      <DependentUpon>SearchByProfHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchByProfHeader.ascx.designer.cs">
+      <DependentUpon>SearchByProfHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\signUp.ascx.cs">
+      <DependentUpon>signUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\signUp.ascx.designer.cs">
+      <DependentUpon>signUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\singIn.ascx.cs">
+      <DependentUpon>singIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\singIn.ascx.designer.cs">
+      <DependentUpon>singIn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\stateDropdown.ascx.cs">
+      <DependentUpon>stateDropdown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\stateDropdown.ascx.designer.cs">
+      <DependentUpon>stateDropdown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UploadResume.ascx.cs">
+      <DependentUpon>UploadResume.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UploadResume.ascx.designer.cs">
+      <DependentUpon>UploadResume.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\main.master.cs">
+      <DependentUpon>main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\main.master.designer.cs">
+      <DependentUpon>main.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\newMain.Master.cs">
+      <DependentUpon>newMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\newMain.Master.designer.cs">
+      <DependentUpon>newMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutWallet.aspx.cs">
+      <DependentUpon>AboutWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AboutWallet.aspx.designer.cs">
+      <DependentUpon>AboutWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AccessFees.aspx.cs">
+      <DependentUpon>AccessFees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AccessFees.aspx.designer.cs">
+      <DependentUpon>AccessFees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ActivateUserAccount.aspx.cs">
+      <DependentUpon>ActivateUserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ActivateUserAccount.aspx.designer.cs">
+      <DependentUpon>ActivateUserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddOnSearches.aspx.cs">
+      <DependentUpon>AddOnSearches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddOnSearches.aspx.designer.cs">
+      <DependentUpon>AddOnSearches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Alacarte.aspx.cs">
+      <DependentUpon>Alacarte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Alacarte.aspx.designer.cs">
+      <DependentUpon>Alacarte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AlacartReport.aspx.cs">
+      <DependentUpon>AlacartReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AlacartReport.aspx.designer.cs">
+      <DependentUpon>AlacartReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AnatomyOfBackgroundCheck.aspx.cs">
+      <DependentUpon>AnatomyOfBackgroundCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AnatomyOfBackgroundCheck.aspx.designer.cs">
+      <DependentUpon>AnatomyOfBackgroundCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\APIResponse.aspx.cs">
+      <DependentUpon>APIResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\APIResponse.aspx.designer.cs">
+      <DependentUpon>APIResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ApplicantAlacarte.aspx.cs">
+      <DependentUpon>ApplicantAlacarte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ApplicantAlacarte.aspx.designer.cs">
+      <DependentUpon>ApplicantAlacarte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ApplicantPackages.aspx.cs">
+      <DependentUpon>ApplicantPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ApplicantPackages.aspx.designer.cs">
+      <DependentUpon>ApplicantPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Benifits.aspx.cs">
+      <DependentUpon>Benifits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Benifits.aspx.designer.cs">
+      <DependentUpon>Benifits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Captcha.aspx.cs">
+      <DependentUpon>Captcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CMS_HomePage.aspx.cs">
+      <DependentUpon>CMS_HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CMS_HomePage.aspx.designer.cs">
+      <DependentUpon>CMS_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CommonMyths.aspx.cs">
+      <DependentUpon>CommonMyths.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CommonMyths.aspx.designer.cs">
+      <DependentUpon>CommonMyths.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConfirmPassword.aspx.cs">
+      <DependentUpon>ConfirmPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ConfirmPassword.aspx.designer.cs">
+      <DependentUpon>ConfirmPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contactus.aspx.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contactus.aspx.designer.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CriminalRecordSearches.aspx.cs">
+      <DependentUpon>CriminalRecordSearches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CriminalRecordSearches.aspx.designer.cs">
+      <DependentUpon>CriminalRecordSearches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\YourWallet.aspx.cs">
+      <DependentUpon>YourWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\YourWallet.aspx.designer.cs">
+      <DependentUpon>YourWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmailTrack.aspx.cs">
+      <DependentUpon>EmailTrack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EmailTrack.aspx.designer.cs">
+      <DependentUpon>EmailTrack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EnterpriseSolutions.aspx.cs">
+      <DependentUpon>EnterpriseSolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EnterpriseSolutions.aspx.designer.cs">
+      <DependentUpon>EnterpriseSolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HRBenifits.aspx.cs">
+      <DependentUpon>HRBenifits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HRBenifits.aspx.designer.cs">
+      <DependentUpon>HRBenifits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PressLink.aspx.cs">
+      <DependentUpon>PressLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PressLink.aspx.designer.cs">
+      <DependentUpon>PressLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\getStarted.aspx.cs">
+      <DependentUpon>getStarted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\getStarted.aspx.designer.cs">
+      <DependentUpon>getStarted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaymentSuccess.aspx.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PaymentSuccess.aspx.designer.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RC_AnalysisSummary.aspx.cs">
+      <DependentUpon>RC_AnalysisSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RC_AnalysisSummary.aspx.designer.cs">
+      <DependentUpon>RC_AnalysisSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RC_DetailedAnalysis.aspx.cs">
+      <DependentUpon>RC_DetailedAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RC_DetailedAnalysis.aspx.designer.cs">
+      <DependentUpon>RC_DetailedAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequesterCandidate.aspx.cs">
+      <DependentUpon>RequesterCandidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RequesterCandidate.aspx.designer.cs">
+      <DependentUpon>RequesterCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequesterPayment.aspx.cs">
+      <DependentUpon>RequesterPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RequesterPayment.aspx.designer.cs">
+      <DependentUpon>RequesterPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CompnayProfile.aspx.cs">
+      <DependentUpon>CompnayProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CompnayProfile.aspx.designer.cs">
+      <DependentUpon>CompnayProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TermsofUse1.aspx.cs">
+      <DependentUpon>TermsofUse1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TermsofUse1.aspx.designer.cs">
+      <DependentUpon>TermsofUse1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Trends.aspx.cs">
+      <DependentUpon>Trends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Trends.aspx.designer.cs">
+      <DependentUpon>Trends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpgradeReportPackage.aspx.cs">
+      <DependentUpon>UpgradeReportPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpgradeReportPackage.aspx.designer.cs">
+      <DependentUpon>UpgradeReportPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GetStarted_ProtectID.aspx.cs">
+      <DependentUpon>GetStarted_ProtectID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GetStarted_ProtectID.aspx.designer.cs">
+      <DependentUpon>GetStarted_ProtectID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GetStarted_SecureJob.aspx.cs">
+      <DependentUpon>GetStarted_SecureJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GetStarted_SecureJob.aspx.designer.cs">
+      <DependentUpon>GetStarted_SecureJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GetStarted_UncoverBackground.aspx.cs">
+      <DependentUpon>GetStarted_UncoverBackground.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GetStarted_UncoverBackground.aspx.designer.cs">
+      <DependentUpon>GetStarted_UncoverBackground.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\orderHistory.aspx.cs">
+      <DependentUpon>orderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\orderHistory.aspx.designer.cs">
+      <DependentUpon>orderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RC_ProcessResume.aspx.cs">
+      <DependentUpon>RC_ProcessResume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RC_ProcessResume.aspx.designer.cs">
+      <DependentUpon>RC_ProcessResume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SelectProf_PackageSelection.aspx.cs">
+      <DependentUpon>SelectProf_PackageSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SelectProf_PackageSelection.aspx.designer.cs">
+      <DependentUpon>SelectProf_PackageSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UploadResume.aspx.cs">
+      <DependentUpon>UploadResume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UploadResume.aspx.designer.cs">
+      <DependentUpon>UploadResume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\eKnowID_blog.aspx.cs">
+      <DependentUpon>eKnowID_blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\eKnowID_blog.aspx.designer.cs">
+      <DependentUpon>eKnowID_blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WalletPayment.aspx.cs">
+      <DependentUpon>WalletPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WalletPayment.aspx.designer.cs">
+      <DependentUpon>WalletPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WhyEKnowID.aspx.cs">
+      <DependentUpon>WhyEKnowID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WhyEKnowID.aspx.designer.cs">
+      <DependentUpon>WhyEKnowID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomErrorPage.aspx.cs">
+      <DependentUpon>CustomErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CustomErrorPage.aspx.designer.cs">
+      <DependentUpon>CustomErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EntryDetails.aspx.cs">
+      <DependentUpon>EntryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EntryDetails.aspx.designer.cs">
+      <DependentUpon>EntryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HowItWork.aspx.cs">
+      <DependentUpon>HowItWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HowItWork.aspx.designer.cs">
+      <DependentUpon>HowItWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\loginajaxcalls.aspx.cs">
+      <DependentUpon>loginajaxcalls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\loginajaxcalls.aspx.designer.cs">
+      <DependentUpon>loginajaxcalls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\orderHandling.aspx.cs">
+      <DependentUpon>orderHandling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\orderHandling.aspx.designer.cs">
+      <DependentUpon>orderHandling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Packages.aspx.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Packages.aspx.designer.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PopUp.aspx.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PopUp.aspx.designer.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProcessPopup.aspx.cs">
+      <DependentUpon>ProcessPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProcessPopup.aspx.designer.cs">
+      <DependentUpon>ProcessPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_ChoosePlan.aspx.cs">
+      <DependentUpon>SearchByProf_ChoosePlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_ChoosePlan.aspx.designer.cs">
+      <DependentUpon>SearchByProf_ChoosePlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_Login.aspx.cs">
+      <DependentUpon>SearchByProf_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_Login.aspx.designer.cs">
+      <DependentUpon>SearchByProf_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_PaymentInfo.aspx.cs">
+      <DependentUpon>SearchByProf_PaymentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_PaymentInfo.aspx.designer.cs">
+      <DependentUpon>SearchByProf_PaymentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_SelectProf.aspx.cs">
+      <DependentUpon>SearchByProf_SelectProf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchByProf_SelectProf.aspx.designer.cs">
+      <DependentUpon>SearchByProf_SelectProf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TermsofUse.aspx.cs">
+      <DependentUpon>TermsofUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TermsofUse.aspx.designer.cs">
+      <DependentUpon>TermsofUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserAccount.aspx.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserAccount.aspx.designer.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserActivity.aspx.cs">
+      <DependentUpon>UserActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserActivity.aspx.designer.cs">
+      <DependentUpon>UserActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserInfoHandling.aspx.cs">
+      <DependentUpon>UserInfoHandling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserInfoHandling.aspx.designer.cs">
+      <DependentUpon>UserInfoHandling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewSampleReport.aspx.cs">
+      <DependentUpon>ViewSampleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewSampleReport.aspx.designer.cs">
+      <DependentUpon>ViewSampleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WhyEmployeeRunKnowID.aspx.cs">
+      <DependentUpon>WhyEmployeeRunKnowID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WhyEmployeeRunKnowID.aspx.designer.cs">
+      <DependentUpon>WhyEmployeeRunKnowID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\YouTubeVideo.aspx.cs">
+      <DependentUpon>YouTubeVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\YouTubeVideo.aspx.designer.cs">
+      <DependentUpon>YouTubeVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cert_key.pem" />
+    <None Include="dictionary\en.pws" />
+    <None Include="Images\orbit\.svn\entries" />
+    <None Include="Images\orbit\.svn\prop-base\bullets.jpg.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\left-arrow.png.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\loading.gif.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\mask-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\pause-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\right-arrow.png.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\rotator-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\prop-base\timer-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\bullets.jpg.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\left-arrow.png.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\loading.gif.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\mask-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\pause-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\right-arrow.png.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\rotator-black.png.svn-base" />
+    <None Include="Images\orbit\.svn\text-base\timer-black.png.svn-base" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="IPN-README.md" />
+    <None Include="MerchantLog.log" />
+    <None Include="paypal_cert.p12" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\main.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\orbit\.svn\props\" />
+    <Folder Include="Images\orbit\.svn\tmp\prop-base\" />
+    <Folder Include="Images\orbit\.svn\tmp\props\" />
+    <Folder Include="Images\orbit\.svn\tmp\text-base\" />
+    <Folder Include="UploadResume\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eknowID.Data\eknowID.Data.csproj">
+      <Project>{b3445054-cc6b-4ee6-856b-083bcf2ad6e1}</Project>
+      <Name>eknowID.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Helper\eknowID.Helper.csproj">
+      <Project>{a601fa49-9f10-484c-9317-9d74b8c3579a}</Project>
+      <Name>eknowID.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Model\eknowID.Model.csproj">
+      <Project>{2e3f3185-90c7-47c8-b99c-c6ad0fb1eaa1}</Project>
+      <Name>eknowID.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Repositories\eknowID.Repositories.csproj">
+      <Project>{afa7d524-75bb-4130-afcf-2850db8cbc62}</Project>
+      <Name>eknowID.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Services\eknowID.Services.csproj">
+      <Project>{c6cb497e-f8f5-4897-a964-feac0a0851d8}</Project>
+      <Name>eknowID.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Tazworks\eknowID.Tazworks.csproj">
+      <Project>{ad4baefb-06ce-4f06-b5b3-58046ff8477e}</Project>
+      <Name>eknowID.Tazworks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64471</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/eknowID.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

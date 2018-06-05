@@ -1,0 +1,26 @@
+﻿<nav class="navbar navbar-trans navbar-fixed-top" role="navigation" ng-controller="headerCtrl">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="innerHeader">
+                        <div class="logo"><a href="#/"><img src="images/eknowid-logo.png" alt="logo"></a></div>
+                        <nav>
+                            <a class="mobileMenu"><img src="images/menu.png"></a>
+                            <ul>
+                                <li><a href="#enterprise-Solutions">Why eKnowId?</a></li>
+                                <li><a href="#enterprise-Solutions">Enterprice Solutions</a></li>
+                                <li><a href="">How It Works</a></li>
+                                <li><a href="#login">Contact US</a></li>
+                            </ul>
+                        </nav>
+                        <div class="topBtn">
+                            <a href="#requester-account" class="btn-success btn">Sign Up</a>
+                            <input type="button" class="btn-default btn" style="text-decoration:none" value="{{loginText}}" ng-click="redirectToLogin();">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</nav>

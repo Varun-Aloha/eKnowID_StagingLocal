@@ -1,0 +1,142 @@
+﻿<!--<div id="section-2">
+    <div class="priceBox">
+        <div id="overlay" ng-show="loading">
+            <img ng-src="Images/loader.gif" class="loading" />
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div ng-repeat="pkg in packages">
+                    <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12">
+                        <div class="serviceBox">
+                            <div class="basicPrice" ng-class="getClassName(pkg.Id,'')">
+                                <div class="priceTitle">
+                                    <span class="glyphicon" ng-class="getClassName(pkg.Id,pkg.PlanName)"></span>
+                                    <h2>{{pkg.PlanName}}</h2>
+                                </div>
+                            </div>
+                            <div class="priceDetail">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                                        <div class="perReportCircle" ng-class="getClassName(pkg.Id)">
+                                            <span class="sup">$</span>{{pkg.PlanPrice}}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                                        <h4>{{pkg.PlanDescription}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="priceList">
+                                <ul ng-class="getReportCircleColor(pkg.Id)" ng-repeat="report in pkg.PlanDetails">
+                                    <li>{{report.PlanDetails}}</li>
+                                </ul>
+                            </div>
+                            <div class="priceBtn"><input type="button" value="select" class="btn" ng-class="getClassName(pkg.Id)" ng-click="selectedPackage(pkg)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<section class="priceBox" id="section-2">
+
+    <div id="overlay" ng-show="loading">
+        <img ng-src="/eknowID.Web/Images/loader.gif" class="loading" />
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12">
+                <div class="serviceBox">
+                    <div class="basicPrice">
+                        <div class="priceTitle">
+                            <span class="glyphicon glyphicon-th"></span>
+                            <h2>{{packages[0].PlanName}}</h2>
+                        </div>
+                    </div>
+                    <div class="priceDetail">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                                <div class="perReportCircle bluebg">
+                                    <span class="sup">$</span>{{packages[0].PlanPrice}}
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                                <h4>{{packages[0].PlanDescription}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priceList">
+                        <ul class="blue" ng-repeat="pkg in packages[0].PlanDetails">
+                            <li>{{pkg.PlanDetails}}</li>
+                        </ul>
+                    </div>
+                    <div class="priceBtn"><input type="button" value="select" class="btn bluebg" ng-click="selectedPackage(packages[0])"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12">
+                <div class="serviceBox">
+                    <div class="standardPrice">
+                        <div class="priceTitle">
+                            <span class="glyphicon glyphicon-certificate"></span>
+                            <h2>{{packages[1].PlanName}}</h2>
+                        </div>
+                    </div>
+                    <div class="priceDetail">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                                <div class="perReportCircle pinkbg">
+                                    <span class="sup">$</span>{{packages[1].PlanPrice}}
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                                <h4>{{packages[1].PlanDescription}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priceList">
+                        <ul class="pink" ng-repeat="pkg in packages[1].PlanDetails">
+                            <li>{{pkg.PlanDetails}}</li>
+                        </ul>
+                    </div>
+                    <div class="priceBtn"><input type="button" value="select" class="btn pinkbg" ng-click="selectedPackage(packages[1])"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12">
+                <div class="serviceBox">
+                    <div class="premiamPrice">
+                        <div class="priceTitle">
+                            <span class="glyphicon glyphicon-usd"></span>
+                            <h2>{{packages[2].PlanName}}</h2>
+                        </div>
+                    </div>
+                    <div class="priceDetail">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                                <div class="perReportCircle purplebg">
+                                    <span class="sup">$</span>{{packages[2].PlanPrice}}
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                                <h4>{{packages[2].PlanDescription}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priceList">
+                        <ul class="purple" ng-repeat="pkg in packages[2].PlanDetails">
+                            <li>{{pkg.PlanDetails}}</li>
+                        </ul>
+                    </div>
+                    <div class="priceBtn"><input type="button" value="select" class="btn purplebg" ng-click="selectedPackage(packages[2])"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

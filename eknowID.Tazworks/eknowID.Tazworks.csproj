@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD4BAEFB-06CE-4F06-B5B3-58046FF8477E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eknowID.Tazworks</RootNamespace>
+    <AssemblyName>eknowID.Tazworks</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HelperClasses\CivilSearchHelper.cs" />
+    <Compile Include="HelperClasses\CreditHelper.cs" />
+    <Compile Include="HelperClasses\CriminalCheckHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelperClasses\CriminalCheckNumber.cs" />
+    <Compile Include="HelperClasses\InstantResponse.cs" />
+    <Compile Include="HelperClasses\NationalCriminalAliasHelper.cs" />
+    <Compile Include="HelperClasses\SSNHelper.cs" />
+    <Compile Include="HelperClasses\TazWorksStatus.cs" />
+    <Compile Include="WrapperClasses\AdditionalItemsWrapper.cs" />
+    <Compile Include="WrapperClasses\ApplicantPersonalDataWarpper.cs" />
+    <Compile Include="WrapperClasses\CreditWrapper.cs" />
+    <Compile Include="WrapperClasses\CriminalWrapper.cs" />
+    <Compile Include="WrapperClasses\DrugVerificationWrapper.cs" />
+    <Compile Include="WrapperClasses\EducationScreeningWrapper.cs" />
+    <Compile Include="WrapperClasses\EmploymentWrapper.cs" />
+    <Compile Include="WrapperClasses\InstaCriminalNationalAliasWrapper.cs" />
+    <Compile Include="WrapperClasses\LicenseWrapper.cs" />
+    <Compile Include="WrapperClasses\OrderStateWrapper.cs" />
+    <Compile Include="WrapperClasses\PersonalDataWarpper.cs" />
+    <Compile Include="WrapperClasses\ReferenceScreeningWraper.cs" />
+    <Compile Include="WrapperClasses\SSNWrapper.cs" />
+    <Compile Include="XMLClasses\AdditionalItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\Aliases.cs" />
+    <Compile Include="XMLClasses\BackgroundCheck.cs" />
+    <Compile Include="XMLClasses\BackgroundSearchPackage.cs" />
+    <Compile Include="HelperClasses\ConstructRequest.cs" />
+    <Compile Include="XMLClasses\DrivingRecordsScreening.cs" />
+    <Compile Include="XMLClasses\InstaCriminalNationalAlias.cs" />
+    <Compile Include="XMLClasses\InstantDrivingLicenseScreening.cs" />
+    <Compile Include="XMLClasses\PersonalReferenceScreening.cs" />
+    <Compile Include="XMLClasses\PersonClasses\company.cs" />
+    <Compile Include="XMLClasses\PersonClasses\education.cs" />
+    <Compile Include="XMLClasses\PersonClasses\EducationEndDate.cs" />
+    <Compile Include="XMLClasses\PersonClasses\educations.cs" />
+    <Compile Include="XMLClasses\PersonClasses\EducationStartDate.cs" />
+    <Compile Include="XMLClasses\PersonClasses\person.cs" />
+    <Compile Include="XMLClasses\PersonClasses\phonenumber.cs" />
+    <Compile Include="XMLClasses\PersonClasses\phonenumbers.cs" />
+    <Compile Include="XMLClasses\PersonClasses\position.cs" />
+    <Compile Include="XMLClasses\PersonClasses\PositionEndDate.cs" />
+    <Compile Include="XMLClasses\PersonClasses\positions.cs" />
+    <Compile Include="XMLClasses\PersonClasses\PositionStartDate.cs" />
+    <Compile Include="XMLClasses\ResponseClasses\BackgroundReportPackage.cs" />
+    <Compile Include="XMLClasses\ResponseClasses\BackgroundReports.cs" />
+    <Compile Include="XMLClasses\ResponseClasses\ScreeningStatus.cs" />
+    <Compile Include="XMLClasses\LicenseScreening.cs" />
+    <Compile Include="XMLClasses\ReferenceContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\ContactInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\ContactMethod.cs" />
+    <Compile Include="XMLClasses\County.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\CountyCivilScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\CountyCriminalScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\CreditScreening.cs" />
+    <Compile Include="XMLClasses\CreditVendor.cs" />
+    <Compile Include="XMLClasses\CustomScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\DatesOfAttendance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\Degree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\DeliveryAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\DemographicDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\District.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\DrugScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\EducationHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\EducationScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\EmploymentScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\EvictionScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\FederalCriminalScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\GlobalHomelandScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\GovernmentId.cs" />
+    <Compile Include="XMLClasses\InstaCriminalMultiStateScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\InstaCriminalSingleStateScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\InstaEvictionScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\InternationalCriminalScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\InvestigativeCustomScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\LinkedApplicants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\LocationSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\Municipality.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\PersonalData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\PersonName.cs" />
+    <Compile Include="HelperClasses\ProcessRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLClasses\PersonSearchScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\PersonSearchVendor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\PostalAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\ReferenceScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\ReferencePersonName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\Region.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\ResidentScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\SchoolOrInstitution.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\ScorecardScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\Screening.cs" />
+    <Compile Include="XMLClasses\Screenings.cs" />
+    <Compile Include="HelperClasses\StatusEnquiry.cs" />
+    <Compile Include="HelperClasses\StatusEnquiryAction.cs" />
+    <Compile Include="XMLClasses\ScreeningType.cs" />
+    <Compile Include="XMLClasses\SearchLicense.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\SearchLicenseLicense.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\SexOfferScreening.cs" />
+    <Compile Include="XMLClasses\SSNScreening.cs" />
+    <Compile Include="XMLClasses\SSNVendor.cs" />
+    <Compile Include="XMLClasses\StartDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\StateCriminalScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\StatusEnquiry\EnquiryBackgroundCheck.cs" />
+    <Compile Include="XMLClasses\StatusEnquiry\EnquiryBackgroundSearchPackage.cs" />
+    <Compile Include="XMLClasses\WorkersCompensationScreening.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLClasses\XMLClasses.cs">
+      <SubType>code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="error1.txt" />
+    <Content Include="XMLFile1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLFile2.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLFile3.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eknowID.Data\eknowID.Data.csproj">
+      <Project>{b3445054-cc6b-4ee6-856b-083bcf2ad6e1}</Project>
+      <Name>eknowID.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Helper\eknowID.Helper.csproj">
+      <Project>{a601fa49-9f10-484c-9317-9d74b8c3579a}</Project>
+      <Name>eknowID.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Model\eknowID.Model.csproj">
+      <Project>{2e3f3185-90c7-47c8-b99c-c6ad0fb1eaa1}</Project>
+      <Name>eknowID.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eknowID.Repositories\eknowID.Repositories.csproj">
+      <Project>{AFA7D524-75BB-4130-AFCF-2850DB8CBC62}</Project>
+      <Name>eknowID.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

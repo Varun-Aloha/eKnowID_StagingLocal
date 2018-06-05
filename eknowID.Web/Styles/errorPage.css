@@ -1,0 +1,104 @@
+﻿/** {
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    box-sizing: border-box;
+}*/
+
+.error-box {
+    width: 625px;
+    height: 230px;
+    border: activeborder solid 1px;
+    margin: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,.60);
+    padding: 40px 20px;
+    margin-top: 150px;
+    background-color:white;
+}
+
+    .error-box .icon {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px;
+    }
+
+.error-cont {
+    width: 370px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+    .error-cont h3 {
+        color: #dc4f29;
+        font-size: 18px;
+        margin: 15px auto 10px auto;
+    }
+
+    .error-cont p {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 auto;
+        color: #686868;
+        text-align: left;
+    }
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 980px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 667px) {
+    .error-box {
+        width: 95%;
+        height: 60%;
+        text-align: center;
+        margin: 85px auto 85px auto;
+        top: 0;
+        bottom: 0;
+        vertical-align: middle;
+    }
+
+    .error-cont {
+        width: 100%;
+    }
+
+        .error-cont h3 {
+            text-align: justify;
+        }
+
+        .error-cont p {
+            text-align: justify;
+        }
+
+        .error-cont a {
+            text-align: center;
+        }
+
+    .error-box .icon {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 600px) {
+    .error-box {
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .error-box {
+        margin: 35px auto;
+    }
+}
+
+@media screen and (max-width: 479px) {
+}

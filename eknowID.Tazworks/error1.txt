@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<BackgroundReports>
+  <BackgroundReportPackage>
+    <ReferenceId>123456789</ReferenceId>
+    <ScreeningStatus>
+      <OrderStatus>x:error</OrderStatus>
+    </ScreeningStatus>
+    <ErrorReport>
+      <ErrorCode>109</ErrorCode>
+      <ErrorDescription>Requested product type not available to end-user client. [demo product]</ErrorDescription>
+    </ErrorReport>
+  </BackgroundReportPackage>
+</BackgroundReports>

@@ -1,0 +1,4490 @@
+﻿body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0px;
+}
+
+img {
+    border-style: none;
+    border-width: 0px;
+}
+
+input[type="submit"], input[type="button"] {
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    height: 18px;
+}
+
+label, input[type="radio"], input[type="checkbox"] {
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.labelColor {
+    color: #4a4a4a;
+}
+
+label.error {
+    float: none;
+    color: red;
+    padding-left: 3px;
+    vertical-align: top;
+}
+
+.displayInlineBlock {
+    display: inline-block;
+}
+
+.lnkColor {
+    color: #4A80c0;
+    text-decoration: none;
+}
+
+.asterisk {
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+label.error {
+    display: none !important;
+}
+
+.darkGrey {
+    color: #8A8A8A;
+}
+
+.red {
+    color: Red;
+}
+
+.white {
+    color: White;
+}
+
+.txtDecorationNone {
+    text-decoration: none !important;
+}
+
+.lightGray {
+    background-color: #e0e0e1;
+}
+
+.faintblack {
+    color: #515151;
+}
+
+.fontsize16 {
+    font-size: 16px;
+}
+
+.fontsize15 {
+    font-size: 15px;
+}
+
+.fontsize12 {
+    font-size: 12px;
+}
+
+.faintGray {
+    color: #5C5C5C;
+}
+
+input::-moz-focus-inner /*Remove button padding in FF*/ {
+    border: 0;
+    padding: 0;
+    line-height: 1000px;
+}
+
+
+.paddingTop20 {
+    padding-top: 20px;
+}
+
+.paddingTop15 {
+    padding-top: 15px;
+}
+
+.paddingTop30 {
+    padding-top: 30px;
+}
+
+.paddingTop10 {
+    padding-top: 10px;
+}
+
+.padding-top_33px {
+    padding-top: 33px;
+}
+
+.paddingTop8 {
+    padding-top: 8px;
+}
+
+.paddingTop5px {
+    padding-top: 5px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.padding25 {
+    padding: 25px;
+}
+
+.padding15 {
+    padding: 15px;
+}
+
+.padding30 {
+    padding: 30px;
+}
+
+.padding21 {
+    padding: 21px;
+}
+
+.padding8 {
+    padding: 8px;
+}
+
+.padding0 {
+    padding: 0px;
+}
+
+.paddingLeft4 {
+    padding-left: 4px;
+}
+
+.paddingLeft15 {
+    padding-left: 15px;
+}
+
+.paddingLeft10 {
+    padding-left: 10px;
+}
+
+.paddingLeft25 {
+    padding-left: 25px;
+}
+
+.paddingLeft28 {
+    padding-left: 28px;
+}
+
+.paddingLeft38 {
+    padding-left: 38px;
+}
+
+.paddingBottom15 {
+    padding-bottom: 15px;
+}
+
+.paddingBottom20 {
+    padding-bottom: 20px;
+}
+
+.paddingBottom5 {
+    padding-bottom: 5px;
+}
+
+.paddingRight15 {
+    padding-right: 15px;
+}
+
+.paddingRight20 {
+    padding-right: 20px;
+}
+
+.paddingRight5 {
+    padding-right: 5px;
+}
+
+.paddingRight10 {
+    padding-right: 10px;
+}
+
+.marginTop23px {
+    margin-top: 23px;
+}
+
+.marginTop30px {
+    margin-top: 30px;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginTop26 {
+    margin-top: 26px;
+}
+
+.marginTop28 {
+    margin-top: 28px;
+}
+
+.marginTop100 {
+    margin-top: 100px;
+}
+
+.marginTop8 {
+    margin-top: 8px;
+}
+
+.marginTop7 {
+    margin-top: 7px;
+}
+
+.marginTop5 {
+    margin-top: 5px;
+}
+
+.marginTop0 {
+    margin-top: 0px;
+}
+
+.marginTop1 {
+    margin-top: 1px;
+}
+
+.marginBottom0 {
+    margin-bottom: 0px;
+}
+
+.marginLeft1 {
+    margin-left: 1px;
+}
+
+.marginLeft2 {
+    margin-left: 2px;
+}
+
+.marginLeft_3px {
+    margin-left: 3px;
+}
+
+.marginLeft5 {
+    margin-left: 5px;
+}
+
+.marginLeft7 {
+    margin-left: 7px;
+}
+
+.marginleft10 {
+    margin-left: 10px;
+}
+
+.marginleft15 {
+    margin-left: 15px;
+}
+
+.marginleft20 {
+    margin-left: 20px;
+}
+
+.marginleft25 {
+    margin-left: 25px;
+}
+
+.marginRight10 {
+    margin-right: 10px;
+}
+
+.marginRight15 {
+    margin-right: 15px;
+}
+
+.marginRight45 {
+    margin-right: 45px;
+}
+
+.marginRight50 {
+    margin-right: 50px;
+}
+
+.margin_0px {
+    margin: 0px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.text_align_justify {
+    text-align: justify;
+}
+
+.heightauto {
+    height: auto;
+}
+
+.height45 {
+    height: 45px !important;
+}
+
+.height48 {
+    height: 48px;
+}
+
+.height50 {
+    height: 50px;
+}
+
+.height21 {
+    height: 21px;
+}
+
+.height_30px {
+    height: 30px;
+}
+
+.height25px {
+    height: 25px;
+}
+
+.height37px {
+    height: 37px;
+}
+
+.height39px {
+    height: 39px;
+}
+
+.height100per {
+    height: 100%;
+}
+
+.minheight_200px {
+    min-height: 200px;
+}
+
+.height78px {
+    height: 78px !important;
+}
+
+.height280px {
+    height: 280px;
+}
+
+.height266px {
+    height: 266px;
+}
+
+.width700 {
+    width: 700px;
+}
+
+.width300 {
+    width: 300px;
+}
+
+.width260 {
+    width: 260px;
+}
+
+.Width195 {
+    width: 195px;
+}
+
+.width275 {
+    width: 275px;
+}
+
+.width150 {
+    width: 150px;
+}
+
+.width160 {
+    width: 160px;
+}
+
+.width170 {
+    width: 170px;
+}
+
+.width180 {
+    width: 180px;
+}
+
+.width100 {
+    width: 100px;
+}
+
+.width105 {
+    width: 105px;
+}
+
+.width110 {
+    width: 110px;
+}
+
+.width200 {
+    width: 200px;
+}
+
+.width208 {
+    width: 208px;
+}
+
+.width202 {
+    width: 202px;
+}
+
+.width285 {
+    width: 285px;
+}
+
+.width120 {
+    width: 120px;
+}
+
+.width135 {
+    width: 135px;
+}
+
+.width145 {
+    width: 145px;
+}
+
+.width245 {
+    width: 245px;
+}
+
+.width460 {
+    width: 460px;
+}
+
+.width500 {
+    width: 500px;
+}
+
+.width600 {
+    width: 600px;
+}
+
+.width447 {
+    width: 447px;
+}
+
+.width215 {
+    width: 215px;
+}
+
+.width65 {
+    width: 65px;
+}
+
+.width50 {
+    width: 50px;
+}
+
+.width80 {
+    width: 80px;
+}
+
+.width96 {
+    width: 96px;
+}
+
+.width75 {
+    width: 75px;
+}
+
+.width73 {
+    width: 73px;
+}
+
+.width53 {
+    width: 53px;
+}
+
+.width48per {
+    width: 48%;
+}
+
+.width95per {
+    width: 95%;
+}
+
+.width100per {
+    width: 100%;
+}
+
+.width1000px {
+    width: 1000px;
+}
+
+.color_3E3E3E {
+    color: #3E3E3E;
+}
+
+.watermark1 {
+    color: #999;
+}
+
+.font-family_Arial {
+    font-family: arial;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.alignJustify {
+    text-align: justify;
+}
+
+.floatLeft {
+    float: left;
+    box-sizing: initial;
+}
+
+.floatRight {
+    float: right;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.alignRight {
+    float: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.display_block {
+    display: block;
+}
+
+.display_none {
+    display: none;
+}
+
+.display_inline {
+    display: inline;
+}
+
+.fontSize_13px {
+    font-size: 13px !important;
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+.color_454545 {
+    color: #454545;
+}
+
+.color_F4F4F4 {
+    background-color: #F4F4F4;
+}
+
+.color_5A5A5A {
+    color: #5A5A5A;
+}
+
+.verticalAlign_super {
+    vertical-align: super;
+}
+
+.capsTitle {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.eKnowIDRed {
+    color: #E62127;
+}
+
+.twitterButton {
+    background-image: url(../images/link_twitter.png);
+}
+
+#topLinkContainer {
+    float: right;
+    width: 296px;
+    height: 45px;
+    background-image: url(../images/header_bg.png);
+}
+
+.stretchDiv {
+    height: 25px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.listMenu {
+    height: 10px;
+    width: 14px;
+    background-image: url(../images/arrow_icon.png);
+}
+
+.facebookButton {
+    background-image: url(../images/link_facebook.png);
+}
+
+.linkedInButton {
+    background-image: url(../images/link_linkedin.png);
+}
+
+.signIn {
+    background-image: url(../images/main_menu_signin.png);
+    width: 54px;
+}
+
+.signUp {
+    background-image: url(../images/JoinNow.png);
+    width: 70px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.signButton {
+    display: block;
+    background-repeat: no-repeat;
+    height: 25px;
+    text-indent: -9999px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.socialButton {
+    display: block;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999px;
+    float: left;
+}
+
+.pageTabRepeater {
+    width: 3px;
+    background-image: url(../images/main_menu_seperator.png);
+    background-repeat: no-repeat;
+    height: 25px;
+}
+
+#topNavigation {
+    float: right;
+}
+
+.navGetStarted {
+    width: 135px;
+    padding: 0 0 0 5px;
+    margin-top: 3px;
+}
+
+    .navGetStarted:hover {
+        background-color: transparent !important;
+    }
+
+.navButtonPaddingTop {
+    height: 44px !important;
+}
+
+.z_index_1 {
+    z-index: 1;
+}
+
+
+.navButtons {
+    background-position: bottom right;
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.font_weight_normal {
+    font-weight: normal;
+}
+
+:-moz-any-link:focus {
+    outline: none;
+}
+
+.divHeaderMain {
+    height: 124px;
+    background-image: url(../Images/header_bg_top.png);
+    background-repeat: repeat-x;
+}
+/* Master Page Menu Start*/
+.Font_size85Per {
+    font-size: 85%;
+}
+
+.visited {
+    background-color: #E8E8E8;
+}
+
+/* LEVEL ONE */
+
+ul {
+    list-style: none;
+}
+
+    ul.dropdown {
+        position: relative;
+        float: right;
+        margin-top: 5px !important;
+        padding-left: 0px !important;
+    }
+
+        ul.dropdown li {
+            font-weight: bold;
+            float: left;
+            zoom: 1;
+            color: #4A4A4A;
+            font-size: 113%;
+        }
+
+        ul.dropdown a:hover {
+            color: #4A4A4A !important;
+        }
+
+        ul.dropdown li a {
+            display: block;
+            padding: 4px 8px;
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        ul.dropdown li:last-child a {
+            border-right: none;
+        }
+        /* Doesn't work in IE */
+
+        ul.dropdown li.hover, ul.dropdown li:hover {
+            background: #E8E8E8;
+            color: #4A4A4A !important;
+            position: relative;
+        }
+
+            ul.dropdown li.hover a {
+                color: black;
+            }
+
+        /* 	LEVEL TWO*/
+        ul.dropdown ul {
+            width: 120px;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 125;
+        }
+
+            ul.dropdown ul li {
+                font-weight: normal;
+                background: #E8E8E8;
+                color: #000;
+                border-top: 1px solid #FFFFFF;
+                float: none;
+            }
+                /* IE 6 & 7 Needs Inline Block */ ul.dropdown ul li a {
+                    border-right: none;
+                    display: inline-block;
+                    width: 241px;
+                }
+
+            /* 	LEVEL THREE*/
+            ul.dropdown ul ul {
+                left: 100%;
+                top: 0;
+            }
+
+        ul.dropdown li:hover > ul {
+            visibility: visible;
+        }
+
+/* Master Page Menu Ends */
+
+#divLogo {
+    float: left;
+}
+
+#footerOuter {
+    background-color: #2F2F2F;
+    width: 100%;
+    /*height:170px;*/
+    min-height: 225px;
+    clear: both;
+    padding: 15px 0;
+}
+
+.footerMargin {
+    margin-top: 80px;
+}
+
+.footerText a {
+    color: White;
+    text-decoration: none;
+}
+
+.footerText {
+    color: White;
+}
+
+.footerSection {
+    font-size: 11px;
+    float: left;
+    padding-right: 44px;
+}
+
+.footerCaptionText {
+    color: #373737 !important;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.divRedFooterMain {
+    height: 42px;
+    background-image: url(../Images/footer_bg.png);
+    background-repeat: repeat-x;
+}
+
+.divRedFooter {
+    padding: 10px 0;
+    height: 20px !important;
+}
+
+.formText {
+    width: 200px;
+}
+
+.formTextspan {
+    padding-top: 5px;
+}
+
+.footerLinkSection {
+    border-right: 1px dotted #646464;
+    padding-right: 25px;
+    float: left;
+    /* height:140px;*/
+    height: 150px;
+}
+
+.footerLayer {
+    padding-top: 20px;
+}
+
+.footerLinkSection a {
+    color: #8A8A8A;
+    text-decoration: none;
+    float: right;
+    font-size: 11px;
+}
+
+
+
+.footerTextSection {
+    float: left;
+    /* padding-right:30px;*/
+    padding-right: 50px;
+}
+
+.lineHeightDouble {
+    line-height: 200%;
+}
+
+.footerTextSection p {
+    font-size: 11px;
+}
+
+/*_________HOME PAGE START________*/
+
+/*Press Link start*/
+.divPressLink {
+    height: 63px;
+    width: 950px;
+    background-image: url(../Images/in_the_press_normal.png);
+    margin-top: 32px;
+}
+
+.divEreNet {
+    height: 54px;
+    margin-right: -3px;
+    width: 118px;
+}
+
+    .divEreNet:hover {
+        background-image: url(../images/in_the_press_hover.png);
+        background-position: 115px 63px;
+    }
+
+.divInformationWeek {
+    height: 54px;
+    width: 130px;
+    margin-right: 70px;
+}
+
+    .divInformationWeek:hover {
+        background-image: url(../images/in_the_press_hover.png);
+        background-position: 315px 63px;
+    }
+
+.divSfGate {
+    height: 54px;
+    width: 115px;
+    margin-right: 32px;
+}
+
+    .divSfGate:hover {
+        background-image: url(../images/in_the_press_hover.png);
+        background-position: 462px 63px;
+    }
+
+.divForbes {
+    height: 54px;
+    width: 136px;
+    margin-right: 48px;
+}
+
+    .divForbes:hover {
+        background-image: url(../images/in_the_press_hover.png);
+        background-position: 646px 63px;
+    }
+
+.divMoneyWatch {
+    height: 54px;
+    width: 94px;
+    margin-right: 59px;
+}
+
+    .divMoneyWatch:hover {
+        background-image: url(../images/in_the_press_hover.png);
+        background-position: -151px 63px;
+    }
+
+/*Press Link end*/
+
+.imgPeopleSayPin {
+    left: 20px;
+    margin-bottom: 0;
+    position: relative;
+    top: -24px;
+}
+
+.imgLatestNewsSeperator {
+    background-image: url(../images/news_seperator.png);
+    height: 5px;
+    width: 290px;
+}
+
+#sliderDiv {
+    height: 430px;
+    width: 100%;
+    background-color: #EAEAEA;
+    margin-top: 1px;
+}
+
+.borderRadius {
+    border-radius: 7px;
+}
+
+.borderRadius_TopLeftRight {
+    border-radius: 7px 7px 0 0;
+}
+
+.divHomePageStmtSeparator {
+    width: 1000px;
+    height: 2px;
+    background-image: url(../images/home_statement_seperator.png);
+}
+
+#sliderContent {
+    height: 780px;
+}
+
+.grahicImage {
+    margin-top: 34px;
+    height: 610px;
+    background-repeat: no-repeat;
+}
+
+#peopleSay {
+    background-image: url(../images/bg_testimonial.png);
+    background-repeat: no-repeat;
+    height: 222px;
+    width: 645px;
+    margin-left: 5px;
+    margin-top: 25px;
+}
+
+#peopleImage {
+    height: 154px;
+    margin: 10px;
+    width: 75px;
+    margin-right: 20px;
+}
+
+#peopleThaught {
+    color: #5A5A5A;
+    height: 144px;
+    line-height: 15px;
+    width: 585px;
+    padding-top: 15px;
+}
+
+#latestBlogs {
+    margin-top: 25px;
+    height: 188px;
+    margin-left: 25px;
+    width: 310px;
+}
+
+.sectionTitle {
+    color: #2A2A2A;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.blogPostText {
+    color: #5A5A5A;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+    .blogPostText hr {
+        margin-bottom: 10px;
+        color: White;
+        margin-left: 0px;
+        width: 288px;
+        float: left;
+    }
+
+    .blogPostText a {
+        color: #5F8EB0;
+        font-weight: bold;
+        line-height: 20px;
+        text-decoration: none;
+    }
+
+.captionTextColor {
+    color: #4f7598;
+}
+
+.fontItalic {
+    font-style: italic;
+}
+
+
+.latestNews {
+    background-image: url(../images/caption_news.png);
+    width: 180px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+.newsText {
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 794px;
+}
+
+.partnerLogo {
+    background-image: url(../images/partner_logo.png);
+    background-repeat: no-repeat;
+    height: 90px;
+}
+
+#lineCaption {
+    background-image: url(../images/line_caption.png);
+    background-repeat: no-repeat;
+    height: 5px;
+    margin-top: 45px;
+}
+
+.homeBox {
+    float: left;
+    width: 320px;
+    height: 165px;
+    background-image: url(../Images/home_3tab_normal.png);
+    background-repeat: no-repeat;
+}
+
+    .homeBox:hover {
+        background-image: url(../Images/home_3tab_hover.png);
+    }
+
+.divLeftDashboard {
+    width: 250px;
+    height: 190px;
+    padding-top: 10px;
+}
+
+.divMidDashboard {
+    margin-top: 1px;
+    width: 250px;
+    margin-bottom: -1px;
+    margin-left: 0px;
+    height: 189px;
+    padding-top: 10px;
+}
+
+.divRightDashboard {
+    width: 250px;
+    padding-top: 10px;
+    height: 190px;
+}
+
+.divSocialHeading {
+    color: #FFFFFF;
+    float: left;
+    font-family: helvetica;
+    font-size: 14px;
+    font-weight: bolder;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 140px;
+    float: left;
+}
+
+.divTwitter {
+    background-image: url(../images/twitter_icon.png);
+    width: 29px;
+    height: 25px;
+    margin-left: 9px;
+    margin-top: 10px;
+}
+
+.lightGrayForeColor {
+    color: #BCBCBC !important;
+}
+
+.divTweets {
+    clear: both;
+    color: #BCBCBC;
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 700;
+    height: 85px;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 10px;
+    width: 226px;
+}
+
+.hrefTwitter {
+    color: #FFFFFF;
+    cursor: text;
+    text-decoration: none;
+}
+
+.divFollowOnTwitter {
+    width: 120px;
+    margin-left: 9px;
+    margin-top: 7px;
+}
+
+.divFacebook {
+    background-image: url(../images/facebook_f_icon.png);
+    width: 13px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.divFansOnFb {
+    font-size: 14px;
+    font-weight: bold;
+    height: 29px;
+    clear: both;
+    color: #717171;
+    font-family: helvetica;
+    clear: both;
+    color: #717171;
+    font-family: helvetica;
+    padding-left: 60px;
+}
+
+.divSocialDashboardBottom {
+    width: 829px;
+    height: 16px;
+    background-image: url(../Images/shadow_bottom.png);
+}
+
+.divSocialDashboardTop {
+    width: 829px;
+    height: 16px;
+    background-image: url(../Images/shadow_top.png);
+}
+
+.divSocialDashboard {
+    margin-top: -4px;
+    height: 200px;
+    width: 977px;
+    margin-bottom: -1px;
+    margin-left: 0px;
+}
+
+.divSocialSeperator {
+    background-image: url(../images/bottom_box_vertical_line.png);
+    height: 171px;
+    width: 1px;
+    float: left;
+}
+
+.divYouTube {
+    background-image: url(../images/you_tube_icon.png);
+    width: 62px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.divYouTubeIframe {
+    height: 74px;
+    margin: -4px 0 0 20px;
+    padding-top: 0;
+    width: 122px;
+}
+
+.divPromotion {
+    float: right;
+    height: 64px;
+    padding-right: 0;
+    padding-top: 18px;
+    width: 138px;
+    display: none;
+}
+
+.divFollowOnYoutube {
+    clear: both;
+    height: 23px;
+    margin-top: 0;
+    padding-top: 18px;
+    width: 134px;
+    margin-left: 21px;
+}
+
+.divYouTubeSearchMain {
+    margin-top: 20px;
+    height: 265px;
+}
+
+.WhyEknowIDHeading {
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+    color: #8A8C8A;
+    margin-left: 395px;
+    width: 185px;
+}
+
+.divYoutubeHomePage {
+    height: 255px;
+    width: 420px;
+    padding: 5px;
+}
+
+.divSearchPercentageMain {
+    padding: 5px;
+    height: 255px;
+    margin-left: 60px;
+    width: 500px;
+}
+
+.divSearchPercentage {
+    color: #808080;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.divSearchProgressBackground {
+    width: 450px;
+    height: 20px;
+    border-radius: 5px;
+    background-image: url(../Images/SearchBar_background.png);
+    background-repeat: repeat-x;
+    padding: 1px 0 0 2px;
+    margin-top: 2px;
+}
+
+.divSearchProgressForeground {
+    height: 18px;
+    border-radius: 5px;
+    background-image: url(../Images/SearchBar_Percentage.png);
+    background-repeat: repeat-x;
+}
+
+.divWhatPeopleSayHeading {
+    background-image: url(../Images/testimonial_rebin.png);
+    width: 639px;
+    margin: 15px 0 0 -13px;
+    height: 31px;
+    padding-top: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.imgGetStartedBtn {
+    background-image: url(../Images/get_started_now.png);
+    width: 128px;
+    height: 27px;
+    background-position: 0 0px;
+}
+
+    .imgGetStartedBtn:hover {
+        background-image: url(../Images/get_started_now.png);
+        width: 128px;
+        height: 27px;
+        background-position: 0 27px;
+    }
+/*_________HOME PAGE END__________*/
+
+/*__________________SignUpForm Start____________*/
+/*.signUpLogo
+{
+    height:72px;
+    width:980px;
+    padding-top:15px;
+    padding-left:10px;
+    background-image:url(../Images/sign_in_header_bg_popup.png);
+    background-repeat:repeat-x;
+}
+.signUpDescription
+{    
+    width:415px;
+    height: 100%;
+    padding-left:15px;
+    margin-top:10px;
+}
+.signUpForm
+{
+    background-color: #f2f2f2;        
+    width:515px;    
+    margin-top:10px;
+    padding-top:15px; 
+    padding-left:15px; 
+    padding-bottom:15px;
+    border-radius:4px;
+}*/
+.singUpDescriptionContent {
+    height: 150px;
+    padding: 10px;
+}
+
+.singUpContentImage {
+    width: 40%;
+    padding-right: 7px;
+}
+
+.detailsNameList {
+    text-align: center;
+    width: 33%;
+}
+
+.planDetail {
+    width: 33%;
+    float: left;
+}
+
+.detailsName {
+    padding-left: 14px;
+    padding-right: 5px;
+    padding-top: 10px !important;
+    text-align: left;
+    height: 25px;
+    width: 133px;
+    font-weight: bolder;
+}
+
+.detailNameValue {
+    padding: 5px;
+    text-align: left;
+    height: 25px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.pText {
+    font-size: 12px;
+}
+
+.Createbtn {
+    /*float:right;   */
+    margin-top: 8px;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.bigTitle {
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+input[type="text"], textarea, input[type="password"], Select {
+    background: -moz-linear-gradient(center top, #F6F6F6, #FFFFFF) repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #C0C8D2;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) inset;
+    /*font-size: 13px;*/
+    margin: 0;
+    transition: all 0.2s linear 0s;
+}
+
+input[type="text"], textarea, input[type="password"] {
+    padding: 2px 7px;
+}
+
+select {
+    padding: 2px 3px;
+}
+
+
+.horizontalLine {
+    background-image: url(../Images/SignUpSeperator.png);
+    background-repeat: repeat-x;
+    width: 225px;
+    display: inline-block;
+    height: 5px;
+    vertical-align: middle;
+}
+
+.signUpBottomImg {
+    margin-left: 6px;
+    margin-top: auto;
+}
+
+/*__________________SignUpForm END____________*/
+
+/*__________________SignIN START_______________*/
+
+/*.signInLogo
+{
+    height:72px;
+    width:690px;
+    margin-left:-10px;
+    padding-top:15px;
+    padding-left:10px;
+    background-image:url(../Images/sign_in_header_bg_popup.png);
+    background-repeat:repeat-x; 
+}*/
+.signInForm {
+    width: 280px;
+    height: auto;
+}
+
+.signFormSeprator {
+    width: 80px;
+    height: auto;
+}
+
+.singFormButton {
+    width: 320px;
+    height: auto;
+    margin-top: 23px;
+}
+
+.closeBtnDiv {
+    float: right;
+    margin-top: -15px;
+    margin-right: -3px;
+}
+
+.bClose {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-image: url(../Images/Close_icon.png);
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-right: -25px;
+    margin-top: -20px;
+}
+
+.signInBottomImg {
+    /* clear: both;
+    position: relative;
+    top: auto;*/
+    margin-top: -15px;
+}
+/*__________________SignIN END_______________*/
+
+
+/*slider divs*/
+.tabData {
+    position: absolute;
+    width: 295px;
+    visibility: hidden;
+    top: 15px;
+}
+
+    .tabData a {
+        text-decoration: none;
+        color: #618FC7;
+    }
+
+.tabContainer {
+    margin-left: -14px;
+    position: absolute;
+    top: 345px;
+    text-align: justify;
+    z-index: 99;
+}
+
+@-moz-document url-prefix() {
+    .tabContainer {
+        margin-left: -14px;
+        position: absolute;
+        top: 348px;
+        text-align: justify;
+        z-index: 99;
+    }
+}
+
+.SeeMoreDiv {
+    padding-top: 10px;
+    clear: both;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .SeeMoreDiv {
+        padding-top: 15px !important;
+        clear: both;
+    }
+}
+
+
+
+
+.backgroundBlack {
+    background-color: Black;
+    opacity: 0.7;
+    color: White;
+}
+
+
+
+.tabTitle {
+    width: 295px;
+    height: 35px;
+    clear: both;
+}
+
+.tabTitleContent {
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.tabH3 {
+    /*padding-left:15px;*/
+    padding-top: 0px;
+    padding-bottom: 4px;
+    font-size: 18px;
+    border-bottom: 2px dotted white;
+}
+
+.tabContentMargin {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+}
+
+.upDownsliDiv {
+    padding: 3px 3px 0px 3px;
+}
+
+.tabContent {
+    clear: both;
+    height: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tabButton {
+    float: left;
+    width: 290px;
+    margin-left: 40px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.box {
+    position: relative;
+    width: 290px;
+    top: 115px;
+}
+/* end of slider divs*/
+
+/*Get started divs*/
+#getStartedContent {
+    background-image: url(../images/bg_content.png);
+    background-repeat: repeat-x;
+    height: 745px;
+}
+
+#startedHeading {
+    background-image: url(../images/caption.png);
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 358px;
+}
+
+#startedHeadingText {
+    color: #4b4b4b;
+    font-size: 18px;
+    text-align: center;
+    padding: 2px;
+}
+
+.boxHeightWidth {
+    width: 290px;
+    height: 470px;
+}
+
+.UncoverYourBgRunCheck, .ProtectIDRunCheck, .SecureJobRunCheck {
+    background-image: url(../Images/run_check_now.png);
+    width: 148px;
+    height: 37px;
+    background-position: 0px 39px;
+}
+
+    .UncoverYourBgRunCheck:hover, .ProtectIDRunCheck:hover, .SecureJobRunCheck:hover {
+        background-image: url(../Images/run_check_now.png);
+        width: 148px;
+        height: 37px;
+        background-position: 0px -2px;
+    }
+
+.FreeResumeCheck {
+    background-image: url(../Images/run_check_now.png);
+    width: 168px;
+    height: 36px;
+    background-position: 168px 39px;
+}
+
+    .FreeResumeCheck:hover {
+        background-image: url(../Images/run_check_now.png);
+        width: 168px;
+        height: 36px;
+        background-position: 168px -2px;
+    }
+
+#byProfessionBox {
+    background-image: url(../Images/box_1.png);
+    background-repeat: no-repeat;
+}
+
+#uploadResumeBox {
+    background-image: url(../Images/box_2.png);
+    background-repeat: no-repeat;
+}
+
+#employeeReferralBox {
+    background-image: url(../Images/box_3.png);
+    background-repeat: no-repeat;
+}
+
+.boxSeprator {
+    background-image: url(../Images/white_box_vertical_line.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 470px;
+}
+
+#mainBoxContainer {
+    padding-left: 60px;
+    padding-right: 50px;
+}
+
+.boxHeader {
+    height: 42px;
+    margin-top: 25px;
+    margin-left: 37px;
+    font-size: 18px;
+}
+
+.boxText {
+    margin-left: 25px;
+    margin-right: 55px;
+    font-size: 12px;
+    text-align: justify;
+    height: 135px;
+    margin-top: 280px;
+}
+
+.startBtn {
+    height: 40px;
+    margin-left: 25px;
+}
+
+#byProfessionImage {
+    height: 190px;
+    display: inline-block;
+    background-image: url(../images/img1.png);
+    background-repeat: no-repeat;
+    width: 221px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#uploadResumeImage {
+    height: 190px;
+    display: inline-block;
+    background-image: url(../images/img2.png);
+    background-repeat: no-repeat;
+    width: 221px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#empReferralImage {
+    height: 190px;
+    display: inline-block;
+    background-image: url(../images/img3.png);
+    background-repeat: no-repeat;
+    width: 221px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+
+/*end of get staeted */
+
+/*start of Search by Profession */
+.SearchByRef_background {
+    height: 855px;
+    width: 100%;
+    /* background-image: url(../images/sub_page_background_bg.png);
+   background-repeat: repeat-x;*/
+    background-color: #E7E7E7;
+}
+
+.myProfile {
+    height: 855px;
+    width: 100%;
+    background-image: url(../images/sub_page_background_bg.png);
+    background-repeat: repeat-x;
+}
+
+.displayNone {
+    display: none;
+}
+
+.SearchByRef_mainDiv {
+    margin: auto;
+    width: 989px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.SearchByRef_SelectHeadDiv {
+    padding-top: 32px;
+    clear: both;
+    width: 100%;
+    height: 50px;
+}
+
+.SearchByRef_SelectProfHeading {
+    color: #424242;
+    margin: 0;
+}
+
+.SearchByRef_SelectProfDropDown {
+    margin-left: 11px;
+    vertical-align: top;
+    width: 201px;
+    border-color: #DBDBDB;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+.SearchByRef_btnGo {
+    margin-top: -4px;
+    margin-left: 5px;
+}
+
+.SearchByRef_bodyMainDiv {
+    height: auto;
+    background-color: white;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    clear: both;
+    box-shadow: 2px 2px 4px #8A8A8A;
+}
+
+.SearchByRef_bodySubMainDiv {
+    margin: auto;
+    width: 895px;
+    padding-top: 10px;
+}
+
+.height_30px {
+    height: 30px;
+}
+
+.SearchByRef_YouSelectedSpan {
+    color: #3E3E3E;
+    margin: 0px;
+    float: left;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.SearchByRef_SelectedProfSpan {
+    color: #415E8F;
+    margin-left: 5px;
+    float: left;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.SearchByRef_LoremIpsumSpan {
+    margin: 0px;
+    color: #3E3E3E;
+}
+
+.SearchByRef_bodyMainSeperatorDiv {
+    margin-left: -8px;
+    width: 901px;
+    margin-top: 28px;
+    border-top: 1px solid #C4C4C4;
+    height: 20px;
+}
+
+.SearchByRef_KnowIDHelpSpan {
+    color: #3E3E3E;
+    margin: 0px;
+    float: left;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+.SearchByRef_GreenTick {
+    float: left;
+    background-image: url(../images/green_tick.png);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 23px;
+}
+
+.SearchByRef_ReportNameDiv {
+    float: left;
+    /*width: 110px;*/
+    width: 20%;
+    margin-left: 20px;
+}
+
+.SearchByRef_ReportNameSpan {
+    color: #990000;
+    margin: 0px;
+    float: left;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.SearchByRef_ReportDescriptDiv {
+    float: left;
+    margin-left: 20px;
+    /*width:60%;*/
+    width: 72%;
+    text-align: justify;
+}
+
+.SearchByRefUC_heading {
+    color: #3A6185;
+    font-family: Arial;
+}
+
+.SearchByRefUC_Subheading {
+    color: #949494;
+    font-family: Arial;
+    margin: 0;
+}
+
+.SearchByRefUC_Descript {
+    color: #3E3E3E;
+    font-family: Arial;
+    font-family: Arial;
+    line-height: 17px;
+    text-align: justify;
+}
+
+.SearchByRefUC_tabHeading {
+    text-decoration: none;
+    color: White;
+    font-size: 19px;
+}
+
+.SearchByRefUC_SelectProfDiv {
+    z-index: 12;
+    position: absolute;
+    margin: 37px 0 0 61px;
+}
+
+.SearchByRefUC_ChoosePlanDiv {
+    z-index: 12;
+    position: absolute;
+    margin: 37px 0 0 400px;
+}
+
+.SearchByRefUC_LoginDiv {
+    z-index: 12;
+    position: absolute;
+    width: 95px;
+    margin: 27px 0 0 551px;
+}
+
+.SearchByRefUC_PaymentDiv {
+    z-index: 12;
+    position: absolute;
+    margin: 37px 0 0 712px;
+    width: 216px;
+}
+
+.z-index_1 {
+    z-index: 1;
+}
+
+.SearchByRefUC_tabImage {
+    margin-top: 20px;
+}
+
+.SearchByProfPayment_Nortan {
+    margin-left: 21px;
+    height: 69px;
+    width: 268px;
+    background-image: url(../Images/nortan_security.png);
+}
+/*end of Search by Profession */
+
+
+/* Drop Down Css */
+/*select
+{
+background: url(../images/arrow_top.png) no-repeat right;
+font-size: 12px;
+outline: none;
+height: 23px;
+border: none;
+background-color: #fff;
+display: block;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border-bottom: #ccc 1px solid;
+border-left: #ccc 1px solid;
+border-top: #ccc 1px solid;
+border-right: #ccc 1px solid;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+   }*/
+/* ____End _____*/
+
+/*Start of Search by Profession-Choose Plan */
+.packagePrice {
+    color: #3E3E3E !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+
+.SearchByRefChosePlan_TickDiv {
+    float: left;
+    background-image: url(../images/green_tick_round.png);
+    background-repeat: no-repeat;
+    height: 57px;
+    width: 60px;
+}
+
+.SearchByRefChosePlan_ChoosePlanHeadDiv {
+    margin-left: 15px;
+    margin-top: 15px;
+    float: left;
+}
+
+.SearchByRefChosePlan_BodyMainDiv {
+    width: 100%;
+    height: 500px;
+}
+
+.SearchByRefChosePlan_BasicMainDiv {
+    text-align: center;
+    height: 100%;
+    width: 33%;
+    float: left;
+}
+
+.SearchByRefChosePlan_SilverMainDiv, .SearchByRefChosePlan_PremiumMainDiv {
+    height: 100%;
+    width: 285px;
+    margin-left: 20px;
+    float: left;
+}
+
+.SearchByRefChosePlan_PlanHeadDiv {
+    float: left;
+    background-image: url(../images/top_bg_body_special_offer.png);
+    width: 284px;
+    background-repeat: no-repeat;
+    height: 433px;
+}
+
+.SearchByRefChosePlan_PlanHeading {
+    clear: both;
+    color: #242B31;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 1px 1px 0 #A6A8A9;
+    width: 200px;
+}
+
+.SearchByRefChosePlan_PriceDetailDiv {
+    height: 111px;
+}
+
+.SearchByRefChosePlan_PriceDollerDiv {
+    float: left;
+    width: 15px;
+    margin-left: 34px;
+}
+
+.SearchByRefChosePlan_PriceDoller {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: 57px;
+}
+
+.SearchByRefChosePlan_PriceDiv {
+    float: left;
+    margin-top: 25px;
+    width: 61px;
+}
+
+.SearchByRefChosePlan_Pricelbl {
+    color: #FFFFFF;
+    margin-top: 55px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.SearchByRefChosePlan_SpecialPricelbl {
+    color: White;
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.SearchByRefChosePlan_PricePercentDiv {
+    margin-top: 18px;
+    margin-left: 80px;
+}
+
+.SearchByRefChosePlan_PricePercentlbl {
+    color: #F6F6F6;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.SearchByRefChosePlan_PriceOfflbl {
+    color: #F6F6F6;
+    font-size: 19px;
+    margin-left: 5px;
+}
+
+.SearchByRefChosePlan_PlanDescDiv {
+    height: auto;
+    color: white;
+    margin: auto;
+    width: 257px;
+    font-size: 11px;
+}
+
+.SearchByRefChosePlan_ReportIncludeDiv {
+    margin: auto;
+    width: 238px;
+    min-height: 30px;
+}
+
+.SearchByRefChosePlan_ReportIncludeHead {
+    color: #ED871B;
+    font-weight: bold;
+}
+
+.SearchByRefChosePlan_ReportListDiv {
+    padding-left: 10px;
+    width: 266px;
+    height: auto;
+}
+
+.SearchByRefChosePlan_ReportRepeater {
+    margin-top: 5px;
+    list-style: none;
+    color: #FFFFFF;
+}
+
+.vertical_align_middle {
+    vertical-align: middle;
+}
+
+.SearchByRefChosePlan_DrugListMainDiv {
+    float: left;
+    background-image: url(../images/bottom_bg_repet_special_offer.png);
+    width: 284px;
+    background-repeat: repeat-y;
+}
+
+.SearchByRefChosePlan_DrugListSubDiv {
+    margin: auto;
+    width: 257px;
+}
+
+.SearchByRefChosePlan_BottomDiv {
+    color: White;
+    float: left;
+    background-image: url(../images/bottom_bg_repet_special_offer.png);
+    width: 284px;
+    background-repeat: repeat-y;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 12px;
+}
+
+.SearchByRefChosePlan_BottomCornerDiv {
+    float: left;
+    background-image: url(../images/bottom_corner_special_offer.png);
+    width: 284px;
+    height: 65px;
+    background-repeat: no-repeat;
+}
+
+.SearchByRefChosePlan_btnContinue {
+    margin-left: 57px;
+    margin-top: 8px;
+}
+
+.SearchByRefChosePlan_lnkViewReport {
+    color: #5383DB;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.SearchByRefChosePlan_lblReportName {
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.divUserProfileUpdate {
+    padding-right: 30px;
+    width: 89px;
+}
+/*end of Search by Profession-Choose Plan */
+/*Start of Inner Sign In */
+.SearchByRefLoginSignIn_MainDiv {
+    background-image: url(../images/signup_background.png);
+    background-repeat: no-repeat;
+    border-radius: 9px 9px 9px 9px;
+    float: left;
+    height: 435px;
+    width: 765px;
+    margin-left: 64px;
+}
+
+.SearchByRefLoginSignIn_HeadDiv {
+    padding: 23px 0 0 30px;
+}
+
+.SearchByRefLoginSignIn_Heading {
+    font-size: 25px;
+}
+
+.SearchByRefLoginSignIn_SubHeading {
+    padding-left: 43px;
+    padding-top: 75px;
+}
+
+.SearchByRefLoginSignIn_LoginDiv {
+    height: 281px;
+    padding: 5px 0 0 20px;
+    width: 297px;
+    margin-left: 25px;
+}
+
+.SearchByRefLoginSignIn_Logintxt {
+    padding: 8px 0;
+}
+
+.SearchByRefLoginSignIn_ForgotPwd {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4A80c0;
+    text-decoration: none;
+}
+
+.SearchByRefLoginSignIn_LoginBtnDiv {
+    margin: 26px 0px 0px 199px;
+}
+
+.SearchByRefLoginSignIn_SeperatorDiv {
+    height: 30px;
+}
+
+.SearchByRefLoginSignIn_leftSeperatorDiv {
+    background-image: url(../images/seperator_line.png);
+    background-repeat: repeat-x;
+    float: left;
+    height: 290px;
+    margin-top: -50px;
+    width: 25px;
+    margin-left: 27px;
+}
+
+.SearchByRefLoginSignIn_OrSeperatorDiv {
+    float: left;
+    height: 15px;
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.SearchByRefLoginSignIn_RightSeperatorDiv {
+    height: 5px;
+    background-image: url(../images/hori_line.png);
+    float: left;
+    background-repeat: repeat-x;
+    margin-top: 5px;
+    width: 270px;
+}
+
+.SearchByRefLoginSignIn_SocialSiteDiv {
+    margin-left: 86px;
+    height: 103px;
+    width: 320px;
+}
+/*End of Inner Sign In */
+
+/*Start of Join eKnow ID */
+.SearchByRefLoginJoin_MainDiv {
+    height: 484px;
+    width: 505px;
+    background-image: url(../images/joinId_bg.png);
+    background-repeat: repeat-x;
+    border-radius: 9px 9px 9px 9px;
+    float: left;
+    padding: 10px 15px;
+}
+
+.SearchByRefLoginJoin_HeadDiv {
+    height: 30px;
+    padding: 18px 0px 0px 20px;
+}
+
+.SearchByRefLoginJoin_leftHeadSpan {
+    color: #415D8F;
+    float: left;
+    font-size: 26px;
+}
+
+.SearchByRefLoginJoin_RighttHeadSpan {
+    color: #415D8F;
+    float: left;
+    font-weight: bold;
+    margin: 7px 0px 0px 8px;
+    font-size: 19px;
+}
+
+.SearchByRefLoginJoin_SubHeadDiv {
+    height: 25px;
+    padding: 5px 0px 0px 20px;
+}
+
+.SearchByRefLoginJoin_leftSubHeadSpan {
+    color: #5F5E5E;
+    float: left;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.SearchByRefLoginJoin_RightSubHeadSpan {
+    color: #5F5E5E;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.SearchByRefLoginJoin_DescDiv {
+    height: 100px;
+    padding: 11px 0px 0px 20px;
+}
+
+.SearchByRefLoginJoin_KnowIDDiv {
+    background-image: url(../images/red_btn1.png);
+    float: left;
+    width: 55px;
+    margin-left: 5px;
+    height: 51px;
+    background-repeat: no-repeat;
+}
+
+.SearchByRefLoginJoin_PlanDiv {
+    background-image: url(../images/red_btn2.png);
+    float: left;
+    width: 55px;
+    margin-left: 5px;
+    height: 51px;
+    background-repeat: no-repeat;
+}
+
+.SearchByRefLoginJoin_NannyDiv {
+    background-image: url(../images/red_btn3.png);
+    float: left;
+    width: 55px;
+    margin-left: 5px;
+    height: 51px;
+    background-repeat: no-repeat;
+}
+
+.SearchByRefLoginJoin_subHeadtxt {
+    color: #5F5E5E;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 9px 0px 0px 10px;
+}
+
+.SearchByRefLoginJoin_desctxt {
+    font-size: 13px;
+    color: #5F5E5E;
+    float: left;
+    margin: 9px 0px 0px 10px;
+}
+/*End of Join eKnow ID */
+
+/* POPUP Container Tabs.aspx */
+.tabContentformat {
+    background: White;
+    padding: 1px;
+    border-radius: 4px;
+}
+
+.topHeaderDiv {
+    background-image: url(../Images/top_header_bg_popup.png);
+    background-repeat: repeat-x;
+    padding: 10px;
+    color: White;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.popUpCloseButton {
+    float: right;
+    margin-top: -6px;
+}
+
+.Initial {
+    background: White;
+}
+
+    .Initial:hover {
+        background: Gray;
+        color: White;
+    }
+
+.Clicked {
+    background: #8C8C8C;
+    color: White;
+}
+
+#MenuContainer input[type="submit"] {
+    width: 120px;
+    border: 0px none white;
+    font-size: 11px;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 27px;
+    margin-right: 5px;
+}
+
+#MenuContainer {
+    float: right;
+    margin-top: 12px;
+}
+
+.popTabContainer {
+    clear: both;
+    padding-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.popTabButtons {
+    height: 45px;
+    margin-top: 10px;
+    padding-right: 6px;
+}
+
+.line {
+    color: White;
+    clear: both;
+    margin-top: 45px;
+}
+
+.blackBtnMiddle {
+    background-image: url(../images/black_btn_middle.png);
+    background-repeat: repeat-x;
+    float: left;
+    height: 30px;
+    border: 0px none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.uploadResumeProceed {
+    background-image: url(../images/proceed_btn.png);
+    background-repeat: repeat-x;
+    float: left;
+    width: 108px;
+    height: 32px;
+    border: 0px none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+
+/*_____End___________*/
+
+
+/* EmployMent Details Control */
+.popupDivstyle {
+    padding-left: 20px;
+    padding-top: 12px;
+    border-radius: 6px;
+}
+
+.PopUPMainContainer {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.backGroudColor {
+    background-color: #F1F1F1;
+}
+
+.calender {
+    padding-top: 1px;
+    padding-left: 5px;
+}
+
+.EmploymentDetails {
+    padding: 5px 15px 0px;
+}
+
+
+.drugsbg {
+    background-image: url(../Images/drug_img.png);
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    height: 137px;
+    padding-left: 250px;
+}
+
+/* _____________End__________*/
+/*______Payement Info_________*/
+
+
+
+.lightgrayBackGround {
+    background-color: #ECECEC;
+    border: 1px solid #DBDBDB;
+    border-right: 6px;
+}
+
+.borderRadius6 {
+    border-radius: 6px;
+}
+
+.borderRadiusTopCorners6 {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.popupBoxShadow {
+    box-shadow: 5px 5px 0px 0px #888888;
+}
+
+.padding1 {
+    padding: 1px;
+}
+
+#paymentSeperator {
+    background-image: url(../Images/line_caption.png);
+    background-repeat: no-repeat;
+}
+
+#paymentInfoLeftContainer {
+    width: 665px;
+    height: 860px;
+}
+
+#paymentInfoRightContainer {
+    width: 300px;
+    height: 860px;
+}
+
+#completePurchsediv {
+    width: 630px;
+    height: 515px;
+    background-color: White;
+}
+
+.popupHeader {
+    background-image: url(../Images/top_header_bg_popup.png);
+    background-repeat: repeat-x;
+    height: 35px;
+}
+
+#orderInformation {
+    width: 535px;
+    height: 285px;
+}
+
+/*______Payement Info end_________*/
+
+/*Start of Logged User On Master Page */
+
+div#SignInInfo:hover {
+    display: block;
+    height: 15px;
+    position: relative;
+    width: 100%;
+    background-color: #ECE8EC;
+}
+
+div#SignInInfo ul {
+    display: none;
+    background-color: #ECE8EC;
+}
+
+div#SignInInfo:hover ul {
+    background-color: #ECE8EC;
+    cursor: pointer;
+    display: block;
+    list-style-type: none;
+    margin-left: -6px;
+    margin-top: 5px;
+    width: 100px;
+    padding-left: 3px;
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+div#SignInInfo:hover li {
+    color: #ECE8EC;
+    font-size: 11px;
+    font-weight: normal;
+    width: 100%;
+}
+
+    div#SignInInfo:hover li.first {
+        padding: 4px 0 0 4px;
+    }
+
+    div#SignInInfo:hover li.middle {
+        padding: 3px 0 0 8px;
+        background-position: left top;
+    }
+
+    div#SignInInfo:hover li.last {
+        background-position: left bottom;
+        padding: 2px 0 6px 5px;
+    }
+
+div#SignInInfo li a {
+    color: #555555;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.login_menuSeperator {
+    background-color: #FFFFFF;
+    height: 1px;
+    margin-top: 1px;
+}
+
+.pnlSignedIn {
+    width: 87px;
+    float: left;
+    margin-left: 6px;
+    margin-top: 2px;
+    height: 80px;
+    color: #8F8F8F;
+}
+
+.SignedInDiv {
+    padding-left: 6px;
+    z-index: 1;
+    padding-top: 6px;
+}
+
+.lblLoggerUserName {
+    float: left;
+    margin-top: -3px;
+    margin-left: 0px;
+    color: #666666;
+}
+
+.imgDownArrow {
+    margin: 4px 0 0 10px;
+}
+
+.headerSeperator {
+    background-image: url(../images/HeaderSeprator.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 1px;
+    clear: both;
+    z-index: 9999;
+}
+
+.lnkLoggedUsrInfo {
+    padding-left: 8px;
+    height: 18px;
+    color: #666666;
+}
+
+.lnkSignOut {
+    height: 21px;
+    color: #666666;
+}
+
+.lnkAccount {
+    color: #989898;
+    height: 18px;
+}
+/*End of Logged User On Master Page */
+
+
+
+
+/* Report  Css */
+
+.reportBorder {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.blueBorder {
+    border: 1px solid #789EC2;
+}
+
+#reportHeader {
+    background-image: url(../Images/report_top_header_bg.png);
+    background-repeat: repeat-x;
+    height: 91px;
+    padding: 10px;
+}
+
+.reportTop {
+    background-image: url(../Images/report_top_img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+}
+
+    .reportTop H2 {
+        margin: 0px;
+        padding: 6px;
+        color: White;
+    }
+
+.reportButtonInitial {
+    background-image: url(../Images/pegination_normal_img.png);
+    background-repeat: no-repeat;
+}
+
+.reportButtonClicked {
+    background-image: url(../Images/pegination_selected_img.png);
+    background-repeat: no-repeat;
+}
+
+.reportHeadingbg {
+    background-image: url(../Images/report_summery_tab_bg.png);
+    background-repeat: repeat-x;
+    padding: 10px;
+    border: none;
+}
+
+.gridHeaderBg {
+    background-image: url(../Images/report_grid_bg_top.png);
+}
+
+
+.imgTextMargin {
+    margin-top: 7px;
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+#reportGridButtons input[type="submit"] {
+    width: 22px;
+    height: 22px;
+    border: none;
+    background-repeat: no-repeat;
+    margin-left: 3px;
+}
+
+
+.reportContentBg {
+    background-image: url(../Images/report_contents_bg.png);
+    border: none;
+    height: 32px;
+    background-repeat: repeat-x;
+    padding-left: 25px;
+}
+
+.arrowDown {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.alternaterowcolor {
+    background-color: #F2F2F2;
+    height: 30px;
+}
+
+.grvHeaderStyle {
+    text-align: left;
+    height: 30px;
+}
+
+.grvRowStyle {
+    background-color: #FFFFFF;
+    height: 30px;
+}
+
+.leftTitleWidth {
+    width: 100px;
+}
+
+.rightTitleWidth {
+    width: 200px;
+}
+
+.grvFirstColumn {
+    text-align: center;
+    width: 50px;
+}
+
+.reportContentBorder {
+    border-bottom: 1px Solid Gray;
+}
+
+.contentBorder {
+    border: 1px solid gray;
+}
+
+.contentColor {
+    background-color: #F6F6FA;
+}
+
+.basicDetails {
+    margin-left: 30px;
+    line-height: 32px;
+}
+
+#fileDetails {
+    height: 150px;
+    padding: 10px;
+}
+
+.marginTop200 {
+    margin-top: 200px;
+}
+
+.marginLeft100 {
+    margin-left: 100px;
+}
+
+.marginBottom50 {
+    margin-bottom: 50px;
+}
+
+.marginBottom20 {
+    margin-bottom: 20px;
+}
+
+.marginBottom30 {
+    margin-bottom: 30px;
+}
+
+.marginTop-20 {
+    margin-top: -20px;
+}
+
+.marginRight-10 {
+    margin-right: -10px;
+}
+
+
+#FloridaDataDiv {
+    height: 400px;
+    margin: 15px;
+}
+
+    #FloridaDataDiv .gridHeaderBg {
+        height: 10px;
+        padding: 10px;
+    }
+
+.dataContainer {
+    line-height: 21px;
+}
+
+.leftDataContainer {
+    margin-left: 59px;
+}
+
+.rightDataContainer {
+    margin-right: 48px;
+}
+
+.leftTitle {
+    margin-left: 50px;
+}
+
+.rightTitle {
+    margin-right: 429px;
+}
+
+#PutnamDataDiv {
+    height: 210px;
+}
+
+    #PutnamDataDiv .gridHeaderBg {
+        height: 10px;
+        padding: 10px;
+    }
+
+.reportImg {
+    height: 30px;
+    width: 30px;
+}
+
+.putnamLeftData {
+    clear: both;
+    float: left;
+    margin-left: 30px;
+}
+
+.putnamRightData {
+    float: right;
+    margin-right: 138px;
+}
+
+
+/*_______END_______*/
+
+/*Start of Plan Order Summary Page */
+
+.PlanOrderSummary_ReportListDiv {
+    height: auto;
+    margin: auto auto auto -9px;
+    width: 267px;
+}
+
+.PlanOrderSummary_BasicReportList {
+    background-image: url("../Images/OrderSummary_repeatBg.png");
+    border-bottom: 2px solid #233640;
+}
+
+
+.PlanOrderSummary_ReportList {
+    background-repeat: repeat-y;
+    color: #FFFFFF;
+    list-style: none outside none;
+    padding: 5px 0 5px 5px;
+}
+
+.whiteColor {
+    color: #FFFFFF;
+}
+/*End of Plan Order Summary Page */
+
+/* Date Picker Css */
+
+.ui-datepicker {
+    font-size: 11px !important;
+}
+/*_____ End _______*/
+
+
+
+/* User Profile Page */
+.TabMainDiv {
+    height: 730px;
+    background: White;
+    border: 1px solid black;
+    width: 800px;
+    clear: both;
+    border-top: 5px solid;
+    border-radius: 5px;
+}
+
+.tabBtnBlue {
+    background-image: url(../Images/profile_tab_middle_side.png);
+}
+
+#ProfileTab input[type="submit"] {
+    height: 35px;
+    border-style: none;
+    margin-left: 5px;
+    border-radius: 5px 5px 1px 1px;
+    color: White;
+    font-weight: bold;
+}
+
+.tabBtnRed {
+    background-image: url(../Images/profile_tab_red_middle_side.png);
+}
+
+.tabBtnBlack {
+    background-image: url(../Images/profile_tab_black_middle_side.png);
+}
+
+.contentBtnBg {
+    background-image: url(../Images/profile_blue_btn.png);
+    color: White;
+    border: none;
+    height: 24px;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.contentPadding {
+    padding: 15px 30px 15px 20px;
+    line-height: 18px;
+}
+
+.Exportbtn {
+    margin-top: 5px;
+}
+
+.leftborder {
+    /* border-top:5px solid black;
+    border-left:2px solid black; */
+    height: 500px;
+}
+
+.RightContent {
+    width: 300px; /*  border-top:5px solid black; 
+    border-right:2px solid black; */
+    height: 100%;
+    color: #3E3E3E;
+    background-color: #F7F7F7;
+}
+
+.rightContentHeaderBG {
+    background-image: url(../Images/right_side_heading_title_bg.png);
+    background-repeat: no-repeat;
+    padding: 1px;
+}
+
+    .rightContentHeaderBG h3 {
+        margin-bottom: 9px;
+        margin-left: 9px;
+        margin-top: 7px;
+        padding-left: 8px;
+    }
+
+
+.buttonContainer input[type="submit"] {
+    font-size: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.AddNewBorder {
+    border: 2px solid #dddddd;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+.removebtn {
+    left: 10px;
+    position: relative;
+    top: 0px;
+}
+
+.divSaveUserProfileBtn {
+    /*margin-left: 200px;*/
+    width: 360px;
+    padding-bottom: 24px;
+    float: right;
+}
+
+/*______END _________*/
+
+/* Forgot Password */
+.divForgotPwdSubHeading {
+    margin-top: 14px;
+    padding-left: 30px;
+}
+
+.ForgotPwdSubHeading {
+    color: #656565;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 1px;
+}
+
+.ForgotPwdBody {
+    height: 169px;
+    margin-left: 2px;
+    padding-left: 21px;
+    padding-top: 20px;
+    width: 455px;
+}
+
+.ForgotPasswordBottomImg {
+    bottom: -17px;
+    clear: both;
+    left: 112px;
+    position: absolute;
+}
+
+.orderSummaryHeader {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    height: 35px;
+    padding-left: 15px;
+    padding-top: 7px;
+    width: 212px;
+}
+
+textarea {
+    resize: none;
+}
+
+input.watermark {
+    color: #999;
+}
+
+.bubbleInfo {
+    position: relative;
+}
+
+.trigger {
+    position: absolute;
+}
+
+/* Bubble pop-up */
+
+.popup {
+    position: absolute;
+    display: inherit;
+    z-index: 50;
+    border-collapse: collapse;
+}
+
+    .popup td.corner {
+        height: 13px;
+        width: 17px;
+    }
+
+    .popup td#topleft {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-1.png);
+    }
+
+    .popup td.top {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-2.png);
+    }
+
+    .popup td#topright {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-3.png);
+    }
+
+    .popup td.left {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-4.png);
+    }
+
+    .popup td.right {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-5.png);
+    }
+
+    .popup td#bottomleft {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-6.png);
+    }
+
+    .popup td.bottom {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-7.png);
+        text-align: center;
+    }
+
+        .popup td.bottom img {
+            display: block;
+            margin: 0 auto;
+        }
+
+    .popup td#bottomright {
+        background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-8.png);
+    }
+
+    .popup table.popup-contents {
+        font-size: 12px;
+        line-height: 1.2em;
+        background-color: #fff;
+        color: #666;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+    }
+
+table.popup-contents th {
+    text-align: right;
+    text-transform: lowercase;
+}
+
+table.popup-contents td {
+    text-align: left;
+}
+
+tr#release-notes th {
+    text-align: left;
+    text-indent: -9999px;
+    background: url(http://jqueryfordesigners.com/demo/images/coda/starburst.gif) no-repeat top right;
+    height: 17px;
+}
+
+tr#release-notes td a {
+    color: #333;
+}
+
+.popup td#toplefts {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-1.png);
+}
+
+.popup td.tops {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-2.png);
+}
+
+.popup td#toprights {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-3.png);
+}
+
+.popup td.lefts {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-4.png);
+}
+
+.popup td.right {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-5.png);
+}
+
+.popup td#bottomlefts {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-6.png);
+}
+
+.popup td.bottoms {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-7.png);
+    text-align: center;
+}
+
+    .popup td.bottoms img {
+        display: block;
+        margin: 0 auto;
+    }
+
+.popup td#bottomrights {
+    background-image: url(http://static.jqueryfordesigners.com/demo/images/coda/bubble-8.png);
+}
+
+/*______END _________*/
+
+
+/*______Start WhyEKnowID_________*/
+.moduleInfo {
+    float: left;
+    margin-left: 10px;
+    width: 921px;
+}
+
+.imgDiv_WhyEKnowID {
+    background-image: url(../Images/secure_job_icon.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 68px;
+    width: 65px;
+}
+
+.featureSubDiv_WhyEKnowID {
+    float: left;
+    font-size: 16px;
+    font-weight: bolder;
+    height: 95px;
+    margin-left: 15px;
+    padding-top: 33px;
+}
+
+.featureMainDiv_WhyEKnowID {
+    clear: both;
+    height: 75px;
+    width: 100%;
+}
+
+.featureContentDiv_WhyEKnowID {
+    float: left;
+    font-size: 14px;
+    height: 95px;
+    margin-left: 8px;
+    padding-top: 33px;
+}
+
+.divWhyEKnowIDBackground {
+    background-image: url(../images/WhyEknow_2.png);
+    width: 1800px;
+    height: 240px;
+}
+
+.divWhyEknowBackground {
+    height: 800px;
+    padding-top: 30px;
+    background-color: #E7E7E7;
+}
+
+.divWhyEknowMain {
+    background-color: white;
+    border-color: #D7D7D7;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 4px #8A8A8A;
+    height: 705px;
+    margin: auto;
+    padding: 30px 50px;
+    width: 900px;
+    color: #404040;
+}
+
+.divWhyRightPannel {
+    background-color: #F2F2F2;
+    box-shadow: 2px 2px 4px #8A8A8A;
+    height: 628px;
+    margin-right: 45px;
+    margin-top: -39px;
+    padding: 15px;
+    width: 30%;
+}
+
+.divWhyEknowInner {
+    font-family: helvetica;
+    font-size: 13px;
+    width: 895px;
+    color: #404040;
+}
+/*______END _________*/
+
+.purchaseErrorPopupimg {
+    height: 80px;
+    width: 100px;
+    background-image: url(../images/error.png);
+    float: left;
+}
+
+.purchaseErrorPopupText {
+    float: left;
+    font-size: 14px;
+    font-weight: bolder;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+    width: 180px;
+}
+
+/*______Start password meter css _________*/
+.GeneratePasswordLink {
+    color: #084B8A;
+    cursor: pointer;
+    font-family: verdana;
+    font-size: 10px;
+}
+
+.NewPassword {
+    color: #000000;
+    font-family: verdana;
+    font-size: 10px;
+}
+
+.neutral {
+    background-color: #FFFFFF;
+    border: 2px solid #CCCCCC;
+    color: #000000;
+    font-family: verdana;
+    font-size: 11px;
+    padding: 3px;
+    text-align: center;
+    width: 150px;
+}
+
+.veryweak {
+    background-color: #B40404;
+    border: 2px solid #CCCCCC;
+}
+
+.weak {
+    background-color: #DF7401;
+    border: 2px solid #CCCCCC;
+}
+
+.medium {
+    background-color: #FFFF00;
+    border: 2px solid #CCCCCC;
+}
+
+.strong {
+    background-color: #9AFE2E;
+    border: 2px solid #CCCCCC;
+}
+
+.verystrong {
+    background-color: #0B610B;
+    border: 2px solid #CCCCCC;
+    color: #FFFFFF;
+}
+
+#pwdMeter {
+    height: 18px;
+    margin-left: 145px !important;
+    width: 188px !important;
+    border-radius: 5px;
+}
+
+.backgroundImage {
+    background-image: url(../images/bg_content.png);
+    background-repeat: repeat-x;
+    height: 745px;
+}
+
+.grayBackground {
+    background-color: #E7E7E7;
+}
+/*______END _________*/
+.ui-datepicker {
+    width: 200px;
+}
+
+.ui-datepicker-year {
+    float: right;
+}
+
+.ui-datepicker-month {
+    float: left;
+}
+
+.messagepopUPHeader {
+    background-color: #ECECEC;
+    border: 1px solid #DBDBDB;
+    border-right: 6px;
+}
+/*____ About Us _____________*/
+.aboutUsSubHeadingFont {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.divContactInfo {
+    padding: 10px;
+    margin-top: 10px;
+    width: 333px;
+}
+
+.divAboutUsBackground {
+    background-image: url(../images/About_2.png);
+    width: 1800px;
+    height: 240px;
+}
+
+.divAboutUsSubHeading {
+    height: 155px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.divAboutUsSubHeadingImg {
+    float: left;
+    height: 80px;
+    width: 80px;
+}
+
+.divAboutUsSubHeadingDesc {
+    float: left;
+    width: 779px;
+    margin-left: 20px;
+}
+
+.divAboutUsBg {
+    background-color: #E7E7E7;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-width: 1000px;
+    height: 865px;
+}
+
+.divAboutUsInner {
+    background-color: white;
+    height: 802px;
+    margin-top: 1px;
+    padding: 30px 50px;
+    width: 900px;
+    border-color: #D7D7D7;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 4px #8A8A8A;
+    color: #404040;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+.boxShadowIE8 {
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=135,strength=5);
+}
+
+.divAboutUsRightPnl {
+    background-color: #F6F6F6;
+    height: auto;
+    margin-top: -40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    width: 287px;
+    box-shadow: 2px 2px 4px #8A8A8A;
+}
+/*_______End__________*/
+/*______Start Report Include Popup_____*/
+.divMainReportIncludePopUp {
+    height: 415px;
+    left: 394px;
+    position: absolute;
+    top: 67px !important;
+    width: 451px;
+    z-index: 9999;
+}
+
+.divSubReportIncludePopUp {
+    min-height: 280px;
+    width: 450px;
+    background-color: White;
+    border-radius: 6px 6px 0 0;
+}
+
+.headReportIncludePopUp {
+    background-image: url(../images/sign_in_header_bg_popup.png);
+    height: 60px;
+    padding: 24px 0 0 5px;
+    width: 445px;
+    border-radius: 6px 6px 0 0;
+}
+/*______End Report Include Popup_______*/
+
+/*______Start Resume Checker Payment Page_____*/
+/* .divChkAllowContact
+  {
+    clear: both;
+    height: 25px;
+    margin-left: 140px;
+    width: 187px;
+  }
+  .rc_payment_chkAllowContact
+  {
+       margin-left: -22px;
+    margin-right: 5px;
+  }*/
+/*End Resume Checker Payment Page_____*/
+
+/*____________ Start Feedback Page______________*/
+.divCaptcha {
+    height: 135px !important;
+    width: 320px !important;
+    font-weight: bolder;
+    margin-left: 0px !important;
+}
+
+.divFeedbackMain {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divSubFeedback {
+    height: 275px;
+    margin-top: 35px;
+}
+
+.feedbackMessageTxt {
+    height: 110px;
+    width: 260px;
+}
+
+.captchaErrorMsg .captchaSuccessMsg {
+    width: 145px;
+    vertical-align: text-bottom;
+}
+
+.divFeedbackSubmit {
+    clear: both;
+    float: left;
+    padding-left: 150px;
+}
+/*____________ End Feedback Page______________*/
+.dialogHeader {
+    height: 72px;
+    width: 100%;
+    padding-top: 15px;
+    background-image: url(../Images/sign_in_header_bg_popup.png);
+    background-repeat: repeat-x;
+}
+
+.dialogClose {
+    cursor: pointer;
+    position: absolute;
+    background-image: url(../Images/Close_icon.png);
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-left: -20px;
+    margin-top: -15px;
+}
+
+
+/*_____________start how it works __________*/
+.marginleft65 {
+    margin-left: 65px;
+}
+
+.margintop40 {
+    margin-top: 40px;
+}
+
+.divHowItWorkVerticalSeperator {
+    background-image: url(../images/how_it_wk_line.png);
+    height: 172px;
+    margin-left: 25px;
+    width: 1px;
+}
+
+.divHowItWorkArrow {
+    background-image: url(../images/arrow_right_grey.png);
+    height: 28px;
+    width: 45px;
+    margin-left: 85px;
+}
+
+.divHowItWorkMain {
+    background-color: white;
+    height: 405px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 50px;
+    width: 930px;
+    margin-top: 30px;
+    border-color: #D7D7D7;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 4px #8A8A8A;
+    color: #404040;
+}
+
+.divHowItWorkBackground {
+    background-image: url(../images/HowItWorks_2.png);
+    width: 1800px;
+    height: 240px;
+}
+
+.divHowItWorkImg {
+    height: 170px;
+    margin-left: 3px;
+    margin-top: 50px;
+}
+
+.divChoosePackageImg {
+    background-image: url(../images/choose_package_img.png);
+    height: 168px;
+    width: 85px;
+}
+
+.divBackgroundCheckImg {
+    background-image: url(../images/bg_check_img.png);
+    height: 176px;
+    width: 120px;
+}
+
+.divReceiveReportImg {
+    background-image: url(../images/recevie_report_img.png);
+    height: 176px;
+    width: 96px;
+}
+
+.divHeadingMain {
+    height: 60px;
+    padding-left: 96px;
+}
+
+.divChoosePackageHeading {
+    color: #2A2A2A;
+    float: left;
+    font-family: helvetica;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-left: 0;
+    margin-top: -18px;
+    width: 150px;
+}
+
+.divBgCheckHeading {
+    color: #2A2A2A;
+    float: left;
+    font-family: helvetica;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-left: 262px;
+    margin-top: -18px;
+    width: 150px;
+}
+
+.divReportHeading {
+    color: #2A2A2A;
+    float: left;
+    font-family: helvetica;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-left: 155px;
+    margin-top: -18px;
+    width: 150px;
+}
+
+.divDescriptionMain {
+    height: 60px;
+    margin-top: 27px;
+}
+
+.divChoosePackageDesc {
+    color: #6A6A6A;
+    float: left;
+    font-size: 13px;
+    font-weight: lighter;
+    margin-left: 34px;
+    margin-top: -18px;
+    width: 245px;
+}
+
+.divBgCheckDesc {
+    color: #6A6A6A;
+    float: left;
+    font-size: 13px;
+    font-weight: lighter;
+    margin-left: 40px;
+    margin-top: -18px;
+    width: 245px;
+}
+
+.divReportDesc {
+    color: #6A6A6A;
+    float: left;
+    font-size: 13px;
+    margin-left: 65px;
+    margin-top: -18px;
+    width: 245px;
+}
+
+.headingColor {
+    color: #980000;
+}
+
+.margin_left_right_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+/*End how it works __________*/
+
+/*_____Start Select by Prof____*/
+.divTabHeading {
+    color: #383838;
+    float: left;
+    font-family: helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    width: 122px;
+}
+
+.divTabHR {
+    background-color: #9D9D9D;
+    border: medium none;
+    height: 1px;
+    margin-left: 8px;
+    margin-top: 0;
+    width: 495px;
+    margin-bottom:5px;
+}
+
+.marginTop_13 {
+    margin-top: -13px;
+}
+
+.marginTop_26 {
+    margin-top: -26px;
+}
+
+.divSelectProfHeading {
+    color: #313131;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.divSelectByProfBgLeft {
+    background-image: url(../Images/tab_Head_bg_left.png);
+    background-repeat: no-repeat;
+    height: 52px;
+    width: 14px;
+}
+
+.divSelectByProfBgMiddle {
+    background-image: url(../Images/tab_Head_bg_repet.png);
+    background-repeat: repeat-x;
+    height: 49px;
+    padding-top: 3px;
+    width: 96%;
+}
+
+.divSelectByProfBgRight {
+    background-image: url(../Images/tab_Head_bg_right.png);
+    background-repeat: no-repeat;
+    height: 52px;
+    width: 2%;
+}
+
+.divSearchByProfTabHeading {
+    height: 25px;
+    margin-left: 120px;
+    margin-right: auto;
+    padding-top: 5px;
+    width: 666px;
+}
+
+.divSearchByProfTabImg {
+    height: 20px;
+    margin-right: auto;
+    width: 630px;
+    /*margin-left: 207px;*/
+    margin-left: 245px;
+}
+/*_____ End Select by Prof____*/
+.minWidth1000px {
+    min-width: 1000px !important;
+}
+
+
+/*______Start Select Package_________*/
+.divChoosePlanMain {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divReportName {
+    float: right;
+    height: 195px;
+    width: 749px;
+}
+
+.divReportHeaderImgMain {
+    width: 749px;
+    height: 95px;
+}
+
+.divBasicReportImg {
+    background-image: url(../Images/basic.png);
+    width: 244px;
+    height: 69px;
+}
+
+.divGoldReportImg {
+    background-image: url(../Images/gold.png);
+    width: 244px;
+    height: 69px;
+}
+
+.divMostPopularImg {
+    background-image: url(../Images/most_popular.png);
+    width: 77px;
+    height: 68px;
+}
+
+.divPlatinumImg {
+    background-image: url(../Images/platinum.png);
+    width: 244px;
+    height: 69px;
+}
+
+.divReportHeaderMain {
+    height: 103px;
+    margin: -3px 0px 0px -2px;
+    width: 749px;
+}
+
+.divReportHeaderInner {
+    float: left;
+    font-family: helvetica;
+    font-size: 17px;
+    height: 80px;
+    padding: 10px;
+    width: 222px;
+}
+
+.divDollerHeader {
+    color: #3D3D3D;
+    float: left;
+    height: 20px;
+    width: 10px;
+}
+
+.divReportInclude {
+    color: #3D3D3D;
+    float: left;
+    height: 20px;
+    margin-left: 19px;
+    width: 124px;
+}
+
+.divContinueBtn {
+    clear: both;
+    height: 35px;
+    padding: 22px 0 0 22px;
+    width: 204px;
+}
+
+.divPlanReportHeading {
+    background-color: #424242;
+    color: #EDEDED;
+    height: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+    width: 970px;
+}
+
+.reportHeaderPadding {
+    padding-left: 15px;
+}
+
+.divPlanHeadingImg {
+    background-image: url(../Images/choose_plan_top_img.png);
+    width: 749px;
+    height: 95px;
+}
+
+.divLeftShadowImg {
+    background-image: url(../Images/choose_plan_left_shadow.png);
+    background-repeat: repeat-y;
+    float: left;
+    height: 105px;
+    width: 11px;
+}
+
+.divRightShadowImg {
+    background-image: url(../Images/choose_plan_right_shadow.png);
+    height: 105px;
+    width: 11px;
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.leftShadowImage {
+    background-image: url(../Images/choose_plan_left_shadow.png);
+    background-repeat: repeat-y;
+}
+
+.rightShadowImage {
+    background-image: url(../Images/choose_plan_right_shadow.png);
+    background-repeat: repeat-y;
+}
+
+.rightShadowImage {
+    background-image: url(../Images/choose_plan_right_shadow.png);
+    background-repeat: repeat-y;
+}
+
+.tableLeftBorder {
+    border-left: 2px solid #DDDDDD !important;
+}
+
+.divPackageSelectoinBg {
+    height: 695px;
+    padding-top: 40px;
+    width: 100%;
+    background-image: url(../images/sub_page_background_bg.png);
+    background-repeat: repeat-x;
+}
+
+.lblPrice {
+    color: #3D3D3D;
+}
+
+.divReportGridOuter {
+    width: 997px;
+    min-height: 25px;
+    float: left;
+}
+
+.divReportGridInner {
+    width: 985px;
+    float: left;
+}
+
+.divReportType {
+    width: 100%;
+    height: 25px;
+    clear: both;
+}
+
+.divReportGridRightShadow {
+    background-image: url(../images/choose_plan_right_shadow.png);
+    width: 12px;
+    background-repeat: repeat-y;
+    float: left;
+}
+
+.divPlanFooter {
+    background-image: url(../images/choose_plan_bottomNew.png);
+    height: 66px;
+    margin-right: 6px;
+    width: 741px;
+    float: right;
+}
+/*______End Select Package_________*/
+
+/*New CSS*/
+
+.blackColor {
+    color: #373737;
+}
+
+.PlanOrderSummary_BasicReportListNew {
+    background-color: #EAEAEA;
+}
+
+.PlanOrderSummary_BasicReportListNewAlterNate {
+    background-color: #FFFFFF;
+}
+
+.SearchByRefChosePlan_ReportIncludeHeadNew {
+    color: #373737 !important;
+    font-weight: normal;
+}
+
+.SearchByRefChosePlan_ReportIncludeHeadNewBold {
+    font-weight: bold !important;
+}
+
+.SearchByRefChosePlan_ReportIncludeButtonNew {
+    color: #3A5369 !important;
+    font-weight: bold !important;
+}
+
+.PlanOrderSummary_ReportListDivNew {
+    height: auto;
+    width: 258px;
+}
+
+.border1Solid {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.divReportSelected {
+    color: #5A5A5A !important;
+    font-size: 17px;
+    font-weight: normal !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.alacartNextBtn {
+    background-image: url(../Images/disabled_next_btn_red.png);
+    width: 98px;
+    height: 32px;
+    border: none;
+}
+
+/*______Start Resume Checker__________*/
+
+.RC_DetailAnalysisBg {
+    background-color: #E7E7E7;
+    min-height: 506px;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.RC_DetailAnalysisMainDiv {
+    width: 940px;
+    min-height: 307px;
+    background-color: White;
+    margin-top: 35px;
+    border-color: #D7D7D7;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #8A8A8A;
+    padding: 30px;
+}
+
+.RC_DetailAnalysis_DefaultDescript {
+    margin: 0px 0px 10px 41px;
+    width: 815px;
+    color: #454545;
+}
+
+.RC_ContinueBtn {
+    background-image: url(../Images/continue_btn_blue_disable.png);
+    width: 108px;
+    height: 32px;
+    border: none;
+}
+
+.RC_RuleDescription {
+    margin: 5px 0px 10px 0px;
+    width: 390px;
+    display: none;
+    color: #5A5A5A;
+}
+
+#spellcheck-badwords {
+    width: 380px;
+    color: Red;
+    display: none;
+}
+/*______End Resume Checker__________*/
+
+
+/*_________ Start Get Started_________*/
+
+.eKnowIDModuleMainDiv {
+    clear: both;
+    height: 145px;
+    width: 100%;
+}
+
+.GetStartModuleSeperator {
+    background-image: url(../Images/navigation_page_hori_line_center.png);
+    height: 1px;
+    width: 969px;
+    margin: 10px 0;
+}
+/*__________End Get Started___________*/
+
+/*_____Press Link Page start________*/
+.divPressLinkMain {
+    color: #404040;
+    font-size: 14px;
+    height: 1050px;
+    padding-top: 30px;
+}
+
+.divPressLinks {
+    width: 100%;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.divPressLinkImg {
+    background-repeat: no-repeat;
+    height: 125px;
+    width: 185px;
+}
+
+.divPressLinkDesc {
+    text-align: justify;
+    width: 800px;
+}
+
+.divMoneyWatchImage {
+    background-image: url("../images/moneyWatch.png");
+    background-position: left top;
+}
+
+.divForbesImage {
+    background-image: url("../images/Forbes.png");
+    background-position: right top;
+    margin-top: 30px !important;
+    height: 58px !important;
+}
+
+.divHCOnlineImage {
+    background-image: url("../images/HC Online.png");
+    width: 124px !important;
+    height: 105px !important;
+    background-position: left top;
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.divereNetImage {
+    background-image: url("../images/ereNet.png");
+    background-position: right top;
+    margin-top: 8px;
+    width: 191px !important;
+    height: 89px !important;
+}
+
+.divInformWeekImage {
+    background-image: url("../images/InformationWeek.png");
+    width: 276px !important;
+    height: 58px;
+}
+
+.divInformationWeekDesc {
+    width: 100% !important;
+    margin-top: 0px !important;
+}
+
+.divInformationWeekPressLink {
+    height: 61px;
+}
+
+.PressLinkSeperator {
+    background-image: url(../Images/navigation_page_hori_line_center.png);
+    height: 1px;
+    width: 969px;
+    margin: 20px 0;
+}
+
+.HCOnlineDescription {
+    float: right !important;
+    width: 831px !important;
+}
+
+.readMoreLink {
+    text-decoration: none;
+    color: #4A80C0 !important;
+}
+/*_____Press Link Page end_______*/
+
+/*________Start Common Myths Page ____________*/
+.divCommonMythsBg {
+    background-color: #E7E7E7;
+    height: auto !important;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 13px;
+    color: #404040;
+}
+
+.divCommonMythsInner {
+    background-color: white;
+    height: auto !important;
+    margin-top: 1px;
+    width: 900px;
+    padding: 30px 50px;
+    border-color: #D7D7D7;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 4px #8A8A8A;
+    color: #404040;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+.ulNumberType {
+    font-weight: bold;
+    line-height: 18px;
+    list-style: decimal outside none;
+}
+
+.list_style_circle {
+    list-style: circle outside none !important;
+    font-weight: normal !important;
+}
+
+.mainCommonMythsContentDiv, .mainAnatomyOfBgCheckContentDiv {
+    height: 100px;
+    width: 100%;
+    clear: both;
+}
+
+.commonMythsListImage, .anatomyOfBgCheckListImage {
+    float: left;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.divCommonMythsDescription {
+    margin-left: 5px;
+    margin-top: 15px;
+    width: 795px;
+}
+
+.listBgImg1 {
+    background-image: url(../images/1.png);
+}
+
+.listBgImg2 {
+    background-image: url(../images/2.png);
+}
+
+.listBgImg3 {
+    background-image: url(../images/3.png);
+}
+
+.listBgImg4 {
+    background-image: url(../images/4.png);
+}
+
+.listBgImg5 {
+    background-image: url(../images/5.png);
+}
+
+.listBgImg6 {
+    background-image: url(../images/6.png);
+}
+
+.listBgImg7 {
+    background-image: url(../images/7.png);
+}
+
+.listBgImg8 {
+    background-image: url(../images/8.png);
+}
+
+.listBgImg9 {
+    background-image: url(../images/9.png);
+}
+/*________End Common Myths Page ____________*/
+
+/*________Start Trends Page ____________*/
+.ulDiscType {
+    font-weight: bold;
+    line-height: 18px;
+    list-style: disc outside none;
+}
+/*________End Trends Page ____________*/
+
+
+/*#region Get started popup window */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 592px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* The Close Button */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #8c8c8c;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid #4c4c4c;
+}
+
+    .modal-header h4 {
+        font-size: 27px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 21px;
+    }
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    cursor: pointer;
+}
+
+.modal-content-candidate {
+    display: inline-block;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 35px;
+}
+
+.modal-content-self {
+    display: inline-block;
+    padding: 15px 42px;
+}
+
+.vertical-line {
+    display: inline-block;
+    position: relative;
+    top: -32px;
+    width: 20px;
+}
+
+.circle {
+    width: 170px;
+    height: 170px;
+    background-color: #ffffff;
+    border: 2px solid #636363;
+    border-color: #636363 !important;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 10px;
+    border-radius: 100px;
+}
+
+.circle-inner img {
+    top: 238px;
+    width: auto;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+
+.circle-text {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #636363;
+    font-weight: 500;
+    text-align: center;
+    color: #636363;
+}
+
+
+/*#endregion */
+
+
+
+/*#region How it work CSS */
+
+.how-work-box-width {
+    width: 200px;
+    float: left;
+    height: 300px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+    .how-work-box-width h3 {
+        color: #535353;
+        font-size: 18px;
+    }
+
+    .how-work-box-width p {
+        color: #a7a7a7;
+        padding: 10px;
+        text-align: center;
+        font-size: 13px;
+        font-family: helvetica;
+    }
+
+.margin-top-40px {
+    margin-top: 40px;
+}
+
+.margin-top-20px {
+    margin-top: 20px;
+}
+
+.margin-left-20px {
+    margin-left: 20px;
+}
+
+.margin-left-23px {
+    margin-left: 23px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/*#endregion */

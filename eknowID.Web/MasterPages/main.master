@@ -1,0 +1,701 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="eknowID.main" %>
+
+<%@ Register Src="../Controls/Footer.ascx" TagName="footer" TagPrefix="uc1" %>
+<%@ Register Src="~/Controls/singIn.ascx" TagName="signIn" TagPrefix="uc2" %>
+<%@ Register Src="../Controls/JoinNow.ascx" TagName="JoinNow" TagPrefix="uc1" %>
+<%@ Register Src="~/Controls/ForgotPassword.ascx" TagName="forgotPassword" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>eKnowID</title>
+    <link rel="shortcut icon" href="../Images/favicon_icon.ico" />
+    <meta name="title" content="eKnowID" />
+    <meta name="description" content="Mistakes and outdated information in your employment background can cost you a job. Take proactive measures before releasing outdated or erroneous information with the help of eKnowID. Use our sophisticated Background Check services to  proactively manage your reputation." />
+    <link rel="image_src" href="https://www.eknowid.com/Images/protect_icon.png" />
+
+    <!-- CDN URL's START -->
+    <script src="../Scripts/jquery-2.2.2.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <link href="../Styles/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery.pwdMeter.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
+    
+
+    <!-- CDN URL's END -->    
+    <link href="../Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/IpadCss.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/bpopUp.js" type="text/javascript"></script>
+    <script src="../Scripts/UserScripts/openPopUp.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.watermark.js" type="text/javascript"></script>
+    <script src="../Scripts/UserScripts/LinkedInData.js" type="text/javascript"></script>
+    <script src="../Scripts/UserScripts/fbLogin.js" type="text/javascript"></script>
+    <script src="../Scripts/UserScripts/JoinNow.js" type="text/javascript"></script>
+    <script src="../Scripts/tooltip.js" type="text/javascript"></script>
+    <script src="../Scripts/UserScripts/Common.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.cookie.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../Scripts/Tooltip/excanvas.js" type="text/javascript"></script>
+    <![endif]-->
+    <script type="text/javascript" language="javascript">
+        $(function () {           
+            var currentUrlpath = window.location.pathname.split("/");
+            var currentPage = currentUrlpath[currentUrlpath.length - 1];
+            
+            if (currentPage.toLowerCase() !== "index.aspx") {
+                $("body").find("#footerOuter").hide();
+            }
+            else {
+                $("body").find("#footerOuter").show();
+            }
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27) { // escape key maps to keycode `27`                    
+                    $(".modal-content").animate({ top: '-250px' }, 300);
+                    $("body").css("overflow", "auto");
+                    $(".modal").hide();
+                }
+            });
+
+            $("#getStarted").click(function () {
+                $("body").css("overflow", "hidden");
+                $(".modal-content").animate({ top: '0px' },300);
+                $(".modal").show();
+            });
+
+            $(".close").click(function () {                
+                $(".modal-content").animate({ top: '-250px' }, 300);
+                $("body").css("overflow", "auto");
+                $(".modal").hide();
+            });
+
+
+            // this will get the full URL at the address bar
+            var url = window.location.href;
+            // passes on every "a" tag 
+            $("#topNavigation a").each(function () {
+                // checks if its the same on the address bar
+                if (url == (this.href)) {
+                    $(this).addClass("visited");
+                }
+            });
+
+        });
+
+        function pageReload() {
+            window.location.href = window.parent.location.href;
+        }
+
+        function sessioTimeOut() {
+            OpenDialog('Your session is expired.', function () {
+                window.location.href = "../Pages/index.aspx";
+            });
+
+        }
+    </script>
+    <script type="text/javascript">
+        jQuery.extend(jQuery.validator.messages, {
+            required: "*",
+            remote: "Please fix this field.",
+            email: "*",
+            url: "Please enter a valid URL.",
+            date: "Please enter a valid date.",
+            dateISO: "Please enter a valid date (ISO).",
+            number: "*",
+            digits: "Please enter only digits.",
+            creditcard: "Please enter a valid credit card number.",
+            equalTo: "*",
+            accept: "Please enter a value with a valid extension.",
+            //maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+            maxlength: jQuery.validator.format("*"),
+            minlength: jQuery.validator.format("*"),
+            rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+            range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+            max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+            min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+
+        });
+
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Validation 
+
+            $(".DateFormat").change(function () {
+                $(this).valid();
+            });
+
+            $('input[type="text"]').change(function () {
+                $(this).valid();
+            });
+
+            $.validator.addMethod("dateRange", function (value, element) {
+
+                var today = new Date('12/31/2000');
+                var event_date = new Date(value);
+                if (event_date <= today)
+                    return true;
+                return false;
+            }, "*");
+
+            $.validator.addMethod("futureDate", function (value, element) {
+
+                var today = new Date();
+                var event_date = new Date(value);
+                if (event_date <= today)
+                    return true;
+                return false;
+            }, "*");
+
+
+            $.validator.addMethod("DateFormat", function (value, element) {
+                return validDateFormat(value) || value == "";
+            }, "*");
+
+            $.validator.addMethod("watermark", function (value, element) {
+                return false;
+            }, "*");
+
+            jQuery.validator.addMethod("lettersonly", function (value, element) {
+                return this.optional(element) || /^[a-z]+$/i.test(value);
+            }, "*");
+
+            jQuery.validator.addMethod("zipcode", function (value, element) {
+                return this.optional(element) || /^\d{5}(-\d{4})?$/.test(value);
+            }, "*");
+
+            jQuery.validator.addMethod("alphanumeric", function (value, element) {
+                return this.optional(element) || /^[a-z0-9\-]+$/i.test(value);
+            }, "*");
+
+            jQuery.validator.addMethod("LettersWithSpace", function (value, element) {
+                return this.optional(element) || /^[a-zA-Z\s]*$/i.test(value);
+            }, "*");
+
+
+            jQuery.validator.addMethod("ddlValidation", function (value, element) {
+
+                if (value == 0) {
+
+                    return false;
+                }
+                else {
+
+                    return true;
+                }
+            }, "*");
+
+
+            $.validator.addMethod("ddlEndYear", function (value, element, params) {
+
+                var startYear = $(params.split(",")[1]).val();
+
+
+                if ((value >= startYear) || (value == 0)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }, "*");
+
+            $.validator.addMethod("ddlStartdate", function (value, element, params) {
+
+                var currentYear = new Date().getFullYear();
+                var currentMonth = new Date().getMonth();
+                var actualMonth = $(params.split(",")[0]).val();
+                currentMonth++;
+                actualMonth = Number(actualMonth);
+                if (currentYear == value) {
+                    if (currentMonth < actualMonth) {
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
+                }
+                else {
+                    return true;
+                }
+            }, "*");
+
+            $.validator.addMethod("ddlEndMonth", function (value, element, params) {
+
+                var startMonth = $(params.split(",")[0]).val();
+                var startYear = $(params.split(",")[1]).val();
+                var endYear = $(params.split(",")[2]).val();
+
+                if (value == 0 && endYear == 0) {
+                    return true;
+
+                }
+                else {
+                    if (endYear > startYear && value != 0) {
+                        return true;
+                    }
+                    else if ((value >= startMonth) && (endYear == startYear)) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }, "*");
+
+            jQuery.validator.addMethod("ssn", function (value, element) {
+                return this.optional(element) || /^\d{3}-\d{2}-\d{4}$/i.test(value);
+            }, "*");
+
+            $("#mstrPage").validate();//
+
+
+            //Tool Tip
+            $('img.remove').tooltip({
+                show: {
+                    effect: "slideDown",
+                    delay: 250
+                }
+            });
+        });
+
+        function validDateFormat(value) {
+            var dtArray = value.match(/^(0[1-9]|1[012])[- //.](0[1-9]|[12][0-9]|3[01])[- //.](19|20)\d\d$/);
+
+            if (dtArray == null)
+                return false;
+
+            //Checks for mm/dd/yyyy format.
+            dtMonth = value.substring(0, 2);
+            dtDay = value.substring(3, 5);
+            dtYear = value.substring(6, 10);
+
+            if (dtMonth < 1 || dtMonth > 12)
+                return false;
+            else if (dtDay < 1 || dtDay > 31)
+                return false;
+            else if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31)
+                return false;
+            else if (dtMonth == 2) {
+                var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+                if (dtDay > 29 || (dtDay == 29 && !isleap))
+                    return false;
+            }
+            return true;
+        }
+
+
+        //Clear cookies if page url is not in the given array(urls)
+        $(function () {
+
+            var urls = ["OrderDetail", "UpgradeReportPackage", "AlacartReport"];
+            var url = window.location.href;
+            var clear = true;
+            for (i = 0; i < 3; i++) {
+                if (url.indexOf(urls[i]) != -1) {
+                    clear = false;
+                }
+            }
+            if (clear) {
+                $.cookie('showUploadResumeDialog', 'false');
+                $.cookie('redirectToOrderDetail', 'false');
+            }
+
+        });
+    </script>
+    <!-- Google analytics start -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39288567-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!-- Google analytics end -->
+    <script type="text/javascript">
+
+        var sess_expirationMinutes = 20;
+        var sess_warningMinutes = 17;
+        var sess_expireInterval;
+        var sess_expireAlert;
+        var SessionTimeOutflag = false;
+
+        function initSession() {
+            if ($("#hdnSessionFlag").val() == "true") {
+                sess_expireInterval = window.setInterval('sessLogOut()', 1200000);
+                sess_expireAlert = window.setInterval('sessInterval()', 1020000);
+                $(document).bind('keypress.session', function (ed, e) {
+                    sessKeyPressed(ed, e);
+                });
+            }
+        }
+
+        function sessKeyPressed(ed, e) {
+            clearInterval(sess_expireInterval);
+            clearInterval(sess_expireAlert);
+            sess_expireInterval = window.setInterval('sessLogOut()', 1200000);
+            sess_expireAlert = window.setInterval('sessInterval()', 1020000);
+        }
+
+        function sessLogOut() {
+            SessionTimeOutflag = true;
+            window.location.href = "../Pages/index.aspx";
+        }
+
+        function sessInterval() {
+            var errorMsg = 'Your session will expire in ' + (sess_expirationMinutes - sess_warningMinutes) + ' minutes. Please save your data.';
+            OpenDialog(errorMsg, function () {
+                clearInterval(sess_expireInterval);
+                clearInterval(sess_expireAlert);
+                sess_expireInterval = window.setInterval('sessLogOut()', 1200000);
+                sess_expireAlert = window.setInterval('sessInterval()', 1020000);
+            });
+        }
+        $(document).ready(function () {
+            initSession();
+        });
+    </script>
+    <style type="text/css">
+        #signInPopUp {
+            display: none;
+            background-color: White;
+            width: 537px;
+            height: 358px;
+            position: absolute !important;
+            top: 200px !important;
+        }
+
+        #signUpPopUp {
+            display: none;
+            background-color: White;
+            width: auto;
+            height: 500px;
+            position: absolute !important;
+            /*top: 200px !important;*/
+            top: 120px !important;
+        }
+
+        label.error {
+            float: none;
+            color: red;
+            padding-left: 3px;
+            vertical-align: top;
+        }
+
+        #dialog {
+            width: auto;
+            height: auto;
+            background-color: White;
+            border: 1px solid Gray;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        #loading {
+            display: none;
+        }
+    </style>
+    <!--[if IE 8]>
+	        <style type="text/css">
+            div#SignInInfo:hover
+        {
+            display: block;
+            height: 15px;
+            position: relative;
+            width: 100%;
+            background-color: #FEFEFE;
+        }
+        
+        div#SignInInfo ul
+        {
+            display: none;      
+            background-color: #FEFEFE;
+        }
+        
+        div#SignInInfo:hover ul
+        {
+            background-color: #FEFEFE;
+            cursor: pointer;
+            display: block;
+            list-style-type: none;
+            margin-left: -6px;
+            margin-top: 5px;
+        width: 90px;
+        padding-left:3px;
+            opacity: 0.8;
+        z-index:1000;
+        }
+        
+        div#SignInInfo:hover li
+        {
+            color: #878787;
+            font-size: 11px;
+            font-weight: normal;
+            width: 100%;
+        }
+        
+        div#SignInInfo:hover li.first
+        {
+            padding: 4px 0 0 4px;
+        }
+        
+        div#SignInInfo:hover li.middle
+        {
+            padding: 3px 0 0 8px;
+            background-position: left top;
+        }
+        
+        div#SignInInfo:hover li.last
+        {
+            background-position: left bottom;
+            padding: 2px 0 6px  5px;
+        }
+        
+        div#SignInInfo li a
+        {
+            color: #555555;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+          
+        }
+            </style>
+        <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="mstrPage" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true"
+            EnablePageMethods="true">
+        </asp:ScriptManager>
+        <asp:HiddenField ID="hdnSessionFlag" runat="server" ClientIDMode="Static" />
+
+        <%--get Started popup window--%>
+
+        <div id="getStartedModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">X</span>
+                    <h4>Who do you want a report on?</h4>
+                </div>
+                <div class="modal-body">
+                    <div class='modal-content-candidate'>
+                        <a href="../Pages/ApplicantPackages.aspx">
+                            <div class='circle'>
+                                <div class='circle-inner'>
+                                    <img src="../images/employee.png"  onmouseover="this.src='../images/employee-hover.png'" onmouseout="this.src='../images/employee.png'" alt=""   />
+                                </div>
+                            </div>
+                        </a>
+                        <div class='circle-text'>
+                            <p>Candidate / Employee </p>
+                        </div>
+                    </div>
+                    <div class='vertical-line'>
+                        <img src='../Images/Vertical-Divider.png' alt="" />
+                    </div>
+                    <div class='modal-content-self'>
+                        <a href="../Pages/getStarted.aspx">
+                            <div class='circle'>
+                                <div class='circle-inner'>
+                                    <img src="../images/myself.png" onmouseover="this.src='../images/myself-hover.png'"; onmouseout="this.src='../images/myself.png'" alt="" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class='circle-text'>
+                            <p>Myself </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <%--end get get started popup window --%>
+
+        <div class="minWidth1000px">
+            <div class="width100per divHeaderMain">
+                <div class="stretchDiv height45">
+                    <div id="topLinkContainer" class="divTopLinker">
+                        <div class="margin_left_right_auto width245 height_30px">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_20x20_style floatLeft"
+                                style="width: 90px; margin-top: 3px;">
+                                <a class="addthis_button_twitter" target="_blank" addthis:title="eKnowID" addthis:description="Mistakes and outdated information in your employment background can cost you a job. Take proactive measures before releasing outdated or erroneous information with the help of eKnowID. Use our sophisticated Background Check services to  proactively manage your reputation.">
+                                    <img src="../images/twitter25x25.png" width="25" height="25" border="0" /></a>
+                                <a class="addthis_button_facebook" target="_blank" addthis:title="eknowID" addthis:description="Mistakes and outdated information in your employment background can cost you a job. Take proactive measures before releasing outdated or erroneous information with the help of eKnowID. Use our sophisticated Background Check services to  proactively manage your reputation.">
+                                    <img src="../images/facebook25x25.png" width="25" height="25" border="0" /></a>
+                                <a class="addthis_button_linkedin" target="_blank" addthis:title="eKnowID" addthis:description="Mistakes and outdated information in your employment background can cost you a job. Take proactive measures before releasing outdated or erroneous information with the help of eKnowID. Use our sophisticated Background Check services to  proactively manage your reputation.">
+                                    <img src="../images/linkdin25x25.png" width="25" height="25" border="0" /></a>
+                            </div>
+                            <script type="text/javascript">
+                                var addthis_config = {
+                                    "data_track_addressbar": false,
+                                    ui_open_windows: true
+                                };
+                            </script>
+                            <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5108f3c447986213"></script>
+                            <!-- AddThis Button END -->
+                            <div class="pageTabRepeater socialButton">
+                            </div>
+                            <div>
+                                <asp:Panel ID="pnlSignIn" runat="server" CssClass="floatLeft" Visible="true">
+                                    <a href="#" class="signIn signButton signInDiv" title="SignIn" id="signInlink" onclick="SignInDialog();">SignIn</a>
+                                    <div class="pageTabRepeater socialButton">
+                                    </div>
+                                    <a href="#" class="signUp signButton signUpDiv " title="SignUp" id="signUplink" onclick="SignUpDialog();">SignUp</a>
+                                </asp:Panel>
+                                <asp:Panel ID="pnlSignedIn" runat="server" Visible="false" CssClass="pnlSignedIn">
+                                    <div class="SignedInDiv floatLeft" id="SignInInfo">
+                                        <a class="bold-text-white top-link" id="lnkLoggedUser" title="Signed User">
+                                            <asp:Label ID="lblUserName" runat="server" Text="" CssClass="lblLoggerUserName fontsize12"></asp:Label>
+                                        </a>
+                                        <%--<asp:Label ID="lblUserName" runat="server" Text="" CssClass="lblLoggerUserName fontsize12"></asp:Label></a>--%>
+                                        <asp:Image ID="imgDownArrow" runat="server" ImageUrl="~/Images/arrow_top_user.png"
+                                            Height="6px" Width="8px" CssClass="imgDownArrow" />
+                                        <ul>
+                                            <li class="first"><a title="Account" href="../Pages/UserProfile.aspx" class="item lnkAccount fontsize12">My Account</a></li>
+                                            <li class="login_menuSeperator"></li>                                           
+                                            <li class="middle"><a title="Profile" href="../Pages/AdminDashboard.aspx" class="item lnkLoggedUsrInfo fontsize12"
+                                                id="a2">Manage Admin</a></li>
+                                            <li class="middle"><a title="Order History" href="../Pages/YourWallet.aspx" class="item lnkLoggedUsrInfo fontsize12">Your Wallet</a></li>
+                                            <% if (userType == (int)EknowIDLib.UserTypeEnum.SUPER_ADMIN) { %>
+                                                <li class="middle"><a title="Alacart Reports" href="../Pages/AddOnSearches.aspx" class="item lnkAlacartReports fontsize12">Alacart Reports</a></li>
+                                                <li class="middle"><a title="Access Fees" href="../Pages/AccessFees.aspx" class="item lnkAccessFees fontsize12">Access Fees</a></li>
+                                            <% } %>
+                                            <li class="login_menuSeperator"></li>
+                                            <li class="last">
+                                                <asp:LinkButton ID="lnkBtnSignOut" runat="server" OnClick="lnkBtnSignOut_Click" CssClass="item lnkSignOut fontsize12">Sign Out</asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </asp:Panel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stretchDiv height78px">
+                    <div id="divLogo" class="floatLeft width300">
+                        <%--<a href="../Pages/index.aspx">
+                        <img runat="server" id="imgLogo" src="~/Images/logo.png" height="72" width="279"
+                            alt="eKnowID" />
+                    </a>--%>
+                        <a href="../Pages/index.aspx">
+                            <img runat="server" id="imgLogo" src="~/Images/logo.png" height="72" width="279"
+                                alt="eKnowID" />
+                        </a>
+                    </div>
+                    <div id="topNavigation" class="z_index_1 floatLeft width700 marginTop23px">
+                        <div class="height37px">
+                            <a href="#" id="getStarted" class="navButtons floatRight navGetStarted" title="Get Started">
+                                <div class="imgGetStartedBtn"></div>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="../Pages/WhyEKnowID.aspx" title="Why eKnowId">Why eKnowID?</a>
+                                    <ul class="sub_menu" style="padding-left: 0px;">
+                                        <li><a href="../Pages/AboutUs.aspx" title="About Us" class="Font_size85Per">About Us</a></li>
+                                        <%--  <li><a href="../Pages/WhyEmployeeRunKnowID.aspx" title="Why Employers Run Background Checks"
+                                        class="Font_size85Per">Why Employers Run Background Checks</a></li>
+                                    <li><a href="../Pages/CommonMyths.aspx" title="Common Myths about Check" class="Font_size85Per">
+                                        Common Myths about Check</a></li>
+                                    <li><a href="../Pages/Trends.aspx" title="Trends" class="Font_size85Per">Trends</a></li>--%>
+                                    </ul>
+                                </li>
+                                <li><a href="../Pages/EnterpriseSolutions.aspx" title="Enterprise Solutions">Enterprise
+                                Solutions</a>
+                                    <%-- <ul class="sub_menu" style="padding-left: 0px;">
+                                    <li><a href="../Pages/Benifits.aspx" title="Benefits" class="Font_size85Per">Benefits</a></li>
+                                    <li><a href="../Pages/HRBenifits.aspx" title="HR Benefits" class="Font_size85Per">HR
+                                        Benefits</a></li>
+                                </ul>--%>
+                                </li>
+                                <li><a href="../Pages/HowItWork.aspx" title="How It Works">How It Works</a>
+                                    <%-- <ul class="sub_menu" style="padding-left: 0px;">
+                                    <li><a href="../Pages/AnatomyOfBackgroundCheck.aspx" title="Anatomy of a Background Check"
+                                        class="Font_size85Per">Anatomy of a Background Check</a></li>
+                                    <li><a href="../Pages/CriminalRecordSearches.aspx" title="5 types of background checks"
+                                        class="Font_size85Per">5 Types of Background Checks</a></li>
+                                </ul>--%>
+                                </li>
+                                <li><a href="../Pages/Contactus.aspx" title="Contact Us">Contact Us</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stretchDiv" style="height: 0px;">
+            </div>
+            <div id="ForgotPwdPopup" class="borderRadiusTopCorners6" style="background-color: White; display: none; height: 318px; position: absolute !important; top: 248px !important; width: 550px;">
+                <uc4:forgotPassword ID="ForgotPassword" runat="server" />
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="footerOuter" class="minWidth1000px">
+                <div class="stretchDiv paddingLeft28" style="padding-right: 10px;">
+                    <uc1:footer ID="footer" runat="server" />
+                </div>
+            </div>
+            <div class="minWidth1000px divRedFooterMain">
+                <div class="stretchDiv paddingLeft28 divRedFooter">
+                    <div class="floatLeft height100per width600">
+                        <span class="footerText">
+                            <a href="../Pages/index.aspx">Home</a> | 
+                            <a href="../Pages/WhyEKnowID.aspx">Why eKnowID</a> | 
+                            <a href="../Pages/AboutUs.aspx">About Us</a> | 
+                            <a href="../Pages/Feedback.aspx">Feedback</a> | 
+                            <a href="../Pages/PrivacyPolicy.aspx">Privacy Policy</a> | 
+                            <a href="../Pages/TermsofUse.aspx">Terms of Use</a> |
+                            <a href="../Pages/eKnowID_blog.aspx" target="_blank">Blog</a>| 
+                            <a href="../Pages/FAQ.aspx">FAQs</a>|
+                            <a href="../Pages/PressLink.aspx" target="_blank">Press</a></span>
+                    </div>
+                    <div class="floatRight height100per white">
+                        Copyright &copy; 2014. &nbsp;eKnowID. All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% if (loadLoginPopups)
+           {%>
+        <div id="signInPopUp" class="borderRadiusTopCorners6">
+            <uc2:signIn ID="signIn" runat="server" />
+        </div>
+        <div id="signUpPopUp" class="borderRadiusTopCorners6">
+            <uc1:JoinNow ID="signUp" runat="server" />
+        </div>
+        <%} %>
+        <div id="loading">
+            <img src="../Images/wait_animation.gif" alt="" />
+        </div>
+        <div id="dialog" class="displayNone borderRadius6 padding1">
+            <div class="height25px messagepopUPHeader borderRadiusTopCorners6" style="width: auto;">
+                <div class="floatLeft marginTop5 paddingLeft10" style="width: 70%;">
+                    <b>Alert</b>
+                </div>
+                <div class="floatRight">
+                    <img src="../Images/close_icon_popup.png" class="cursorPointer" alt="" title="Close"
+                        onclick="CloseDialog()" />
+                </div>
+            </div>
+            <div id="dialogMessageContainer" class="paddingLeft15 paddingBottom15 paddingRight15 marginTop15">
+            </div>
+            <div class="height25px paddingRight5 paddingBottom5" style="width: auto;">
+                <input type="button" id="btnOk" class="floatRight" onclick="CloseDialog();" value="OK"
+                    title="OK" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

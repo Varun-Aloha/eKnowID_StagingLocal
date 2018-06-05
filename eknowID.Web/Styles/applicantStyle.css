@@ -1,0 +1,462 @@
+﻿@charset "utf-8";
+
+body {
+    padding: 0;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    box-sizing: border-box;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: #b0b0b0 solid 1px;
+    color: #188ac5 !important;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 20px auto 0 auto;
+    font-weight: bold !important;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.browser-icon {
+    float: right;
+    margin-top: -60px;
+    margin-right: 10%;
+}
+
+@media (min-width: 320px) {
+    .browser-icon {
+        float: right;
+        margin-top: -60px;
+        margin-right: -9px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .browser-icon {
+        float: right;
+        margin-top: -60px;
+        margin-right: 10%;
+    }
+}
+
+@media (min-width: 992px) {
+    .browser-icon {
+        float: right;
+        margin-top: -60px;
+        margin-right: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .browser-icon {
+        float: right;
+        margin-top: -60px;
+        margin-right: 10%;
+    }
+}
+
+
+.mainbox {
+    width: 620px;
+    margin: 10px auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    ul li {
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+        display: inline-block;
+        position: relative;
+        box-shadow: 0 1px 3px rgba(0,0,0,.60);
+    }
+
+        ul li:first-child {
+            margin-top: 55px;
+        }
+
+        ul li .linkedin_box {
+            background: #0270af;
+        }
+
+        ul li .resume_box {
+            background: #52a294;
+        }
+
+        ul li .manually_box {
+            background: #696594;
+        }
+
+        ul li .right_box input {
+            margin-top: 8px;
+        }
+
+        ul li .right_box .linkedin_btn {
+            width: 70%;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            color: #ffffff;
+            background: #0270af;
+            border-radius: 5px;
+        }
+
+        ul li .resume_btn {
+            width: 40%;
+            border: #ccc solid 1px;
+            padding: 8px;
+            font-weight: bold;
+            display: inline-block;
+            color: #ffffff;
+            border-radius: 5px 0 0 5px;
+        }
+
+        ul li .upload {
+            width: 30%;
+            border: #52a294 solid 1px;
+            padding: 8px;
+            font-weight: bold;
+            display: inline-block;
+            color: #ffffff;
+            border-radius: 0 5px 5px 0;
+            border-left: none;
+            text-transform: capitalize;
+            background: #52a294;
+        }
+
+        ul li .manually {
+            width: 70%;
+            background: #696594;
+            border: #696594 solid 1px;
+            padding: 8px;
+            font-weight: bold;
+            display: inline-block;
+            color: #ffffff;
+            border-radius: 5px;
+            text-transform: capitalize;
+        }
+
+.left_box, .right_box {
+    padding: 27px 0;
+    position: relative;
+}
+
+.left_box {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.left_box, .right_box, ul li {
+    height: 105px;
+}
+
+.right_box {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.linkedin {
+    color: #0270af;
+    margin-top: 10px;
+}
+
+.resume {
+    background: #52a294;
+}
+
+.manually {
+    background: #696594;
+}
+
+ul li .left_box:before {
+    width: 0;
+    content: '';
+    right: -10px;
+    top: 40%;
+    bottom: 0;
+    vertical-align: middle;
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+ul li .linkedin_box:before {
+    border-left: 10px solid #0270af;
+}
+
+ul li .resume_box:before {
+    border-left: 10px solid #52a294;
+}
+
+ul li .manually_box:before {
+    border-left: 10px solid #696594;
+}
+
+.resume_box label {
+    line-height: 26px !important;
+}
+
+.left_box label {
+    color: #ffffff;
+    vertical-align: top;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: capitalize;
+    width: 106px;
+    text-align: left;
+}
+
+.left_box img {
+    vertical-align: top;
+}
+
+::-webkit-input-placeholder {
+    color: #ccc;
+    font-weight: normal;
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #ccc;
+    font-weight: normal;
+    font-style: italic;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #ccc;
+    font-weight: normal;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    color: #ccc;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.left_file_upload {
+    width: 100%;
+    margin: 0 auto 0 45px;
+}
+
+    .left_file_upload .filestyle {
+        display: inline-block;
+        width: 100px;
+    }
+
+input[type="file"] {
+    width: 100px;
+}
+
+.bootstrap-filestyle {
+    float: left;
+}
+
+ul li .right_box .upload {
+    margin-top: 0;
+}
+
+.btn {
+    padding: 8px 12px !important;
+    border-radius: 5px 0 0 5px !important;
+}
+
+.row {
+    margin-left: -15px !important;
+}
+
+.alert {
+    position: absolute;
+    vertical-align: middle;
+    display: inline-block;
+    top: -57px;
+    left: 0;
+    z-index: 999;
+    margin: auto;
+    right: 0;
+    width: 90%;
+}
+
+@media (max-width: 767px) {
+    .left_file_upload {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .bootstrap-filestyle {
+        width: 70%;
+    }
+
+    span.group-span-filestyle {
+        width: 100%;
+    }
+
+    .left_file_upload .btn {
+        width: 100%;
+    }
+
+    ul li .right_box .upload {
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .mainbox {
+        width: 100%;
+        height: 100%;
+    }
+
+    ul li .right_box .linkedin_btn, ul li .right_box .resume_btn, ul li .right_box .upload {
+        font-size: 12px;
+    }
+
+    .right_box {
+        width: 55%;
+    }
+
+    .left_box {
+        width: 45%;
+    }
+
+    .left_file_upload {
+        width: 77%;
+        margin: 0 auto 0 15px;
+    }
+
+    .left_file_upload {
+        width: 62%;
+        margin: 0 auto;
+    }
+
+    .bootstrap-filestyle {
+        width: 70%;
+    }
+
+    ul li .right_box .upload {
+        line-height: 20px;
+    }
+
+    span.group-span-filestyle {
+        width: 100%;
+        display: block;
+    }
+
+    .left_file_upload .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    ul li {
+        float: left;
+        height: auto;
+        padding: 0 !important;
+    }
+
+    .right_box {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .left_box {
+        width: 100%;
+        height: auto !important;
+    }
+
+    ul li .left_box:before {
+        display: none;
+    }
+
+    ul li .right_box .upload {
+        width: 32%;
+        margin-left: -4px;
+        line-height: 20px;
+    }
+
+    ul li .right_box input {
+        margin: 0 auto;
+    }
+
+    .left_box, .right_box {
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+
+    .left_box, .right_box, ul li {
+        height: auto;
+    }
+
+        ul li .right_box .linkedin_btn, ul li .right_box .resume_btn, ul li .right_box .upload {
+            display: inline-block;
+        }
+
+    .left_file_upload .btn {
+        width: 130px;
+    }
+
+    ul li {
+        margin: 15px auto;
+    }
+
+    .left_file_upload {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .bootstrap-filestyle {
+        width: 66%;
+    }
+
+    span.group-span-filestyle {
+        width: 100%;
+        display: block;
+    }
+
+    .left_file_upload .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .left_file_upload {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .left_file_upload {
+        width: 64%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .left_file_upload {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

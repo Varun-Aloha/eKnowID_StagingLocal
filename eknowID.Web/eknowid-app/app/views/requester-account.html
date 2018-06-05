@@ -1,0 +1,53 @@
+﻿<div id="section-2">
+    <div class="top-content">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row" style="margin-top:-40px;">
+                    <div class="col-sm-5 col-sm-offset-3">
+                        <div class="form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>Sign up now</h3>
+                                    <p>Fill in the form below to get instant access:</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form name="requesterForm" method="post" ng-submit="requesterSignUp();" novalidate>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterForm.FirstName.$invalid && (requesterForm.FirstName.$dirty || requestersubmitted)}">
+                                        <input type="text" name="FirstName" placeholder="First name..." class="form-control textbox" ng-model="FirstName" character-only ng-required="true">
+                                        <p ng-show="requesterForm.FirstName.$error.required && (requesterForm.FirstName.$dirty || requestersubmitted)" class="help-block">First Name is required.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterForm.LastName.$invalid && (requesterForm.LastName.$dirty || requestersubmitted)}">
+                                        <input type="text" name="LastName" placeholder="Last name..." class="form-control textbox" ng-model="LastName" character-only ng-required="true">
+                                        <p ng-show="requesterForm.LastName.$error.required && (requesterForm.LastName.$dirty || requestersubmitted)" class="help-block">Last Name is required.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterForm.requesterEmail.$invalid  && (requesterForm.requesterEmail.$dirty || requestersubmitted) }">
+                                        <input type="email" name="requesterEmail" placeholder="Email..." class="form-control textbox" ng-model="Email" ng-required="true" ng-blur ng-keypress="emailKeydown()">
+                                        <p ng-show="requesterForm.requesterEmail.$error.required && (requesterForm.requesterEmail.$dirty || requestersubmitted)" class="help-block">Email is required.</p>
+                                        <p ng-show="requesterForm.requesterEmail.$error.email && (requesterForm.requesterEmail.$dirty || requestersubmitted)" class="help-block">Enter a valid email.</p>
+                                        <p ng-show="hasExists" class="help-block">Email address is exists.</p>
+
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : requesterForm.password.$invalid && (requesterForm.password.$dirty || requestersubmitted)}">
+                                        <input type="password" name="password" placeholder="Password" class="form-control textbox" ng-model="Password" ng-minlength="6" ng-required="true">
+                                        <p ng-show="requesterForm.password.$error.required && (requesterForm.password.$dirty || requestersubmitted)" class="help-block">Your password is required.</p>
+                                        <p ng-show="requesterForm.password.$error.minlength && (requesterForm.password.$dirty || requestersubmitted)" class="help-block">Your password is too short.</p>
+                                    </div>
+
+                                    <input type="submit" value="Sign me up!" class="signup-button" ng-disabled="requesterForm.$invalid || hasExists ">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+﻿<div id="section-2">
+    <div role="main" class="container theme-showcase">
+        <div style="margin-top:90px;">
+            <div class="col-lg-8 col-lg-offset-2" style="background-color:white;">
+                <div class="bs-component">
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-sm-6">
+                            <input type="text" ng-model="search" class="form-control" placeholder="Search by First name  or Last name">
+                        </div>
+
+                        <div class="col-sm-4">
+                            <select ng-model="tazStatusFilter" class="form-control">
+                                <option value="{{$index}}" ng-repeat="status in tazWorkStatus">{{status}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th style="padding:20px 0;">
+                                Id
+                            </th>
+                            <th style="padding:20px 0;">
+                                First Name
+                            </th>
+                            <th style="padding:20px 0;">
+                                Last Name
+                            </th>
+                            <th style="padding:20px;">
+                                Order Status
+                            </th>
+                            <th style="padding:20px 0;">
+                                Purchase Date
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr dir-paginate="order in orderList.Orders | filter:search | itemsPerPage:itemsPerPage" total-items="totalItem">
+                            <td>{{$index+1}}</td>
+                            <td>{{order.FirstName}}</td>
+                            <td>{{order.LastName}}</td>
+                            <td>
+                                <div ng-if="order.OrderState==0"><span class="order-status cancel">{{tazWorkStatus[order.OrderState]}}</span></div>
+                                <div ng-if="order.OrderState==2"><span class="order-status in-progress" ng-click="displayReport(order);">{{tazWorkStatus[order.OrderState]}}</span></div>
+                            </td>
+                            <td>{{order.PurchaseDate | date : 'MM-dd-yyyy' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="col-lg-3">Total record's  {{totalItem}}</div>
+                    <div style="float:right;" class="col-lg-5">
+                        <dir-pagination-controls max-size="5"
+                                                 direction-links="true"
+                                                 boundary-links="true"
+                                                 on-page-change="getData(newPageNumber)">
+                        </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
